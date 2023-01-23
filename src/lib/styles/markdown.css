@@ -1,0 +1,56 @@
+h2 {
+  color: var(--primary);
+  margin-top: 3em;
+  margin-left: -1.5em;
+  font-size: 2em;
+  text-decoration: underline;
+}
+
+h3 {
+  color: var(--primary);
+  margin-top: 1.5em;
+  margin-left: -1em;
+  font-size: 1.75em;
+}
+
+h4 {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+img {
+  margin: 2rem 0;
+}
+
+p code,
+li code {
+  padding: 0.25em;
+  padding-top: 0;
+  padding-bottom: 0.0125em;
+  border-radius: 3px;
+  font-weight: bolder;
+  letter-spacing: -0.005in;
+  white-space: nowrap;
+  background: #ddd;
+}
+
+blockquote {
+  border-left: 0.5em solid var(--primary);
+  padding: 0.35em 1em;
+  font-size: 95%;
+  background-color: #ddd;
+  margin: 2rem;
+}
+blockquote pre code[class*=language-] {
+  font-size: 1rem;
+}
+
+pre code[class*=language-] {
+  font-size: 1rem;
+}
+
+/* fenced code blocks */
+pre[class*=language-] {
+  overflow: auto;
+  border-radius: 0.5em;
+}
