@@ -206,5 +206,104 @@ At this stage, your `package.json` file should show the dependencies we have add
 }
 ```
 
-Now, let's test that $\KaTeX$ is working but if you see a fancily typeset $\KaTeX$ in this document, we should be fine. Replace the markdown in `localhost:5173/fluids/test/+page.md` with some math:
+
+#### Test the math
+
+Now, let's test that $\KaTeX$ is working. (But if you can see a fancily typeset $\KaTeX$ in the previous sentence, $\KaTeX$ is installed correctly.)
+
+ Replace the markdown in `localhost:5173/fluids/test/+page.md` with some math:
+
+```md
+<!-- src/routes/fluids/test/+page.md -->
+$\LaTeX$ / $\KaTeX$ math code delimited by single dollar 
+signs: $a=\sqrt{b^2+c^2}$ 
+
+Code delimited by double dollar signs is in display mode: 
+$$
+a=\sqrt{b^2+c^2} 
+$$
+```
+The code above renders as:
+
+$\LaTeX$ / $\KaTeX$ math code delimited by single dollar 
+signs: $a=\sqrt{b^2+c^2}$ 
+
+Code delimited by double dollar signs is in display mode: 
+$$
+a=\sqrt{b^2+c^2} 
+$$
+
+Beautiful math typesetting!
+
+>Note that for display mode typesetting, the double dollar delimiters need to be on their own line so that Svelte doesn't assume that the curly braces contain variables ($b$ and $c$, which are not defined as variables).
+
+### SASS
+
+There are a number of options for using `css` in Sveltekit. A simple approach is to include your `styles.css` file in `static/styles` folder. (This will be a global stylesheet. Svelte also allows styles to be defined, and scoped, to each component.) You then reference the styles from `app.html` like this:
+
+```html
+<!-- src/app.html -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        ...
+        <link rel="stylesheet" href="/styles/app.css">
+        ...
+    </head>
+    ...
+```
+
+I choose to create a folder `lib` (under `src`) with subfolders `/src/lib/styles` and `/src/lib/components`. And I prefer to use `scss`, rather than standard `css`, which I import into layout files as needed.
+
+First, install the sass and svelte-preprocess packages for node.
+
+```bash
+> npm i -D sass svelte-preprocess
+```
+
+Edit `svelte.config.js` so that it looks like this:
+
+```js
+import adapter from "@sveltejs/adapter-auto";
+import { mdsvex } from "mdsvex";
+import rehypeKatexSvelte from "rehype-katex-svelte";
+import remarkMath from "remark-math";
+// THIS LINE IS NEW
+import sveltePreprocess from "svelte-preprocess"; 
+
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+	kit: {
+		adapter: adapter(),
+	},
+
+	extensions: [".svelte", ".md"],
+
+	preprocess: [
+		mdsvex({
+			remarkPlugins: [remarkMath],
+			rehypePlugins: [
+				rehypeKatexSvelte,
+				/* other rehype plugins... */
+			],
+			extensions: [".md"],
+		}),
+		sveltePreprocess(), // THIS LINE IS NEW
+	],
+};
+
+export default config;
+```
+
+Create a `src/lib/styles/styles.scss` file with your preferred styling (or copy mine from the repo on [github](https://github.com/dmorgorg/workedExamples/blob/main/src/lib/styles/styles.scss)) and create a `src/routes/+layouts.svelte` with the necessary import.
+
+```svelte
+<script>
+    import '$lib/styles/styles.scss'
+</script>
+
+<main><slot /></main>
+```
+
+Your styles will now be globally available.
 
