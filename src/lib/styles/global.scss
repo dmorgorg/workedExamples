@@ -1,0 +1,253 @@
+:root {
+	--bg: #fff;
+	--statics-primary: #800;
+	--statics-white: #eee8e8;
+	--strength-primary: #880;
+	--strength-white: #eeeee8;
+	--fluids-primary: #088;
+	--fluids-white: #e8eeee;
+	--main-grey: #aaa;
+	--light-grey: #eee;
+	--primary-grey: #ccc;
+	--off-black: #333;
+	--dark-grey: #555;
+	font-family: Arial, sans-serif;
+	// font-size: 16px;
+	font-size: clamp(16px, 1.5vw, 24px);
+	font-weight: 400;
+}
+
+html {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	color: var(off-black);
+	margin: 0;
+	overflow-y: hidden;
+	padding: 0;
+}
+
+main {
+	width: 60%;
+	margin: 0 auto;
+}
+
+.katex {
+	font-size: 105%;
+	padding: 0;
+	margin: 0;
+}
+
+.part-answer .katex {
+	background-color: var(--light-grey);
+	border: 2px solid black;
+	font-size: 1em;
+	padding: 0.5em 1em;
+}
+
+.answer .katex {
+	border: 2px solid black;
+	font-size: 1.1em;
+	padding: 0.5em 1em;
+}
+
+button {
+	font-size: 1em;
+	vertical-align: middle;
+	padding: 0.075rem;
+	margin-left: 1em;
+	margin-bottom: 0.5em;
+	min-width: 8em;
+	border: 1px solid black;
+}
+
+.fluids {
+	h3 {
+		color: var(--fluids-primary);
+	}
+	section .statement::before {
+		color: var(--fluids-primary);
+	}
+	button {
+		color: var(--fluids-primary);
+		background-color: var(--primary-grey);
+		&:hover {
+			background-color: var(--fluids-primary);
+			color: white;
+		}
+	}
+	.part-answer .katex,
+	.answer .katex,
+	.problem-part-soln {
+		background-color: var(--fluids-white);
+	}
+}
+
+.statics {
+	h3 {
+		color: var(--statics-primary);
+	}
+	section .statement::before {
+		color: var(--statics-primary);
+	}
+	button {
+		color: var(--statics-primary);
+		background-color: var(--primary-grey);
+		&:hover {
+			background-color: var(--statics-primary);
+		}
+	}
+	.part-answer .katex,
+	.answer .katex,
+	.problem-part-soln {
+		background-color: var(--statics-white);
+	}
+}
+
+.strength {
+	h3 {
+		color: var(--strength-primary);
+	}
+	section .statement::before {
+		color: var(--strength-primary);
+	}
+	button {
+		color: var(--strength-primary);
+		background-color: var(--primary-grey);
+		&:hover {
+			background-color: var(--strength-primary);
+		}
+	}
+	.part-answer .katex,
+	.answer .katex,
+	.problem-part-soln {
+		background-color: var(--strength-white);
+	}
+}
+
+img {
+	width: 100%;
+}
+
+.clear {
+	clear: both;
+}
+
+.hide {
+	display: none;
+	// transition: all 3.5s ease-out;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.show {
+	display: block;
+	visibility: visible;
+	opacity: 1;
+	// transition: all 3.5s ease-out;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.fright {
+	float: right;
+}
+
+.width100 {
+	vertical-align: middle;
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.width95 {
+	vertical-align: middle;
+	position: relative;
+	width: 95%;
+	margin: 0 auto;
+}
+
+.width90 {
+	vertical-align: middle;
+	position: relative;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.width85 {
+	vertical-align: middle;
+	position: relative;
+	width: 85%;
+	margin: 0 auto;
+}
+
+.width80 {
+	vertical-align: middle;
+	position: relative;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.width75 {
+	vertical-align: middle;
+	position: relative;
+	width: 75%;
+	margin: 0 auto;
+}
+
+.width70 {
+	vertical-align: middle;
+	position: relative;
+	width: 70%;
+	margin: 0 auto;
+}
+
+.width65 {
+	vertical-align: middle;
+	position: relative;
+	width: 65%;
+	margin: 0 auto;
+}
+
+.width60 {
+	vertical-align: middle;
+	position: relative;
+	width: 60%;
+	margin: 0 auto;
+}
+
+.width55 {
+	vertical-align: middle;
+	position: relative;
+	width: 55%;
+	margin: 0 auto;
+}
+
+.width50 {
+	position: relative;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.width45 {
+	position: relative;
+	width: 45%;
+	margin: 0 auto;
+}
+
+.width40 {
+	position: relative;
+	width: 40%;
+	margin: 0 auto;
+}

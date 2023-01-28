@@ -14,7 +14,9 @@
 		"prism-themes": "^1.9.0",
 		"rehype-katex-svelte": "^1.1.2",
 		"remark-math": "^3.0.1",
+		"sass": "^1.57.1",
 		"svelte": "^3.54.0",
+		"svelte-preprocess": "^5.0.1",
 		"vite": "^4.0.0"
 	},
 	"type": "module"

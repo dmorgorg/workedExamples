@@ -1,5 +1,5 @@
 <script>
-    import '$lib/styles/markdown.css'
+    import '$lib/styles/markdown.scss'
 </script>
 
 <main><slot /></main>
