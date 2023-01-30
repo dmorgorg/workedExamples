@@ -10,20 +10,13 @@
 			{:else}
 				<a href="/fluids">Fluids & Water Resources</a>
 			{/if}
-		
-				<div>
-					{#if course !== "all"}
-					<a href="/">Home</a>
-					{/if}
-	
-					<!-- <a href="/fluids/01PressureMeasurement"><s>01 Pressure Measurement</s></a>
-					<a href="/fluids/03-1StaticFluids"><s>03.1 Forces Due to Static Fluids</s></a>
-					<a href="/fluids/03-2StaticFluids"><s>03.2 Forces Due to Static Fluids</s></a> -->
-					<a href="/fluids/121-OpenChannel">12.1 Open Channel Flow</a>
-					<a href="/fluids/122-OpenChannel">12.2 Open Channel Flow</a>
-					<!-- <a href="/fluids/12-2OpenChannel"><s>12.2 Open Channel Flow</s></a> -->
-				</div>
-			
+			<div>
+				<!-- <a href="/fluids/01PressureMeasurement"><s>01 Pressure Measurement</s></a>
+				<a href="/fluids/03-1StaticFluids"><s>03.1 Forces Due to Static Fluids</s></a>
+				<a href="/fluids/03-2StaticFluids"><s>03.2 Forces Due to Static Fluids</s></a> -->
+				<a href="/fluids/12-1OpenChannel">12.1 Open Channel Flow</a>
+				<!-- <a href="/fluids/12-2OpenChannel"><s>12.2 Open Channel Flow</s></a> -->
+			</div>
 		</li>
 	{/if}
 	<!-- {#if course === "all" || course === "statics"}

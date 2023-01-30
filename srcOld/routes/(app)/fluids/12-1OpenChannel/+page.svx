@@ -1,0 +1,90 @@
+<script>
+    import Header from '$lib/components/Header.svelte'
+    import SubsectionHeader from '$lib/components/SubsectionHeader.svelte'
+    import Problem from '$lib/components/Problem.svelte'
+    import ProblemStatement from '$lib/components/ProblemStatement.svelte'
+
+    const topMatter = {
+        description: "worked examples",
+        course: "fluids", // statics, strength, fluids
+        courseModule: "12.1 Open Channel Flow",
+        math: "$x^2$"
+	};
+
+
+</script>
+
+<div class="page {topMatter.course}">
+<Header {topMatter} />
+
+<main>
+
+<SubsectionHeader>Rectangular Channel</SubsectionHeader>
+<Problem> 
+    <ProblemStatement>
+
+    A rectangular channel has a width of $4.00\,\mathsf{m}$ and a slope of $0.1\%$. For a discharge of $4.80\,\mathsf{m^3\!/s}$, the depth is measured to be $850\,\mathsf{mm}$. Determine the average flow velocity for these conditions. Then find the average flow velocity $v$ and the discharge $Q$ when the depth is $1.700\,\mathsf{m}$.    
+
+    </ProblemStatement>
+
+    <!-- <div class="show-hide-control">
+        <ShowHideControl bind:showHide />
+    </div> -->
+
+    <!-- <div class:show={displaySolution} class:hide={!displaySolution}>
+			display solution
+	  </div>
+
+    <div class:show={displayAnswer} class:hide={!displayAnswer}>
+		display answer
+	  </div>  -->
+    
+</Problem>
+
+
+
+
+<Problem> 
+    <ProblemStatement>
+
+    A rectangular channel has a width of $4.00\,\mathsf{m}$ and a slope of $0.1\%$. For a discharge of $4.80\,\mathsf{m^3\!/s}$, the depth is measured to be $850\,\mathsf{mm}$. Determine the average flow velocity for these conditions. Then find the average flow velocity $v$ and the discharge $Q$ when the depth is $1.700\,\mathsf{m}$.    
+
+    </ProblemStatement>
+
+    <!-- <div class="show-hide-control">
+        <ShowHideControl bind:showHide />
+    </div> -->
+
+    <!-- <div class:show={displaySolution} class:hide={!displaySolution}>
+			display solution
+	  </div>
+
+    <div class:show={displayAnswer} class:hide={!displayAnswer}>
+		display answer
+	  </div>  -->
+    
+</Problem>
+<SubsectionHeader>Triangular Channel</SubsectionHeader>
+<Problem> 
+    <ProblemStatement>
+
+    A rectangular channel has a width of $4.00\,\mathsf{m}$ and a slope of $0.1\%$. For a discharge of $4.80\,\mathsf{m^3\!/s}$, the depth is measured to be $850\,\mathsf{mm}$. Determine the average flow velocity for these conditions. Then find the average flow velocity $v$ and the discharge $Q$ when the depth is $1.700\,\mathsf{m}$.    
+
+    </ProblemStatement>
+
+    <!-- <div class="show-hide-control">
+        <ShowHideControl bind:showHide />
+    </div> -->
+
+    <!-- <div class:show={displaySolution} class:hide={!displaySolution}>
+			display solution
+	  </div>
+
+    <div class:show={displayAnswer} class:hide={!displayAnswer}>
+		display answer
+	  </div>  -->
+    
+</Problem>
+</main>
+</div>
+

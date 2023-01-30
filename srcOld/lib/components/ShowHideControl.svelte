@@ -31,9 +31,10 @@
 
 <style lang="scss">
 	.show-hide-control {
-		flex-grow: 10;
+		// flex-grow: 10;
 		text-align: right;
 		padding: 0;
-        padding-right: 1rem;
+        // padding-right: 1rem;
+        // border: 1px solid black;
 	}
 </style>
