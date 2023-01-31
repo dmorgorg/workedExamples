@@ -1,0 +1,16 @@
+{
+	"inline katex": {
+		"prefix": "ki",
+		"body": [
+			"${ki(`${1}`)}"
+		],
+		"description": "inline katex"
+	},
+	"display katex": {
+		"prefix": "kd",
+		"body": [
+			"${kd(`${1}`)}"
+		],
+		"description": "display katex"
+	}
+}

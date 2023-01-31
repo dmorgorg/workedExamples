@@ -1,19 +1,32 @@
 <script>
-    import Header from '$lib/components/Header.svelte'
-	import { ki, kd } from '$lib/utilities';
+	import Header from "$lib/components/Header.svelte";
+	import SubsectionHeader from "$lib/components/SubsectionHeader.svelte";
+	import Problem from "$lib/components/Problem.svelte";
+	// import { ki, kd } from "$lib/utilities";
+	import problems from "./problems";
 
 	const topMatter = {
-		description: 'worked examples',
-		course: 'fluids', // statics, strength, fluids
-		courseModule: '12.1 Open Channel Flow'
+		description: "worked examples",
+		course: "fluids", // statics, strength, fluids
+		courseModule: "12.1 Open Channel Flow",
 	};
-
-	const pset = [`what the phuck ${ki('a^2')}`, `who the heck ${kd('b^c')}`];
 </script>
 
 <div class="page {topMatter.course}">
-<Header {topMatter} />
-channel (1)
-{@html pset[0]}
+	<Header {topMatter} />
 
+	
+
+	<div class="wrapper">
+		<main>
+			{#each problems as problem}
+				{#if typeof problem === "string"}
+					<!-- e.g. Rectangular Channel, Triangular Channel, ... -->
+					<SubsectionHeader subsectionHeader={problem} />
+				{:else}
+					<Problem {problem} />
+				{/if}
+			{/each}
+		</main>
+	</div>
 </div>

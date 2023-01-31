@@ -30,17 +30,21 @@ html {
 }
 
 body {
-	color: var(off-black);
+	// color: var(off-black);
 	margin: 0;
-	overflow-y: hidden;
+	// overflow-y: hidden;
 	padding: 0;
 }
 
 main {
-	width: 60%;
 	margin: 0 auto;
-    counter-reset: section-counter;
-    padding-top: 1em;
+	counter-reset: section-counter;
+	padding: 1em calc(50vw - 21rem);
+	// border: solid 3px green;overflow-y: auto;
+	overflow-y: auto;
+}
+.wrapper {
+	overflow-y: hidden;
 }
 
 .katex {
@@ -49,17 +53,32 @@ main {
 	margin: 0;
 }
 
+.katex-display > .katex {
+	white-space: normal;
+	// font-weight: bold;
+	// color: blue;
+}
+/* Add space between broken lines: */
+.katex-display > .base {
+	margin: 0.25em 0;
+}
+/* Compensate by reducing space around display math */
+.katex-display {
+	margin: 0.5em 0;
+}
+
 .part-answer .katex {
-	background-color: var(--light-grey);
-	border: 2px solid black;
+	// background-color: var(--light-grey);
+	// border: 2px solid black;
 	font-size: 1em;
 	padding: 0.5em 1em;
 }
 
 .answer .katex {
-	border: 2px solid black;
+	// border: 2px solid black;
 	font-size: 1.1em;
 	padding: 0.5em 1em;
+	font-weight: 600;
 }
 
 button {
@@ -88,9 +107,22 @@ button {
 		}
 	}
 	.part-answer .katex,
-	.answer .katex,
-	.problem-part-soln {
+	.answer .katex {
 		background-color: var(--fluids-white);
+		font-weight: 500;
+		border: 1px solid black;
+	}
+	.problem-part-soln {
+		// background: white;
+		// color: var(--fluids-primary);
+		// color: black;
+
+		.katex {
+			color: black;
+		}
+	}
+	.left-matter h4 {
+		color:var(--fluids-primary);
 	}
 }
 
