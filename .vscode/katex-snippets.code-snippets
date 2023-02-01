@@ -12,5 +12,13 @@
 			"${kd(`${1}`)}"
 		],
 		"description": "display katex"
+	},
+	"unit pre-spacing": {
+		"prefix": "un",
+		"body": [
+			// double escape each backslash
+			"\\\\\\, \\\\\\mathsf{${1}}"
+		],
+		"description": "unit pre-spacing"
 	}
 }

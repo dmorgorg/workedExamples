@@ -4,7 +4,7 @@
 	import ProblemStatement from "./ProblemStatement.svelte";
 	import ShowHideControl from "./ShowHideControl.svelte";
 	import ProblemParts from "./ProblemParts.svelte";
-    // import ProblemAnswer from "./ProblemAnswer.svelte";
+    import ProblemAnswer from "./ProblemAnswer.svelte";
 	export let problem;
 
 	let showHide = {
@@ -32,9 +32,9 @@
 		</div>
 	{/if}
 
-	<!-- <div class:show={displayAnswer} class:hide={!displayAnswer}>
+	<div class:show={displayAnswer} class:hide={!displayAnswer}>
 		<ProblemAnswer {problem} />
-	</div> -->
+	</div>
 </section>
 
 <style lang="scss">

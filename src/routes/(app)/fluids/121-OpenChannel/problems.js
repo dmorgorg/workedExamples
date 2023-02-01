@@ -7,13 +7,13 @@ export default [
 	// first problem
 	[
 		// problem statement
-		`A rectangular channel has a width of ${ki("4.00\\,\\mathsf{m}")} and a slope of ${ki(
+		`A rectangular channel has a width of ${ki("4.00 \\, \\mathsf{m}")} and a slope of ${ki(
 			"0.1\\%"
-		)}. For a discharge of ${ki("4.80\\,\\mathsf{m^3\\!/s}")}, the depth is measured to be ${ki(
-			"850\\,\\mathsf{mm}"
+		)}. For a discharge of ${ki("4.80 \\, \\mathsf{m^3\\!/s}")}, the depth is measured to be ${ki(
+			`850\\,\\mathsf{mm}`
 		)}. Determine the average flow velocity for these conditions.Then find the average flow velocity ${ki(
 			"v"
-		)} and the discharge ${ki("Q")} when the depth is ${ki("1.700\\,\\mathsf{m}")} .`,
+		)} and the discharge ${ki("Q")} when the depth is ${ki("1.700\\,\\mathsf{m}")}.`,
 
 		// wrapper for problem parts
 		[
@@ -75,9 +75,9 @@ export default [
 
 				`${kd(`
 					\\begin{aligned}
-						A &= 4.00\\mathsf{m} \\times 1.700\\mathsf{m} \\\\
+						A &= 4.00\\,\\mathsf{m} \\times 1.700\\,\\mathsf{m} \\\\
 						&= 6.8000\\,\\mathsf{m^2} \\\\\\\\
-						WP &= 4.00\\mathsf{m}+2(1.700\\mathsf{m}) \\\\
+						WP &= 4.00\\,\\mathsf{m}+2(1.700\\,\\mathsf{m}) \\\\
 						&= 7.4000\\,\\mathsf{m}\\\\\\\\
 						R &= A/P \\\\
 						&= \\frac {6.8000\\,\\mathsf{m^2}}{7.4000\\,\\mathsf{m}} \\\\
@@ -99,7 +99,7 @@ export default [
 				`${kd(`
 					\\begin{aligned}
 						Q &= Av \\\\
-						&= 6.8000\\mathsf{m^2}\\times 1.8832\\mathsf{m/s} \\\\
+						&= 6.8000\\,\\mathsf{m^2}\\times 1.8832\\,\\mathsf{m/s} \\\\
 						&= 12.805\\,\\mathsf{m^3/s}
 					\\end{aligned}
 				`)}`,
@@ -113,12 +113,13 @@ export default [
 		],
 
 		// problem answer
-		`$$ 
-        \\begin{aligned}
-            v_{(0.850\\,\\mathsf{m})} &= 1.412\\, \\mathsf{m/s} \\\\
-            Q_{(1.700\\,\\mathsf{m})} &= 12.81\\,\\mathsf{m^3/s} \\\\
-            v_{(1.700\\,\\mathsf{m})} &= 1.883\\,\\mathsf{m/s} 
-        \\end{aligned} $$`,
+		`${kd(`
+			\\begin{aligned}
+				v_{(0.850\\,\\mathsf{m})} &= 1.412\\, \\mathsf{m/s} \\\\
+				Q_{(1.700\\,\\mathsf{m})} &= 12.81\\, \\mathsf{m^3/s} \\\\
+				v_{(1.700\\,\\mathsf{m})} &= 1.883\\, \\mathsf{m/s} 
+			\\end{aligned}
+		`)}`,
 	],
 
 	// PROBLEM 2
@@ -135,8 +136,8 @@ export default [
 			[
 				`Find ${ki("v")}, the average flow velocity.`,
 
-				`$$     
-                    \\begin{aligned}
+				`${kd(`
+					\\begin{aligned}
                         A &= b \\cdot y \\\\ 
                         &= 6.25\\,\\mathsf{m} \\times 1.650\\,\\mathsf{m} \\\\
                         &= 10.313 \\,\\mathsf{m^2} \\\\\\\\ 
@@ -144,42 +145,51 @@ export default [
                         &= \\frac{23.5\\,\\mathsf{m^3/s}}{10.313\\,\\mathsf{m^2}} \\\\
                         &= 2.2787 \\,\\mathsf{m/s} 
                     \\end{aligned}
-                $$`,
+				`)}`,
 
-				`$$ v=2.2787 \\,\\mathsf{m/s} $$`,
+				`${kd(`
+					v=2.2787 \\,\\mathsf{m/s} 
+				`)} `,
 			],
 
 			[
 				`Find ${ki("E")}, the specific energy.`,
 
-				`$$
-                    \\begin{aligned}
+				`${kd(`
+					\\begin{aligned}
                         E &= y + \\frac{v^2}{2g} \\\\
                         &= 1.650\\,\\mathsf{m}+\\frac{(2.2787\\,\\mathsf{m/s})^2}{2(9.81\\,\\mathsf{m/s^2)}} \\\\ 
                         &=1.9147\\,\\mathsf{m}
                     \\end{aligned}
-                $$`,
+				`)}`,
 
-				`$$E=1.9147 \\,\\mathsf{m}$$`,
+				`${kd(`
+					E=1.9147 \\,\\mathsf{m}
+				`)}`,
 			],
 
 			[
 				`Determine ${ki("N_F")}, the Froude number, and use it to classify the flow.`,
 
-				`$$
-                    \\begin{aligned}
-                        N_F &= \\frac{v}{\\sqrt{g(A/T)}} \\\\
-                        &= \\frac{2.2787\\,\\mathsf{m/s}}{\\sqrt{(9.81\\,\\mathsf{m/s^2})(1.650\\,\\mathsf{m})}} \\\\
-                        &= 0.56638 \\\\
-                        &<1 \\qquad(\\textsf{Flow is sub-critical})
+				`${kd(`
+					\\begin{aligned}
+						N_F &= \\frac{v}{\\sqrt{g(A/T)}} \\\\
+						&= \\frac{2.2787\\,\\mathsf{m/s}}{\\sqrt{(9.81\\,\\mathsf{m/s^2})(1.650\\,\\mathsf{m})}} \\\\
+						&= 0.56638 \\\\
+						&<1 \\qquad(\\textsf{Flow is sub-critical})
                     \\end{aligned}
-                $$`,
-				`$$ N_F = 0.56638\\lt 1\\qquad(\\textsf{Flow is sub-critical})  $$`,
+				`)}`,
+
+				`${kd(`
+					N_F = 0.56638\\lt 1\\qquad(\\textsf{Flow is sub-critical})
+				`)}`,
 			],
 		],
 
 		// the answer
-		`$$ N_F = 0.56638\\lt 1\\qquad(\\textsf{Flow is sub-critical})  $$`,
+		`${kd(`
+			E=1.915 \\,\\mathsf{m},\\quad N_F = 0.566\\lt 1\\:(\\textsf{Flow is sub-critical})
+		`)}`,
 	],
 
 	[
@@ -199,70 +209,89 @@ export default [
 		[
 			[
 				`Use ${ki("A")} and ${ki("R")} to find ${ki("Q")}.`,
-				`$$     
-                          \\begin{aligned}
-                              A &= b \\cdot y \\\\
-                              &=1.250\\,\\mathsf{m} \\times 0.900\\,\\mathsf{m} \\\\
-                              &= 1.1250 \\,\\mathsf{m} \\\\\\\\
-                              P &= b+2y \\\\
-                              &= 1.250\\,\\mathsf{m} + 2(0.900\\,\\mathsf{m}) \\\\
-                              &= 3.0500\\,\\mathsf{m} \\\\\\\\
-                              R &= A/P \\\\
-                              &= \\frac{1.1250 \\,\\mathsf{m}}{3.0500 \\, \\mathsf{m}} \\\\
-                              &= 0.36885\\,\\mathsf{m} \\\\\\\\
-                              Q &= \\frac 1n AR^{2/3} S^{1/2} \\\\
-                              &= \\frac 1{0.012} (1.1250)(0.36885)^{2/3} (0.0014)^{1/2} \\\\ 
-                              &= 1.8041\\,\\mathsf{m^3/s} 
-                          \\end{aligned}
-                      $$`,
-				`$$ Q=1.8041\\,\\mathsf{m^3/s} $$`,
+				`${kd(`
+				 	\\begin{aligned}
+						A &= b \\cdot y \\\\
+						&=1.250\\,\\mathsf{m} \\times 0.900\\,\\mathsf{m} \\\\
+						&= 1.1250 \\,\\mathsf{m} \\\\\\\\
+						P &= b+2y \\\\
+						&= 1.250\\,\\mathsf{m} + 2(0.900\\,\\mathsf{m}) \\\\
+						&= 3.0500\\,\\mathsf{m} \\\\\\\\
+						R &= A/P \\\\
+						&= \\frac{1.1250 \\,\\mathsf{m}}{3.0500 \\, \\mathsf{m}} \\\\
+						&= 0.36885\\,\\mathsf{m} \\\\\\\\
+						Q &= \\frac 1n AR^{2/3} S^{1/2} \\\\
+						&= \\frac 1{0.012} (1.1250)(0.36885)^{2/3} (0.0014)^{1/2} \\\\ 
+						&= 1.8041\\,\\mathsf{m^3\\!/s} 
+					\\end{aligned}
+				`)}`,
+
+				`${kd(`
+					 Q=1.8041\\,\\mathsf{m^3/s} 
+				`)}`,
 			],
 			[
 				`Solve for ${ki("y_c")}.`,
-				`$$
-                          \\begin{aligned}
-                              N_F &= \\frac v{\\sqrt{g(A/T)}}=1 \\\\
-                              \\Rightarrow v_c &= \\sqrt{g(A_c/T_c)} \\\\\\\\ 
-                              \\Rightarrow \\left(\\frac Q{A_c}\\right)^2 &= g(A_c/T_c) \\\\
-                              \\Rightarrow \\frac{Q^2}g &= \\frac{A_c^3}{T_c} \\\\
-                              &= \\frac{\\left(b\\cdot y_c\\right)^3}{b} \\\\
-                              &= b^2 y_c^3 \\\\
-                              \\Rightarrow y_c &= \\left(\\frac{Q^2}{b^2g}\\right)^{1/3} \\\\
-                              &= \\left(\\frac{(1.8041)^2}{(1.250)^2(9.81)}\\right)^{1/3} \\\\
-                              &=0.59659\\,\\mathsf{m}
-                          \\end{aligned}
-                      $$`,
-				`$$y_c=0.59659 \\,\\mathsf{m}$$`,
+
+				`Under critical conditions, ${ki(`N_F=1`)}:
+				
+				${kd(`
+					\\begin{aligned}
+						N_F &= \\frac v{\\sqrt{g(A/T)}}=1 \\\\
+						\\Rightarrow v_c &= \\sqrt{g(A_c/T_c)} \\\\\\\\ 
+						\\Rightarrow \\left(\\frac Q{A_c}\\right)^2 &= g(A_c/T_c) \\\\
+						\\Rightarrow \\frac{Q^2}g &= \\frac{A_c^3}{T_c} \\\\
+						&= \\frac{\\left(b\\cdot y_c\\right)^3}{b} \\\\
+						&= b^2 y_c^3 \\\\
+						\\Rightarrow y_c &= \\left(\\frac{Q^2}{b^2g}\\right)^{1/3} \\\\
+						&= \\left(\\frac{(1.8041)^2}{(1.250)^2(9.81)}\\right)^{1/3} \\\\
+						&=0.59659\\,\\mathsf{m}
+					\\end{aligned}
+				`)}`,
+
+				`${kd(`
+					y_c=0.59659 \\,\\mathsf{m}
+				`)} `,
 			],
 			[
 				`Calculate ${ki("v_c")}.`,
-				`$$
-                          \\begin{aligned}
-                              v_c &= \\frac{Q}{A_c} \\\\
-                              &= \\frac{Q}{b\\cdot y_c} \\\\
-                              &= \\frac{(1.8041\\,\\mathsf{m^3/s})}{(1.250\\,\\mathsf{m})\\cdot (0.59659 \\,\\mathsf{m})} \\\\
-                              &= 2.4192 \\,\\mathsf{m/s}
-                          \\end{aligned}
-                      $$`,
-				`$$ v_c = 2.4192 \\,\\mathsf{m/s} $$`,
+
+				`${kd(`
+					\\begin{aligned}
+						v_c &= \\frac{Q}{A_c} \\\\
+						&= \\frac{Q}{b\\cdot y_c} \\\\
+						&= \\frac{(1.8041\\,\\mathsf{m^3/s})}{(1.250\\,\\mathsf{m})\\cdot (0.59659 \\,\\mathsf{m})} \\\\
+						&= 2.4192 \\,\\mathsf{m/s}
+					\\end{aligned}
+				`)}`,
+
+				`${kd(`
+					v_c = 2.4192 \\,\\mathsf{m/s} 
+				`)} `,
 			],
 			[
 				`Determine the slope ${ki("S_c")} that generates these critical conditions.`,
-				`$$
-                          \\begin{aligned}
-                              v_c &= \\frac 1n R_c^{2/3} S_c^{1/2} \\\\
-                              &= \\frac 1n \\left(\\frac{A_c}{P_c}\\right)^{2/3}\\!\\cdot S_c^{1/2} \\\\ 
-                              &= \\frac 1n \\left(\\frac{b\\cdot y_c}{b+2\\cdot y_c}\\right)^{2/3} \\!\\cdot S_c^{1/2} \\\\ \\Rightarrow S_c &= \\left(n\\cdot v_c \\left( \\frac{b+2\\cdot y_c}{b\\cdot y_c}\\right)^{2/3} \\right)^2 \\\\
-                              &= \\left(0.012\\cdot 2.4192 \\left( \\frac{1.250+2\\cdot 0.59659}{1.250\\cdot 0.59659}\\right)^{2/3}\\right)^2 \\\\
-                              &= 0.0041008 \\\\ 
-                              &=0.41008\\%
-                          \\end{aligned}
-                      $$`,
-				`$$ S_c =0.41008\\% $$`,
+				`${kd(`
+					\\begin{aligned}
+						v_c &= \\frac 1n R_c^{2/3} S_c^{1/2} \\\\
+						&= \\frac 1n \\left(\\frac{A_c}{P_c}\\right)^{2/3}\\!\\! S_c^{1/2} \\\\ 
+						&= \\frac 1n \\left(\\frac{by_c}{b+2y_c}\\right)^{2/3}S_c^{1/2} \\\\
+						\\Rightarrow S_c &= \\left(nv_c \\left( \\frac{b+2y_c}{by_c}\\right)^{2/3} \\right)^2 \\\\
+						&= \\left(0.012\\cdot 2.4192 \\left( \\frac{1.250+2\\cdot 0.59659}{1.250\\cdot 0.59659}\\right)^{2/3}\\right)^2 \\\\
+						&= 0.0041008 \\\\ 
+						&=0.41008\\%
+					\\end{aligned}
+				`)}`,
+
+				`${kd(`
+					S_c =0.41008\\%
+				`)}`,
 			],
 		],
 		// the answer
-		`$$ Q=1.804\\,\\mathsf{m^3/s},\\; S_c=0.410\\%,\\; y_c=0.597 \\,\\mathsf{m},\\; v_c= 2.42\\,\\mathsf{m/s} $$`,
+		`${kd(`
+			 Q=1.804\\,\\mathsf{m^3/s},\\; S_c=0.410\\%,\\; y_c=0.597 \\,\\mathsf{m},\\; v_c= 2.42\\,\\mathsf{m/s}
+		`)}`,
 	],
 
 	[
@@ -697,20 +726,22 @@ export default [
 
 				`<div class="width80"><img src="/images/circularGuidedPractice1Full.png" /></div><div class="clear" />
     
-                    $$\\begin{aligned}
-                        A &= \\frac{\\pi D^2}{4} = \\frac{\\pi (1.500)^2}{4}\\\\
-                        &= 1.7671\\,\\mathsf{m^2}\\\\
-                        P &= \\pi D = \\pi(1.500)\\\\
-                        &= 4.7124\\,\\mathsf{m}\\\\
-                        R &= A/P = \\frac{1.7671}{4.7124}\\\\
-                        &= 0.37500\\,\\mathsf{m}\\\\\\\\
-                        v &= \\frac 1n R^{2/3}S^{1/2}\\\\
-                        &= \\frac 1{0.013} (0.37500)^{2/3} (0.002)^{1/2}\\\\
-                        &= 1.7889\\,\\mathsf{m/s}\\\\\\\\
-                        Q &= Av\\\\
-                        &= 1.7671\\cdot 1.7889\\\\
-                        &= 3.1612\\,\\mathsf{m^3/s}
-                    \\end{aligned}$$`,
+                    ${kd(`
+						\\begin{aligned}
+							A &= \\frac{\\pi D^2}{4} = \\frac{\\pi (1.500)^2}{4}\\\\
+							&= 1.7671\\,\\mathsf{m^2}\\\\
+							P &= \\pi D = \\pi(1.500)\\\\
+							&= 4.7124\\,\\mathsf{m}\\\\
+							R &= A/P = \\frac{1.7671}{4.7124}\\\\
+							&= 0.37500\\,\\mathsf{m}\\\\\\\\
+							v &= \\frac 1n R^{2/3}S^{1/2}\\\\
+							&= \\frac 1{0.013} (0.37500)^{2/3} (0.002)^{1/2}\\\\
+							&= 1.7889\\,\\mathsf{m/s}\\\\\\\\
+							Q &= Av\\\\
+							&= 1.7671\\cdot 1.7889\\\\
+							&= 3.1612\\,\\mathsf{m^3/s}
+                    \\end{aligned}
+					`)}`,
 			],
 		],
 
