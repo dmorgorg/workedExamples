@@ -5,9 +5,9 @@
   import problems from "./problems";
 
   const topMatter = {
-    subject: "fluids", // statics, strength, fluids
-    title: "fluids & water resources",
-    module: "12.1 Open Channel Flow",
+    subject: "math", // statics, strength, fluids
+    title: "mathematics",
+    module: "01.1 Pythagorean Theorem Proofs",
   };
 </script>
 

@@ -1,24 +1,20 @@
 {
-	"inline katex": {
-		"prefix": "ki",
-		"body": [
-			"${ki(`${1}`)}"
-		],
-		"description": "inline katex"
-	},
-	"display katex": {
-		"prefix": "kd",
-		"body": [
-			"${kd(`${1}`)}"
-		],
-		"description": "display katex"
-	},
-	"unit pre-spacing": {
-		"prefix": "un",
-		"body": [
-			// double escape each backslash
-			"\\\\\\, \\\\\\mathsf{${1}}"
-		],
-		"description": "unit pre-spacing"
-	}
+  "inline katex": {
+    "prefix": "kin",
+    "body": ["${ki(`${1}`)}"],
+    "description": "inline katex"
+  },
+  "display katex": {
+    "prefix": "kd",
+    "body": ["${kd(`${1}`)}"],
+    "description": "display katex"
+  },
+  "unit pre-spacing": {
+    "prefix": "un",
+    "body": [
+      // double escape each backslash
+      "\\\\\\, \\\\\\mathsf{${1}}"
+    ],
+    "description": "unit pre-spacing"
+  }
 }

@@ -1,287 +1,331 @@
 :root {
-	--bg: #fff;
-	--statics-primary: #800;
-	--statics-white: #eee8e8;
-	--strength-primary: #880;
-	--strength-white: #eeeee8;
-	--fluids-primary: #088;
-	--fluids-white: #e8eeee;
-	--main-grey: #aaa;
-	--light-grey: #eee;
-	--primary-grey: #ccc;
-	--off-black: #333;
-	--dark-grey: #555;
-	font-family: Arial, sans-serif;
-	// font-size: 16px;
-	font-size: clamp(12px, 1.5vw, 24px);
-	font-weight: 400;
+  --bg: #fff;
+  --statics-primary: #800;
+  --statics-white: #eee8e8;
+  --strength-primary: #880;
+
+  --strength-white: #eeeee8;
+  --fluids-primary: #088;
+  --fluids-white: #e8eeee;
+  --math-primary: #060;
+  --math-light: #080;
+  --math-white: #eee8ee;
+  --main-grey: #aaa;
+  --light-grey: #eee;
+  --primary-grey: #ccc;
+  --off-black: #333;
+  --dark-grey: #555;
+  font-family: Arial, sans-serif;
+  // font-size: 16px;
+  font-size: clamp(12px, 1.5vw, 24px);
+  font-weight: 400;
 }
 
 html {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 *,
 *:before,
 *:after {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
-	// color: var(off-black);
-	margin: 0;
-	// overflow-y: hidden;
-	padding: 0;
+  // color: var(off-black);
+  margin: 0;
+  // overflow-y: hidden;
+  line-height: 1.5;
+  padding: 0;
 }
 
 main {
-	margin: 0 auto;
-	counter-reset: section-counter;
-	padding: 1em calc(50vw - 21rem);
-	// border: solid 3px green;overflow-y: auto;
-	overflow-y: auto;
+  margin: 0 auto;
+  counter-reset: section-counter;
+  padding: 1em calc(50vw - 21rem);
+  // border: solid 3px green;overflow-y: auto;
+  overflow-y: auto;
 }
 .wrapper {
-	overflow-y: hidden;
+  overflow-y: hidden;
 }
 
 .katex {
-	font-size: 105%;
-	padding: 0;
-	margin: 0;
+  font-size: 105%;
+  padding: 0;
+  margin: 0;
 }
 
 .katex-display > .katex {
-	white-space: normal;
-	// font-weight: bold;
-	// color: blue;
+  white-space: normal;
+  // font-weight: bold;
+  // color: blue;
 }
 /* Add space between broken lines: */
 .katex-display > .base {
-	margin: 0.25em 0;
+  margin: 0.25em 0;
 }
 /* Compensate by reducing space around display math */
 .katex-display {
-	margin: 0.5em 0;
+  margin: 0.5em 0;
 }
 
 .part-answer .katex {
-	// background-color: var(--light-grey);
-	// border: 2px solid black;
-	font-size: 1em;
-	padding: 0.5em 1em;
+  // background-color: var(--light-grey);
+  // border: 2px solid black;
+  font-size: 1em;
+  padding: 0.5em 1em;
 }
 
 .answer .katex {
-	// border: 2px solid black;
-	font-size: 1.1em;
-	padding: 0.5em 1em;
-	font-weight: 600;
+  // border: 2px solid black;
+  font-size: 1.1em;
+  padding: 0.5em 1em;
+  font-weight: 600;
 }
 
 button {
-	font-size: 1em;
-	vertical-align: middle;
-	padding: 0.075rem;
-	margin-left: 1em;
-	margin-bottom: 0.5em;
-	min-width: 8em;
-	border: 1px solid black;
+  font-size: 1em;
+  vertical-align: middle;
+  padding: 0.075rem;
+  margin-left: 1em;
+  margin-bottom: 0.5em;
+  min-width: 8em;
+  border: 1px solid black;
 }
 
 .fluids {
-	h3 {
-		color: var(--fluids-primary);
-	}
-	section .statement::before {
-		color: var(--fluids-primary);
-	}
-	button {
-		color: var(--fluids-primary);
-		background-color: var(--primary-grey);
-		&:hover {
-			background-color: var(--fluids-primary);
-			color: white;
-		}
-	}
-	.part-answer .katex,
-	.answer .katex {
-		background-color: var(--fluids-white);
-		font-weight: 500;
-		border: 1px solid black;
-	}
-	.problem-part-soln {
-		// background: white;
-		// color: var(--fluids-primary);
-		// color: black;
+  h3 {
+    color: var(--fluids-primary);
+  }
+  section .statement::before {
+    color: var(--fluids-primary);
+  }
+  button {
+    color: var(--fluids-primary);
+    background-color: var(--primary-grey);
+    &:hover {
+      background-color: var(--fluids-primary);
+      color: white;
+    }
+  }
+  .part-answer .katex,
+  .answer .katex {
+    background-color: var(--fluids-white);
+    font-weight: 500;
+    border: 1px solid black;
+  }
+  .problem-part-soln {
+    // background: white;
+    // color: var(--fluids-primary);
+    // color: black;
 
-		.katex {
-			color: black;
-		}
-	}
-	.left-matter h4 {
-		color:var(--fluids-primary);
-	}
+    .katex {
+      color: black;
+    }
+  }
+  .left-matter h4 {
+    color: var(--fluids-primary);
+  }
+}
+
+.math {
+  h3 {
+    color: var(--math-primary);
+  }
+  section .statement::before {
+    color: var(--math-primary);
+  }
+  button {
+    color: var(--math-primary);
+    background-color: var(--primary-grey);
+    &:hover {
+      background-color: var(--math-primary);
+      color: white;
+    }
+  }
+  .part-answer .katex,
+  .answer .katex {
+    background-color: var(--math-white);
+    font-weight: 500;
+    border: 1px solid black;
+  }
+  .problem-part-soln {
+    // background: white;
+    // color: var(--math-primary);
+    // color: black;
+
+    .katex {
+      color: black;
+    }
+  }
+  .left-matter h4 {
+    color: var(--math-primary);
+  }
 }
 
 .statics {
-	h3 {
-		color: var(--statics-primary);
-	}
-	section .statement::before {
-		color: var(--statics-primary);
-	}
-	button {
-		color: var(--statics-primary);
-		background-color: var(--primary-grey);
-		&:hover {
-			background-color: var(--statics-primary);
-		}
-	}
-	.part-answer .katex,
-	.answer .katex,
-	.problem-part-soln {
-		background-color: var(--statics-white);
-	}
+  h3 {
+    color: var(--statics-primary);
+  }
+  section .statement::before {
+    color: var(--statics-primary);
+  }
+  button {
+    color: var(--statics-primary);
+    background-color: var(--primary-grey);
+    &:hover {
+      background-color: var(--statics-primary);
+    }
+  }
+  .part-answer .katex,
+  .answer .katex,
+  .problem-part-soln {
+    background-color: var(--statics-white);
+  }
 }
 
 .strength {
-	h3 {
-		color: var(--strength-primary);
-	}
-	section .statement::before {
-		color: var(--strength-primary);
-	}
-	button {
-		color: var(--strength-primary);
-		background-color: var(--primary-grey);
-		&:hover {
-			background-color: var(--strength-primary);
-		}
-	}
-	.part-answer .katex,
-	.answer .katex,
-	.problem-part-soln {
-		background-color: var(--strength-white);
-	}
+  h3 {
+    color: var(--strength-primary);
+  }
+  section .statement::before {
+    color: var(--strength-primary);
+  }
+  button {
+    color: var(--strength-primary);
+    background-color: var(--primary-grey);
+    &:hover {
+      background-color: var(--strength-primary);
+    }
+  }
+  .part-answer .katex,
+  .answer .katex,
+  .problem-part-soln {
+    background-color: var(--strength-white);
+  }
 }
 
 img {
-	width: 100%;
+  width: 100%;
 }
 
 .clear {
-	clear: both;
+  clear: both;
 }
 
 .hide {
-	display: none;
-	// transition: all 3.5s ease-out;
-	visibility: hidden;
-	opacity: 0;
+  display: none;
+  // transition: all 3.5s ease-out;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .show {
-	display: block;
-	visibility: visible;
-	opacity: 1;
-	// transition: all 3.5s ease-out;
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  // transition: all 3.5s ease-out;
 }
 
 .inline-block {
-	display: inline-block;
+  display: inline-block;
 }
 
 .fright {
-	float: right;
+  float: right;
+}
+
+.center {
+  text-align: center;
 }
 
 .width100 {
-	vertical-align: middle;
-	position: relative;
-	width: 100%;
-	margin: 0 auto;
+  vertical-align: middle;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .width95 {
-	vertical-align: middle;
-	position: relative;
-	width: 95%;
-	margin: 0 auto;
+  vertical-align: middle;
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
 }
 
 .width90 {
-	vertical-align: middle;
-	position: relative;
-	width: 90%;
-	margin: 0 auto;
+  vertical-align: middle;
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .width85 {
-	vertical-align: middle;
-	position: relative;
-	width: 85%;
-	margin: 0 auto;
+  vertical-align: middle;
+  position: relative;
+  width: 85%;
+  margin: 0 auto;
 }
 
 .width80 {
-	vertical-align: middle;
-	position: relative;
-	width: 80%;
-	margin: 0 auto;
+  vertical-align: middle;
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .width75 {
-	vertical-align: middle;
-	position: relative;
-	width: 75%;
-	margin: 0 auto;
+  vertical-align: middle;
+  position: relative;
+  width: 75%;
+  margin: 0 auto;
 }
 
 .width70 {
-	vertical-align: middle;
-	position: relative;
-	width: 70%;
-	margin: 0 auto;
+  vertical-align: middle;
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
 }
 
 .width65 {
-	vertical-align: middle;
-	position: relative;
-	width: 65%;
-	margin: 0 auto;
+  vertical-align: middle;
+  position: relative;
+  width: 65%;
+  margin: 0 auto;
 }
 
 .width60 {
-	vertical-align: middle;
-	position: relative;
-	width: 60%;
-	margin: 0 auto;
+  vertical-align: middle;
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
 }
 
 .width55 {
-	vertical-align: middle;
-	position: relative;
-	width: 55%;
-	margin: 0 auto;
+  vertical-align: middle;
+  position: relative;
+  width: 55%;
+  margin: 0 auto;
 }
 
 .width50 {
-	position: relative;
-	width: 50%;
-	margin: 0 auto;
+  position: relative;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .width45 {
-	position: relative;
-	width: 45%;
-	margin: 0 auto;
+  position: relative;
+  width: 45%;
+  margin: 0 auto;
 }
 
 .width40 {
-	position: relative;
-	width: 40%;
-	margin: 0 auto;
+  position: relative;
+  width: 40%;
+  margin: 0 auto;
 }
