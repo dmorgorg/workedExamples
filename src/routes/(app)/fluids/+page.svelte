@@ -6,9 +6,10 @@
     title: "fluids & water resources", // statics, strength, fluids
     module: "",
   };
+  let unlinkTitle = true;
 </script>
 
 <div class="page {topMatter.subject}">
-  <Header {topMatter} />
+  <Header {topMatter} {unlinkTitle} />
   <Navigation {topMatter} />
 </div>

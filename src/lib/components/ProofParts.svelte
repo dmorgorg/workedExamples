@@ -9,7 +9,7 @@
 <section>
   <!-- don't need problem statement and show-hide button if only one part to the proof  -->
   {#if problem[2].length <= 1}
-    <div class="single">{@html problem[2][0][1]}</div>
+    <div class="single">{@html problem[2][0][0]}</div>
   {:else}
     {#each problem[2] as part}
       <ProofPart {part} />

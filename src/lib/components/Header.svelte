@@ -1,12 +1,15 @@
 <script>
   export let topMatter;
   $: tm = topMatter;
+  export let unlinkTitle = false;
 </script>
 
 <header>
   <div class="left">
     {#if tm.subject === "all"}
       <h3>Worked Examples & Proofs</h3>
+    {:else if unlinkTitle}
+      <h3>{tm.title}</h3>
     {:else}
       <h3><a href="/{tm.subject}">{tm.title}</a></h3>
     {/if}

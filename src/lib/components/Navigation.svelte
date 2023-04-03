@@ -24,10 +24,24 @@
         <div><a href="/">Home</a></div>
         <p />
       {:else}
-        <a href="/math">Mathematics</a>
+        <a href="/math">Mathematics (Miscellaneous)</a>
       {/if}
       <div>
         <a href="/math/011-pythagoreanThm">01.1 Pythagorean Theorem Proofs</a>
+      </div>
+    </li>
+  {/if}
+  {#if tm.subject === "all" || tm.subject === "calculus"}
+    <li class="math">
+      {#if tm.subject === "calculus"}
+        <div><a href="/">Home</a></div>
+      {:else}
+        <a href="/math/calculus">A-level Calculus</a>
+      {/if}
+      <div>
+        <a href="/math/calculus/011-DifferentiationFromFirstPrinciples"
+          >01.1 Differentiation From First Principles</a
+        >
       </div>
     </li>
   {/if}
