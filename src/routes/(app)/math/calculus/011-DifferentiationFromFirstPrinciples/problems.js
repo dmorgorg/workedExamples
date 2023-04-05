@@ -127,6 +127,39 @@ export default [
     "example",
 
     // example statement
+    `Determine, from first principles, the derivative of ${ki(
+      `y=\\left(1+x^2\\right)^2`
+    )}.`,
+
+    // wrapper for example parts
+    [
+      // example solution part
+      [
+        // example solution - only one
+        `${kd(`
+            \\begin{aligned}
+                \\frac{dy}{dx} &=\\lim_{h \\to 0} \\frac{f(x+h)-f(x)}{h} \\\\
+                &=\\lim_{h \\to 0} \\frac{(1+(x+h)^2)^2-(1+x^2)^2)}{h} \\\\
+                &=\\lim_{h \\to 0} \\frac{\\left[\\cancel{1}+2(x+h)^2+(x+h)^4\\right]-\\left[\\cancel{1}+2x^2+x^4\\right]}{h} \\\\
+                &=\\lim_{h \\to 0} \\frac{2(x+h)^2+(x+h)^4-2x^2-x^4}{h} \\\\
+                &=\\lim_{h \\to 0} \\frac{2(x^2+2xh+h^2)+(x^4+4x^3h+6x^2h^2+4xh^3+h^4)-2x^2-x^4}{h} \\\\
+                &=\\lim_{h \\to 0} \\frac{\\cancel{2x^2}+4xh+2h^2+\\cancel{x^4}+4x^3h+6x^2h^2+4xh^3+h^4-\\cancel{2x^2}-\\cancel{x^4}}{h} \\\\
+                &=\\lim_{h \\to 0} \\frac{4x\\cancel{h}+2h^{\\cancel{2}1}+4x^3\\cancel{h}+6x^2h^{\\cancel{2}1}+4xh^{\\cancel{3}2}+h^{\\cancel{4}3}}{\\cancel{h}} \\\\
+                &=\\lim_{h \\to 0} \\frac{4x+2h+4x^3+6x^2h+4xh^2+h^3}{1} \\\\
+                &= 4x+4x^3 \\\\
+                \\frac{dy}{dx} &= 4x(1+x^2)                
+            \\end{aligned}`)}`,
+      ],
+      // end of problem parts wrapper
+    ],
+    // problem answer
+    `${kd(`\\frac{dy}{dx} = 4x(1+x^2)`)}`,
+  ],
+  // PROBLEM 4
+  [
+    "example",
+
+    // example statement
     `Find, from first principles, that the derivative of ${ki(
       `y=\\frac{1}{x}`
     )}.`,
