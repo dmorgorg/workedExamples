@@ -124,7 +124,7 @@ export default [
     "proof",
 
     // main problem statement
-    `A Trigonometric proof of the Pythagorean Theorem.`,
+    `A trigonometric proof of the Pythagorean Theorem.`,
 
     // solution parts
     [

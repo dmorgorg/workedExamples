@@ -1,21 +1,25 @@
 <script>
   export let topMatter;
   $: tm = topMatter;
-  export let unlinkTitle = false;
 </script>
 
-<header>
-  <div class="left">
-    {#if tm.subject === "all"}
+<header class={tm.theme}>
+  <div class="left  ">
+    {#if tm.theme === "all"}
       <h3>Worked Examples & Proofs</h3>
-    {:else if unlinkTitle}
-      <h3>{tm.title}</h3>
+    {:else if tm.subject[1]}
+      <!-- if is linked -->
+      <h3><a href={tm.subject[2]}>{tm.subject[0]}</a></h3>
     {:else}
-      <h3><a href="/{tm.subject}">{tm.title}</a></h3>
+      <h3>{tm.subject[0]}</h3>
     {/if}
-    <!-- <h3><a href='/'>{tm.description}</a> ::</h3>  -->
   </div>
-  <h3 class="module">{tm.module}</h3>
+  {#if tm.module[1]}
+    <!-- if is linked -->
+    <h3><a href={tm.module[2]}>{tm.module[0]}</a></h3>
+  {:else}
+    <h3>{tm.module[0]}</h3>
+  {/if}
 </header>
 
 <style>

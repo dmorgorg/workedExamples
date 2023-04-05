@@ -2,14 +2,21 @@
   import Header from "$lib/components/Header.svelte";
   import Navigation from "$lib/components/Navigation.svelte";
   const topMatter = {
-    subject: "fluids",
-    title: "fluids & water resources", // statics, strength, fluids
-    module: "",
+    theme: "fluids",
+    subject: ["worked examples & proofs", true, "/"],
+    module: ["Fluids & Water Resources", false],
   };
-  let unlinkTitle = true;
 </script>
 
-<div class="page {topMatter.subject}">
-  <Header {topMatter} {unlinkTitle} />
-  <Navigation {topMatter} />
+<div class="page ">
+  <Header {topMatter} />
+
+  <ul class="page {topMatter.theme}">
+    <li>
+      <div>
+        <a href="fluids/121-OpenChannel">12.1 Open Channel Flow</a>
+        <!-- <a href="/math/calculus/012-Differentiation">01.2 Differentiation</a> -->
+      </div>
+    </li>
+  </ul>
 </div>

@@ -5,9 +5,9 @@
   import problems from "./problems";
 
   const topMatter = {
-    theme: "fluids", // statics, strength, fluids
-    subject: ["fluids & water resources", true, "/fluids"],
-    module: ["12.1 Open Channel Flow", false],
+    subject: "math", // statics, strength, fluids
+    title: "calculus",
+    module: "Differentiation",
   };
 </script>
 
