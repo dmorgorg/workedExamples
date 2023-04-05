@@ -122,4 +122,40 @@ export default [
     // problem answer
     `${kd(`\\frac{dy}{dx} = 8x`)}`,
   ],
+  // PROBLEM 3
+  [
+    "example",
+
+    // example statement
+    `Find, from first principles, that the derivative of ${ki(
+      `y=\\frac{1}{x}`
+    )}.`,
+
+    // wrapper for example parts
+    [
+      // example solution part
+      [
+        // example solution - only one
+        `${kd(`
+            \\begin{aligned}
+                \\frac{dy}{dx} &=\\lim_{dx \\to 0} \\frac{f(x+dx)-f(x)}{dx} \\\\
+                &=\\lim_{dx \\to 0} \\frac{\\frac{1}{x+dx}-\\frac{1}{x}}{dx} \\\\
+                &=\\lim_{dx \\to 0} \\frac{\\frac{x - (x+dx)}{(x+dx)x}}{dx} \\\\
+                &=\\lim_{dx \\to 0} \\frac{\\frac{x - x-dx}{x^2+xdx}}{dx} \\\\
+                &=\\lim_{dx \\to 0} \\frac{\\frac{\\cancel{x} - \\cancel{x}-dx}{x^2+xdx}}{dx} \\\\
+                &=\\lim_{dx \\to 0} \\frac{\\frac{-dx}{x^2+xdx}}{dx} \\\\
+                &=\\lim_{dx \\to 0} \\frac{\\frac{-\\cancel{dx}}{x^2+xdx}}{\\cancel{dx}} \\\\
+                &=\\lim_{dx \\to 0} \\frac{\\frac{-1}{x^2+xdx}}{1} \\\\
+                &=\\frac{-1}{\\lim_{dx \\to 0} (x^2+xdx)}\\\\
+                &=\\frac{-1}{\\lim_{dx \\to 0} x^2+ \\lim_{dx \\to 0} xdx}\\\\
+                &=\\frac{-1}{ x^2+ x\\cdot 0}\\\\
+                \\frac{dy}{dx} &=\\frac{-1}{ x^2}
+               
+            \\end{aligned}`)}`,
+      ],
+      // end of problem parts wrapper
+    ],
+    // problem answer
+    `${kd(`\\frac{dy}{dx} = \\frac{-1}{ x^2}`)}`,
+  ],
 ];
