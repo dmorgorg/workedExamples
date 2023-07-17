@@ -94,11 +94,11 @@ button {
 .fluids {
   color: var(--fluids-primary);
 
-  button,
-  .statement::before,
-  .left-matter h4 {
-    color: var(--fluids-primary);
-  }
+  // button,
+  // .statement::before,
+  // .left-matter h4 {
+  //   color: var(--fluids-primary);
+  // }
 
   button {
     &:hover {
@@ -162,12 +162,6 @@ button {
 }
 .math {
   color: var(--math-primary);
-
-  button,
-  .statement::before,
-  .left-matter h4 {
-    color: var(--math-primary);
-  }
 
   button {
     &:hover {
@@ -270,7 +264,6 @@ blockquote {
 }
 
 main {
-  background: yellow;
   flex: 1;
   margin: 1em 0;
   overflow-y: auto;
@@ -281,6 +274,30 @@ main {
   background: white;
   padding: 1em;
 }
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+.math {
+  color: var(--math-primary);
+
+  button,
+  .statement::before {
+    color: var(--math-primary);
+  }
+}
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+.fluids {
+  color: var(--fluids-primary);
+
+  button,
+  .statement::before {
+    color: var(--fluids-primary);
+  }
+}
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 .katex {
   font-size: 110%;
@@ -300,7 +317,8 @@ main {
   margin: 0.5em 0;
 }
 
-.centered-list {
+.centered-list,
+.centered-block {
   display: flex;
   justify-content: center;
 }

@@ -3,7 +3,6 @@
   const topMatter = {
     theme: "fluids",
     headerLeft: ["worked examples & proofs", true, "/"], // to help with navigation and color styling
-    // subsect: ["wef stuff", false],
     headerRight: ["Fluids & Water Resources", false], // statics, strength, fluids
   };
   let tm = topMatter;
