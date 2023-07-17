@@ -746,6 +746,8 @@ export default [
                 "y"
               )}.
               ${kd(`y=2.4063\\,\\mathsf{m}`)}`,
+
+        `${kd(`y=2.4063\\,\\mathsf{m}`)}`,
       ],
     ],
 

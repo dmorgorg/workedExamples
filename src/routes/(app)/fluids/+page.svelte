@@ -1,22 +1,28 @@
 <script>
   import Header from "$lib/components/Header.svelte";
-  import Navigation from "$lib/components/Navigation.svelte";
   const topMatter = {
     theme: "fluids",
-    subject: ["worked examples & proofs", true, "/"],
-    module: ["Fluids & Water Resources", false],
+    headerLeft: ["worked examples & proofs", true, "/"], // to help with navigation and color styling
+    // subsect: ["wef stuff", false],
+    headerRight: ["Fluids & Water Resources", false], // statics, strength, fluids
   };
+  let tm = topMatter;
 </script>
 
-<div class="page ">
+<div class="container">
   <Header {topMatter} />
 
-  <ul class="page {topMatter.theme}">
-    <li>
-      <div>
-        <a href="fluids/121-OpenChannel">12.1 Open Channel Flow</a>
-        <!-- <a href="/math/calculus/012-Differentiation">01.2 Differentiation</a> -->
-      </div>
-    </li>
-  </ul>
+  <main class="linknav fluids">
+    <ul>
+      <li class="header3"><a href="/">Site Home Page</a></li>
+      <li class="header2">
+        Fluids & Water Resources
+        <ul>
+          <li class="header3">
+            <a href="/fluids/121-OpenChannel">12.1 Open Channel Flow</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </main>
 </div>

@@ -11,11 +11,11 @@
 
 <style lang="scss">
   article {
+    color: black;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    // margin-top: 1em;
     padding: 0;
 
     h4 {

@@ -3,27 +3,23 @@
 </script>
 
 <article class="statement">
-  <p>
+  <span>
     {@html problem[1]}
-  </p>
+  </span>
 </article>
 
 <style lang="scss">
   .statement {
-    // line-height: 1;
-
-    p {
-      margin: 0.5em;
-    }
-
     &::before {
-      margin: 0.5em;
       position: relative;
       font-size: 115%;
       font-weight: bold;
       counter-increment: problem-counter;
-      content: "Example " counter(section-counter) "." counter(problem-counter)
-        ". ";
+      content: "Example " counter(module-counter) "." counter(section-counter)
+        "." counter(subsection-counter) "." counter(problem-counter) "  ";
     }
+  }
+  span {
+    margin-left: 1em;
   }
 </style>

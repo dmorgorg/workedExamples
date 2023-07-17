@@ -1,13 +1,14 @@
 <script>
+  import { ki } from "$lib/utilities";
   import Header from "$lib/components/Header.svelte";
   import SubsectionHeader from "$lib/components/SubsectionHeader.svelte";
   import Problem from "$lib/components/Problem.svelte";
   import problems from "./problems";
 
   const topMatter = {
-    theme: "fluids",
-    headerLeft: ["Fluids & Water Resources", true, "/fluids"],
-    headerRight: ["12 Open Channel Flow", false],
+    theme: "math",
+    headerLeft: ["The Pythagorean Theorem", true, "/math/Pythagoras"],
+    headerRight: [`Miscellaneous`, false],
   };
 </script>
 
@@ -29,9 +30,8 @@
 </div>
 
 <style>
-  .container {
+  main {
     counter-set: none;
-    counter-set: module-counter 12 section-counter 1 subsection-counter 0
-      problem-counter 0;
+    counter-set: chapter-counter 1 subChapter-counter 1 problem-counter 0;
   }
 </style>

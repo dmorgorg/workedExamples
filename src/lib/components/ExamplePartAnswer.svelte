@@ -1,15 +1,16 @@
 <script>
-    export let answer;
+  export let answer;
 </script>
 
 <div class="part-answer">
-    {@html answer}
+  <div>{@html answer}</div>
 </div>
 
 <style lang="scss">
-    div {
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-    }
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    // width: 80%;
+  }
 </style>

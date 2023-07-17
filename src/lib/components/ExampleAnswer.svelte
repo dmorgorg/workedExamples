@@ -3,13 +3,18 @@
 </script>
 
 <div class="answer">
-  {@html problem[3]}
+  <div>{@html problem[3]}</div>
 </div>
 
-<style lang="scss">
+<!-- <style lang="scss">
+  div.answer {
+    border: green solid 3px;
+  }
+</style> -->
+
+<style>
   div {
-    display: flex;
-    justify-content: center;
-    margin: 2em auto 0 auto;
+    margin: 0;
+    padding: 0;
   }
 </style>

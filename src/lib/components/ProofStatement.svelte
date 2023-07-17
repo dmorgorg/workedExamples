@@ -2,26 +2,29 @@
   export let problem;
 </script>
 
-<article class="statement">
+<div class="statement">
   <p>
     {@html problem[1]}
   </p>
-</article>
+</div>
 
 <style lang="scss">
   .statement {
-    p {
-      margin: 0.5em;
-    }
+    color: black;
+    // p {
+    //   margin: 0.5em;
+    // }
 
     &::before {
-      margin: 0.5em;
+      // margin: 0.5em;
+      margin-top: -1em;
       position: relative;
       font-size: 115%;
       font-weight: bold;
       counter-increment: problem-counter;
-      content: "Proof " counter(section-counter) "." counter(problem-counter)
-        ". ";
+      // content: "Proof " counter(problem-counter) ". ";
+      content: "Proof " counter(chapter-counter) "." counter(subChapter-counter)
+        "." counter(problem-counter) ". ";
     }
   }
 </style>

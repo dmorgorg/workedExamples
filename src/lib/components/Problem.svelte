@@ -54,15 +54,17 @@
 <style lang="scss">
   section {
     &.problem {
-      box-shadow: 0.125rem 0.125rem 0.5rem 0.125rem rgba(0, 0, 0, 0.25);
-      margin: 1.25em 1.75em;
+      // box-shadow: 0.125rem 0.125rem 0.5rem 0.125rem rgba(0, 0, 0, 0.25);
+      border: 1px #999 solid;
+      // border-radius: 6px;
+      margin: 1.25em auto;
       overflow-x: auto;
-      padding: 1rem;
-      padding-bottom: 1em;
+      padding: 1em;
+      background: white;
     }
 
-    .show-hide-control {
-      margin-right: 0.5em;
-    }
+    // .show-hide-control {
+    //   margin-right: 0.5em;
+    // }
   }
 </style>

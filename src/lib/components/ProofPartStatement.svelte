@@ -11,12 +11,12 @@
 
 <style lang="scss">
   article {
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: space-between;
-    // align-items: flex-start;
-    // margin-top: 1em;
-    // padding: 0;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
 
     h4 {
       padding: 0;

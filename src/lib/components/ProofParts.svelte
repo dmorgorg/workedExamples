@@ -19,11 +19,11 @@
 
 <style>
   section {
+    color: black;
     counter-reset: part-counter;
-    margin: 0.5em;
+    /* margin: 0.5em; */
   }
-  .single {
-    /* width: 80%; */
+  /* .single {
     margin: 1em 2em;
-  }
+  } */
 </style>

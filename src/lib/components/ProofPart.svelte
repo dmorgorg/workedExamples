@@ -6,15 +6,18 @@
 
   let showHide = {
     displayAnswer: false,
+    displaySolution: false,
   };
 
   $: displaySolution = showHide.displaySolution;
+  $: displayAnswer = showHide.displayAnswer;
+  $: either = displaySolution || displayAnswer;
 
   let statement = part[0];
   let solution = part[1];
 </script>
 
-<div class="statement-line ">
+<div class="statement-line">
   <div class="statement"><ProofPartStatement {statement} /></div>
 
   <div class="show-hide">
@@ -28,12 +31,11 @@
 </div>
 
 <style lang="scss">
-  // div.box {
-  //   width: 90%;
-  //   margin: -1em auto 2em auto;
-  //   padding: 0 1em;
-  //   padding-bottom: 0;
-  // }
+  div.box {
+    // width: 80%;
+    // margin: -1em auto 3em auto;
+    padding: 0;
+  }
   div.show-hide {
     font-size: 0.75em;
     padding-right: 0;

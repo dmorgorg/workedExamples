@@ -35,7 +35,7 @@
     text-align: right;
     // margin: 0 0.5em;
     padding: 0;
-    // padding-top: 1em;
+    padding-top: 1em;
     // padding-bottom: 1em;
     // border: 1px solid green;
 
@@ -44,7 +44,7 @@
       vertical-align: middle;
       padding: 0.075rem;
       margin-left: 1em;
-      margin-bottom: 0.5em;
+      margin-bottom: 1em;
       min-width: 8em;
 
       &:hover {

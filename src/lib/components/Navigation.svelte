@@ -72,7 +72,7 @@
 	{/if} -->
 </ul>
 
-<style lang="scss">
+<!-- <style lang="scss">
   ul {
     list-style: none;
   }
@@ -115,4 +115,4 @@
       color: var(--math-light);
     }
   }
-</style>
+</style> -->

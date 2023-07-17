@@ -6,11 +6,10 @@
 
 <style>
   div.problem-part-soln {
+    color: black;
     margin-top: -1em;
-    /* margin-bottom: 3em; */
-    /* border: 1px solid black; */
-    /* background-color: var(--main-grey); */
-    /* padding: 1em;
-        padding-bottom: 0; */
+    /* margin-bottom: 2em; */
+    /* padding: 1em 2em; */
+    /* border: 1px solid gray; */
   }
 </style>

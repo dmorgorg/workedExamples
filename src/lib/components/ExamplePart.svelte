@@ -37,11 +37,9 @@
 
 <style lang="scss">
   div.box {
-    // border: 1px solid red;
-    width: 80%;
-    margin: -1em auto 3em auto;
+    width: 100%;
+    margin: 0;
     padding: 0;
-    // padding-bottom: 0;
   }
   div.show-hide {
     font-size: 0.9em;
@@ -58,7 +56,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    /* margin-top: 1em; */
     margin-bottom: 2em;
     padding: 0;
 

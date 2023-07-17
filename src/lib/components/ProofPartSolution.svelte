@@ -6,10 +6,7 @@
 
 <style>
   div.problem-part-soln {
-    margin-top: 1em;
-    /* margin-top: 0; */
-    /* padding: 2em; */
-    /* padding-bottom: 0; */
-    border: 1px solid yellow;
+    color: black;
+    /* margin-top: -1em; */
   }
 </style>
