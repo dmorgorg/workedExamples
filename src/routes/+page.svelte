@@ -2,8 +2,8 @@
   import Header from "$lib/components/Header.svelte";
   const topMatter = {
     theme: "all",
-    headerLeft: ["worked examples & proofs", false], // to help with navigation and color styling
-    headerRight: ["a selection", false], // statics, strength, fluids
+    headerLeft: ["Worked Examples & Proofs", false], // to help with navigation and color styling
+    headerRight: ["A Selection", false], // statics, strength, fluids
   };
 </script>
 

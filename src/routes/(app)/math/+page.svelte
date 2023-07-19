@@ -2,9 +2,8 @@
   import Header from "$lib/components/Header.svelte";
   const topMatter = {
     theme: "math",
-    headerLeft: ["worked examples & proofs", true, "/"], // to help with navigation and color styling
-    // subsect: ["wef stuff", false],
-    headerRight: ["mathematics", false], // statics, strength, fluids
+    headerLeft: ["Worked Examples & Proofs", true, "/"], // to help with navigation and color styling
+    headerRight: ["Mathematics", false],
   };
   let tm = topMatter;
 </script>
@@ -14,7 +13,7 @@
 
   <main class="linknav math">
     <ul>
-      <li class="header3"><a href="/">Worked Examples Home Page</a></li>
+      <li class="header3"><a href="/">Home Page</a></li>
       <li class="header2">
         <a href="/math/ALevelPure">A-Level Pure Mathematics (Year 1)</a>
         <ul>
@@ -32,9 +31,7 @@
             <a href="/math/Pythagoras/Misc">1 Misc.</a>
             <a href="/math/Pythagoras/Trigonometric">2 Trigonometric Proof</a>
             <a href="/math/Pythagoras/Algebraic"><s>3 Algebraic Proofs</s></a>
-            <a href="/math/Pythagoras/Geometric"
-              ><s>4&nbsp;Geometric Proofs</s></a
-            >
+            <a href="/math/Pythagoras/Geometric"><s>4 Geometric Proofs</s></a>
           </li>
         </ul>
       </li>
