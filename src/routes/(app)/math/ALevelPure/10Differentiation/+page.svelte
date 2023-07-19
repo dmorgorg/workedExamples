@@ -6,7 +6,7 @@
 
   const topMatter = {
     theme: "math",
-    headerLeft: ["a-level pure math (year 1)", true, "/math/ALevelPure"], // to help with navigation and color styling
+    headerLeft: ["A-Pevel Pure Maths (Year 1)", true, "/math/ALevelPure"], // to help with navigation and color styling
     headerRight: ["10 Differentiation", false], // statics, strength, fluids
   };
   let tm = topMatter;
