@@ -12,24 +12,25 @@
 
   <main class="linknav {topMatter.theme}">
     <ul>
-      <li class="homeLink header3"><a href="/">Worked Example Home Page</a></li>
-      <li class="header2">
-        {topMatter.headerRight[0]}
+      <li><a href="/"><h5>Home Page</h5></a></li>
+      <li>
+        <h4>{topMatter.headerRight[0]}</h4>
       </li>
       <ul>
-        <li class="header3">
-          <div>
-            <a href="/math/Pythagoras/Misc">Misc.</a>
-          </div>
-          <div>
-            <a href="/math/Pythagoras/Trigonometric">Trigonometric Proof</a>
-          </div>
-          <div>
-            <a href="/math/Pythagoras/Algebraic">Algebraic Proofs</a>
-          </div>
-          <div>
-            <a href="/math/Pythagoras/Geometric">Geometric Proofs</a>
-          </div>
+        <li>
+          <a href="/math/Pythagoras/Misc"><h5>Misc.</h5></a>
+
+          <a href="/math/Pythagoras/Trigonometric"
+            ><h5>Trigonometric Proof</h5></a
+          >
+
+          <a href="/math/Pythagoras/Algebraic"
+            ><h5><s>Algebraic Proofs</s></h5></a
+          >
+
+          <a href="/math/Pythagoras/Geometric"
+            ><h5><s>Geometric Proofs</s></h5></a
+          >
         </li>
       </ul>
     </ul>

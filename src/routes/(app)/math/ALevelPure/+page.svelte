@@ -1,37 +1,3 @@
-<!-- 
-
-<div class="container">
-  <Header {topMatter} />
-
-  <main class="linknav {tm.theme}">
-    <ul>
-      <li class="homeLink header3"><a href="/">Home Page</a></li>
-      <li class="header2">
-        A-Level Pure Mathematics (Year 1)
-
-        <ul>
-          <li class="header3">
-            <div>
-              <a href="/math/ALevelPure/10Differentiation">10 Differentiation</a
-              >
-            </div>
-            <div>
-              <a href="/math/ALevelPure/11Integration"><s>11 Integration</s></a>
-            </div>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </main>
-</div>
-
-<style>
-  .homeLink {
-    margin-top: 2em;
-    text-decoration: none;
-  }
-</style> -->
-
 <script>
   import Header from "$lib/components/Header.svelte";
   const topMatter = {
@@ -45,21 +11,19 @@
   <Header {topMatter} />
   <main class="linknav {topMatter.theme}">
     <ul>
-      <li class="homeLink header3">
-        <a href="/">Worked Examples Home Page</a>
+      <li>
+        <a href="/"><h5>Home Page</h5></a>
       </li>
-      <li class="header2">
-        A-Level Pure Mathematics (Year 1)
-
+      <li>
+        <h4>A-Level Pure Mathematics (Year 1)</h4>
         <ul>
-          <li class="header3">
-            <div>
-              <a href="/math/ALevelPure/10Differentiation">10 Differentiation</a
-              >
-            </div>
-            <div>
-              <a href="/math/ALevelPure/11Integration"><s>11 Integration</s></a>
-            </div>
+          <li>
+            <a href="/math/ALevelPure/10Differentiation"
+              ><h5>10 Differentiation</h5></a
+            >
+            <a href="/math/ALevelPure/11Integration"
+              ><h5><s>11 Integration</s></h5></a
+            >
           </li>
         </ul>
       </li>

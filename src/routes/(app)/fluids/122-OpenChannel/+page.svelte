@@ -7,7 +7,7 @@
   const topMatter = {
     theme: "fluids",
     headerLeft: ["Fluids & Water Resources", true, "/fluids"],
-    headerRight: ["12.1 Open Channel Flow", false],
+    headerRight: ["12.2 Open Channel Flow (2)", false],
   };
 </script>
 
