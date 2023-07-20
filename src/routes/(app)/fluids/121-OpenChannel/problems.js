@@ -925,7 +925,7 @@ export default [
     ],
 
     `${kd(`
-    \\footnotesize
+        \\footnotesize
         \\color{black}
             {\\begin{array}{|c|c|c|c|}
                 \\hline
