@@ -769,6 +769,7 @@ export default [
       "n=0.013"
     )}. Determine the pipe discharge and average flow velocity for each of the following flow depths, entering results into a table for easier comparison:
     ${kd(`
+    \\footnotesize
       \\begin{array}{|c|c|c|c|}
       \\hline 
       \\textsf{Depth}, y & \\textsf{Velocity}, v & \\textsf{Discharge}, Q & \\qquad \\qquad \\textsf{Comments} \\qquad \\qquad  \\\\ 
@@ -924,6 +925,7 @@ export default [
     ],
 
     `${kd(`
+    \\footnotesize
         \\color{black}
             {\\begin{array}{|c|c|c|c|}
                 \\hline
