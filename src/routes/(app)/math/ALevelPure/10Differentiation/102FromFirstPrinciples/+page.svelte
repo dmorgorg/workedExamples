@@ -13,10 +13,10 @@
     ],
     headerRight: ["10.2 From First Principles", false],
   };
-  let tm = topMatter;
+  // let tm = topMatter;
 </script>
 
-<div class="container">
+<div class="container math">
   <Header {topMatter} />
 
   <main class={topMatter.theme}>
@@ -38,5 +38,6 @@
     counter-set: none;
     counter-set: module-counter 10 section-counter 2 subsection-counter 1
       problem-counter 0;
+    /* background-color: blue; */
   }
 </style>

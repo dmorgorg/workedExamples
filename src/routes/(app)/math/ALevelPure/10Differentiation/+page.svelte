@@ -1,6 +1,6 @@
 <script>
   import Header from "$lib/components/Header.svelte";
-  // import { ki } from "$lib/utilities";
+  import { ki } from "$lib/utilities";
 
   const topMatter = {
     theme: "math",
@@ -69,7 +69,7 @@
             </a>
 
             <a href="/math/ALevelPure/10Differentiation/103PowersOfX">
-              <h5>10.3&nbsp;Powers of $x$</h5>
+              <h5>10.3&nbsp;Powers&nbsp;of&nbsp;{@html `${ki(`x`)}`}</h5>
             </a>
           </li>
         </ul>

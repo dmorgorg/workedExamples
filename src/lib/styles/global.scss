@@ -39,20 +39,10 @@ button {
     background: none;
     border: none;
   }
-
-  .part-answer {
-    background: var(--fluids-white);
-  }
 }
 
 .fluids {
   color: var(--fluids-primary);
-
-  // button,
-  // .statement::before,
-  // .left-matter h4 {
-  //   color: var(--fluids-primary);
-  // }
 
   button {
     &:hover {
@@ -263,12 +253,19 @@ main {
 header {
   align-items: center;
   background: var(--primary-grey);
-  border-bottom: 1px solid #666;
+
   display: flex;
   justify-content: space-between;
   overflow-y: hidden;
-  padding: 1rem 2rem;
-  text-shadow: 0 0 0.75px rgba(0, 0, 0, 1);
+  padding: 0.75rem 2rem;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 1);
+
+  &.math {
+    border-bottom: 5px solid var(--math-primary);
+  }
+  &.fluids {
+    border-bottom: 5px solid var(--fluids-primary);
+  }
 }
 
 .problem {
@@ -277,13 +274,13 @@ header {
 }
 
 main {
-  // background: green;
   margin: inherit 1em;
 }
 
 @media (min-width: 512px) {
   main {
     padding: 1em 6em;
+    padding-bottom: 12rem;
     font-size: 0.9rem;
   }
 }
@@ -296,12 +293,15 @@ main {
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-.math {
+.container.math {
+  background-color: var(--math-white);
   color: var(--math-primary);
-
   button,
   .statement::before {
     color: var(--math-primary);
+  }
+  .problem {
+    border: 3px solid var(--math-primary);
   }
 }
 
@@ -319,7 +319,7 @@ main {
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 .katex {
-  font-size: 110%;
+  font-size: 100%;
   padding: 0;
   margin: 0;
 }
@@ -348,17 +348,17 @@ img {
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-.hide {
-  display: none;
-  visibility: hidden;
-  opacity: 0;
-}
+// .hide {
+//   display: none;
+//   visibility: hidden;
+//   opacity: 0;
+// }
 
-.show {
-  display: block;
-  visibility: visible;
-  opacity: 1;
-}
+// .show {
+//   display: block;
+//   visibility: visible;
+//   opacity: 1;
+// }
 .center {
   text-align: center;
 }

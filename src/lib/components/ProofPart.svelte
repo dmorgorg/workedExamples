@@ -34,21 +34,13 @@
 {/if}
 
 <style lang="scss">
-  div.box {
-    // width: 80%;
-    // margin: -1em auto 3em auto;
-    padding: 0;
-  }
   div.show-hide {
     font-size: 0.75em;
     padding-right: 0;
     flex-grow: 1;
     align-self: flex-end;
   }
-  .show ~ .show {
-    padding-top: 0;
-    border: none;
-  }
+
   div.statement-line {
     display: flex;
     flex-wrap: wrap;
