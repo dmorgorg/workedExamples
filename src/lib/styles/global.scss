@@ -275,13 +275,14 @@ header {
 
 main {
   margin: inherit 1em;
+  margin-bottom: 12rem;
 }
 
 @media (min-width: 512px) {
   main {
     padding: 1em 6em;
-    padding-bottom: 12rem;
     font-size: 0.9rem;
+    margin-bottom: 1em;
   }
 }
 @media (min-width: 1024px) {
