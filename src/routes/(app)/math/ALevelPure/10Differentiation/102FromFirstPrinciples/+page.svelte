@@ -11,7 +11,7 @@
       true,
       "/math/ALevelPure/10Differentiation",
     ],
-    headerRight: ["10.2 From first principles", false],
+    headerRight: ["10.2 From First Principles", false],
   };
   let tm = topMatter;
 </script>

@@ -22,9 +22,5 @@
     color: black;
     counter-reset: part-counter;
     margin-top: 2em;
-    /* border: 3px solid pink; */
   }
-  /* .single {
-    margin: 1em 2em;
-  } */
 </style>

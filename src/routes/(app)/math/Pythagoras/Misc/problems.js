@@ -3,7 +3,7 @@ import { ki, kd } from "$lib/utilities";
 export default [
   // section, or sub-type of course module
   "Pythagorean Triples",
-  "1 Pythagorean Triples",
+  // "1 Pythagorean Triples",
 
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////
   // EXAMPLE TEMPLATE
@@ -62,7 +62,7 @@ export default [
   [
     "proof",
     // problem statement
-    "There are infinitely many Pythagorean Triples.",
+    "There are infinitely many primitive Pythagorean triples. <br/>(Primitive Pythagorean triples are those that are not simply multiples of some smaller Pythagorean triple.)",
 
     // wrapper for proof (parts if necessary)
     [

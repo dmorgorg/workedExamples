@@ -2,16 +2,17 @@
   import ProofPartSolution from "$lib/components/ProofPartSolution.svelte";
   import ProofPartStatement from "$lib/components/ProofPartStatement.svelte";
   import ProofShowHideControl from "$lib/components/ProofShowHideControl.svelte";
+  import { fade } from "svelte/transition";
   export let part;
 
   let showHide = {
     displayAnswer: false,
-    displaySolution: false,
+    // displaySolution: false,
   };
 
   $: displaySolution = showHide.displaySolution;
-  $: displayAnswer = showHide.displayAnswer;
-  $: either = displaySolution || displayAnswer;
+  // $: displayAnswer = showHide.displayAnswer;
+  // $: either = displaySolution || displayAnswer;
 
   let statement = part[0];
   let solution = part[1];
@@ -26,9 +27,11 @@
   <br />
   <!-- {@html statement} -->
 </div>
-<div class:show={displaySolution} class:hide={!displaySolution}>
-  <ProofPartSolution {solution} />
-</div>
+{#if displaySolution}
+  <div transition:fade={{ duration: 3500 }}>
+    <ProofPartSolution {solution} />
+  </div>
+{/if}
 
 <style lang="scss">
   div.box {

@@ -8,7 +8,7 @@
   const topMatter = {
     theme: "math",
     headerLeft: ["The Pythagorean Theorem", true, "/math/Pythagoras"],
-    headerRight: [`2&nbsp; A trigonometric Proof`, false],
+    headerRight: [`2 A Trigonometric Proof`, false],
   };
 </script>
 

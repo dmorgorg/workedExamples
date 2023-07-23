@@ -26,11 +26,11 @@
     <div class="show-hide-control">
       <ProofShowHideControl bind:showHide />
     </div>
-    <!-- 	creating solution in {#if ...} doesn't render the latex so use
-			css to hide/show the solution 		-->
-    <div class:show={displaySolution} class:hide={!displaySolution}>
-      <ProofParts {problem} />
-    </div>
+    {#if displaySolution}
+      <div transition:fade={{ duration: 1000 }}>
+        <ProofParts {problem} />
+      </div>
+    {/if}
   {:else if problem[0] === "example"}
     <ExampleStatement {problem} />
     <!-- show or hide solution parts or answer  -->
@@ -38,14 +38,16 @@
       <ExampleShowHideControl bind:showHide />
       <!-- check whether there are solutions provided -->
       {#if problem[1]}
-        <!-- 	creating solution in {#if ...} doesn't render the latex so use
-			  	css to hide/show the solution 		-->
-        <div class:show={displaySolution} class:hide={!displaySolution}>
-          <ExampleParts {problem} />
-        </div>
-        <div class:show={displayAnswer} class:hide={!displayAnswer}>
-          <ExampleAnswer {problem} />
-        </div>
+        {#if displaySolution}
+          <div transition:fade={{ duration: 1000 }}>
+            <ExampleParts {problem} />
+          </div>
+        {/if}
+        {#if displayAnswer}
+          <div transition:fade={{ duration: 1000 }}>
+            <ExampleAnswer {problem} />
+          </div>
+        {/if}
       {/if}
     </div>
   {/if}
@@ -54,17 +56,12 @@
 <style lang="scss">
   section {
     &.problem {
-      // box-shadow: 0.125rem 0.125rem 0.5rem 0.125rem rgba(0, 0, 0, 0.25);
       border: 1px #999 solid;
-      // border-radius: 6px;
+      border-radius: 6px;
       margin: 1.25em auto;
       overflow-x: auto;
       padding: 1em;
       background: white;
     }
-
-    // .show-hide-control {
-    //   margin-right: 0.5em;
-    // }
   }
 </style>

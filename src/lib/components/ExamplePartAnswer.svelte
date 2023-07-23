@@ -2,15 +2,14 @@
   export let answer;
 </script>
 
-<div class="part-answer">
-  <div>{@html answer}</div>
+<div class="part-answer width80">
+  {@html answer}
 </div>
 
 <style lang="scss">
-  div {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    // width: 80%;
+  div.part-answer {
+    // display: inline;
+    margin: 0.5em auto;
+    padding: 0;
   }
 </style>

@@ -4,10 +4,10 @@
   $: displaySolution = showHide.displaySolution;
   $: displayAnswer = showHide.displayAnswer;
 
-  function toggleAnswer(event) {
+  function toggleAnswer() {
     showHide.displayAnswer = !displayAnswer;
   }
-  function toggleSolution(event) {
+  function toggleSolution() {
     showHide.displaySolution = !displaySolution;
   }
 </script>
@@ -31,17 +31,16 @@
 
 <style lang="scss">
   .show-hide-control {
-    flex-grow: 10;
-    text-align: right;
-    // margin: 0 0.5em;
-    padding: 0;
-    padding-top: 1em;
-    // padding-bottom: 1em;
     // border: 1px solid green;
+    display: flex;
+    justify-content: end;
+    align-self: center;
+    padding: 0;
+    padding-top: 0.25em;
 
     button {
       font-size: 1em;
-      vertical-align: middle;
+      align-self: flex-end;
       padding: 0.075rem;
       margin-left: 1em;
       margin-bottom: 1em;

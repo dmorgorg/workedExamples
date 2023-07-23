@@ -3,6 +3,7 @@
   import ExamplePartSolution from "$lib/components/ExamplePartSolution.svelte";
   import ExamplePartStatement from "$lib/components/ExamplePartStatement.svelte";
   import ExampleShowHideControl from "$lib/components/ExampleShowHideControl.svelte";
+  import { fade } from "svelte/transition";
   export let part;
 
   let showHide = {
@@ -27,12 +28,16 @@
 </div>
 
 <div class:box={either}>
-  <div class:show={displaySolution} class:hide={!displaySolution}>
-    <ExamplePartSolution {solution} />
-  </div>
-  <div class:show={displayAnswer} class:hide={!displayAnswer}>
-    <ExamplePartAnswer {answer} />
-  </div>
+  {#if displaySolution}
+    <div transition:fade={{ duration: 500 }}>
+      <ExamplePartSolution {solution} />
+    </div>
+  {/if}
+  {#if displayAnswer}
+    <div transition:fade={{ duration: 500 }}>
+      <ExamplePartAnswer {answer} />
+    </div>
+  {/if}
 </div>
 
 <style lang="scss">
@@ -47,10 +52,7 @@
     flex-grow: 1;
     align-self: flex-end;
   }
-  .show ~ .show {
-    padding-top: 0;
-    border: none;
-  }
+
   div.statement-line {
     display: flex;
     flex-wrap: wrap;

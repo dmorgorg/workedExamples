@@ -8,8 +8,5 @@
   div.problem-part-soln {
     color: black;
     margin-top: -1em;
-    /* margin-bottom: 2em; */
-    /* padding: 1em 2em; */
-    /* border: 1px solid gray; */
   }
 </style>
