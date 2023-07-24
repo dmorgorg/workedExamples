@@ -9,7 +9,7 @@
   let tm = topMatter;
 </script>
 
-<div class="container">
+<div class="container {tm.theme}">
   <Header {topMatter} />
 
   <h1>coming soon</h1>
