@@ -7,7 +7,7 @@
   };
 </script>
 
-<div class="container">
+<div class="container {topMatter.theme}">
   <Header {topMatter} />
 
   <main class="linknav">

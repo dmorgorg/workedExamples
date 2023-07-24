@@ -5,13 +5,12 @@
     headerLeft: ["Worked Examples & Proofs", true, "/"], // to help with navigation and color styling
     headerRight: ["Mathematics", false],
   };
-  let tm = topMatter;
 </script>
 
-<div class="container">
+<div class="container {topMatter.theme}">
   <Header {topMatter} />
 
-  <main class="linknav math">
+  <main class="linknav">
     <ul>
       <li><a href="/"><h5>Home Page</h5></a></li>
       <li>

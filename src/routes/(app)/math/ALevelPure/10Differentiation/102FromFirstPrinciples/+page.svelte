@@ -16,10 +16,10 @@
   // let tm = topMatter;
 </script>
 
-<div class="container math">
+<div class="container {topMatter.theme}">
   <Header {topMatter} />
 
-  <main class={topMatter.theme}>
+  <main>
     {#each problems as problem}
       {#if typeof problem === "string"}
         {#if problem.length > 0}

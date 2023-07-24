@@ -82,9 +82,7 @@ export default [
               \\Rightarrow \\textsf{adj}^2 + \\textsf{opp}^2& = \\textsf{hyp}^2
           \\end{aligned}`
         )} In effect, these \'proofs\' assume the Pythagorean Theorem to prove the Pythagorean Theorem. Elisha Loomis in his 1940 publication <a href="https://files.eric.ed.gov/fulltext/ED037335.pdf"> \'The Pythagorean Proposition\'</a> (a compilation of several hundred Pythagorean proofs, from which the vast majority of proofs on this site are appropriated) stated \'that no trigonometric proof is possible\'. However, when Jason Zimba, in 2009, provided a <a href="https://nanopdf.com/download/on-the-possibility-of-trigonometric-proofs-of-the-pythagorean_pdf">proof</a> that did not depend upon the above identity, Loomis <a href="https://www.cut-the-knot.org/pythagoras/TrigProof.shtml">stated</a> that \'I happily admit to being in the wrong.\'<p/></blockquote>
-        <strong>Proof</strong>: (Closely based on that presented by Jason Zimba). Recall the well-known addition formul${ki(
-          `\\text{\\ae}`
-        )}:
+        <strong>Proof</strong>: (Closely based on that presented by Jason Zimba). Recall the well-known addition formul&aelig;:
         ${kd(`  
         \\begin{aligned}
           \\sin(x-y) &= \\sin x \\cos y - \\cos x \\cos y \\\\
