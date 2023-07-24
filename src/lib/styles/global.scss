@@ -97,7 +97,7 @@ header {
 
 .fluids {
   header {
-    border-bottom: 5px solid var(--fluids-primary);
+    border-bottom: 0.2rem solid var(--fluids-primary);
   }
 }
 
@@ -111,26 +111,20 @@ main {
 .math {
   color: var(--math-primary);
   header {
-    border-bottom: 5px solid var(--math-primary);
+    border-bottom: 0.2rem solid var(--math-primary);
   }
   main {
     background-color: var(--math-white);
   }
-  // .linknav {
-  //   color: var(--math-primary);
-  // }
 }
 .fluids {
   color: var(--fluids-primary);
   header {
-    border-bottom: 5px solid var(--fluids-primary);
+    border-bottom: 0.2rem solid var(--fluids-primary);
   }
   main {
     background-color: var(--fluids-white);
   }
-  // .linknav {
-  //   color: var(--fluids-primary);
-  // }
 }
 
 .linknav {
