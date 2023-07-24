@@ -15,11 +15,13 @@
     {/if}
   </div>
   <!-- if is linked -->
-  {#if tm.headerRight[1]}
-    <h3>
-      <a href={tm.headerRight[2]}>{@html tm.headerRight[0]}</a>
-    </h3>
-  {:else}
-    <h3>{@html tm.headerRight[0]}</h3>
-  {/if}
+  <div class="right">
+    {#if tm.headerRight[1]}
+      <h3>
+        <a href={tm.headerRight[2]}>{@html tm.headerRight[0]}</a>
+      </h3>
+    {:else}
+      <h3>{@html tm.headerRight[0]}</h3>
+    {/if}
+  </div>
 </header>
