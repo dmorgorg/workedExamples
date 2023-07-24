@@ -11,10 +11,10 @@
   };
 </script>
 
-<div class="container">
+<div class="container {topMatter.theme}">
   <Header {topMatter} />
 
-  <main class={topMatter.theme}>
+  <main>
     {#each problems as problem}
       {#if typeof problem === "string"}
         {#if problem.length > 0}

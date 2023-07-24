@@ -97,6 +97,15 @@ main {
   padding: 1em;
   padding-bottom: 10rem;
 }
+
+.problem {
+  border-radius: 0.35rem;
+  margin: 1rem auto;
+  overflow-x: auto;
+  padding: 0.5rem 1rem;
+  background: white;
+}
+
 .math {
   color: var(--math-primary);
   header {
@@ -104,6 +113,9 @@ main {
   }
   main {
     background-color: var(--math-white);
+  }
+  .problem {
+    border: 0.1rem var(--math-primary) solid;
   }
 }
 .fluids {
@@ -113,6 +125,9 @@ main {
   }
   main {
     background-color: var(--fluids-white);
+  }
+  .problem {
+    border: 0.1rem var(--fluids-primary) solid;
   }
 }
 
@@ -150,14 +165,20 @@ main {
   }
 }
 
+h3.subsectionHeader {
+  margin: 1rem 0 0 0;
+  // margin-bottom: -0.35rem;
+  text-transform: capitalize;
+}
+
 // button {
 //   border: 1px solid black;
 // }
 
 // .math,
 // .fluids {
-//   letter-spacing: 0.05em;
-//   line-height: 1.4;
+// letter-spacing: 0.025em;
+// line-height: 1.2;
 
 //   button {
 //     background-color: var(--primary-grey);
@@ -166,10 +187,10 @@ main {
 //     }
 //   }
 
-//   .statement div ol {
-//     background: none;
-//     border: none;
-//   }
+// .statement div ol {
+//   background: none;
+//   border: none;
+// }
 // }
 
 // .fluids {
@@ -299,23 +320,13 @@ main {
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-// .problem {
-//   background: white;
-//   padding: 1em;
-// }
-
-// main {
-//   margin: inherit 1em;
-//   margin-bottom: 12rem;
-// }
-
-// @media (min-width: 512px) {
-//   main {
-//     padding: 1em 6em;
-//     font-size: 0.9rem;
-//     margin-bottom: 1em;
-//   }
-// }
+@media (min-width: 512px) {
+  main {
+    padding: 1em 3em;
+    font-size: 0.9rem;
+    margin-bottom: 1em;
+  }
+}
 // @media (min-width: 1024px) {
 //   main {
 //     padding: 1em 10em;
@@ -351,7 +362,7 @@ main {
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 .katex {
-  font-size: 100%;
+  font-size: 110%;
   padding: 0;
   margin: 0;
 }
@@ -368,11 +379,11 @@ main {
   margin: 0.5em 0;
 }
 
-// .centered-list,
-// .centered-block {
-//   display: flex;
-//   justify-content: center;
-// }
+.centered-list,
+.centered-block {
+  display: flex;
+  justify-content: center;
+}
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 

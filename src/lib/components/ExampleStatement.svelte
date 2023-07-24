@@ -11,15 +11,16 @@
 <style lang="scss">
   .statement {
     &::before {
-      position: relative;
-      font-size: 115%;
       font-weight: bold;
       counter-increment: problem-counter;
       content: "Example " counter(module-counter) "." counter(section-counter)
         "." counter(subsection-counter) "." counter(problem-counter) "  ";
     }
-  }
-  span {
-    margin-left: 1em;
+
+    span {
+      margin-left: 1em;
+      color: black;
+      font-size: 90%;
+    }
   }
 </style>

@@ -54,14 +54,4 @@
 </section>
 
 <style lang="scss">
-  section {
-    &.problem {
-      border: 1px #999 solid;
-      border-radius: 6px;
-      margin: 1.25em auto;
-      overflow-x: auto;
-      padding: 1em;
-      background: white;
-    }
-  }
 </style>
