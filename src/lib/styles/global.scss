@@ -6,9 +6,9 @@
 
   --strength-white: #eeeee8;
   --fluids-primary: #099;
-  --fluids-white: #f8ffff;
+  --fluids-white: #edefef;
   --math-primary: #080;
-  --math-white: #f8fff8;
+  --math-white: #edefed;
   --math-border: #ddf0dd;
   --main-grey: #aaa;
   --light-grey: #eee;
@@ -63,7 +63,7 @@ img {
 header {
   align-items: center;
   background: var(--primary-grey);
-  border-bottom: 5px solid black;
+  border-bottom: 0.2rem solid black;
   display: flex;
   justify-content: space-between;
   overflow-y: hidden;
