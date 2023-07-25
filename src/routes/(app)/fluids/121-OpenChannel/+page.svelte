@@ -9,6 +9,7 @@
     headerLeft: ["Fluids & Water Resources", true, "/fluids"],
     headerRight: ["12.1 Open Channel Flow", false],
   };
+  let levels = 4; // module-counter, section-counter, subsection-counter, problem-counter
 </script>
 
 <div class="container {topMatter.theme}">
@@ -22,7 +23,7 @@
           <SubsectionHeader subsectionHeader={problem} />
         {/if}
       {:else}
-        <Problem {problem} />
+        <Problem {problem} {levels} />
       {/if}
     {/each}
   </main>

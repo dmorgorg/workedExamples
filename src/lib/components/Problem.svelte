@@ -9,6 +9,7 @@
   import ExampleParts from "./ExampleParts.svelte";
   import ExampleAnswer from "./ExampleAnswer.svelte";
   export let problem;
+  export let levels = 3;
 
   let showHide = {
     displayAnswer: false,
@@ -21,7 +22,7 @@
 
 <section class="problem" transition:fade>
   {#if problem[0] === "proof"}
-    <ProofStatement {problem} />
+    <ProofStatement {problem} {levels} />
     <!-- show or hide solution parts or answer  -->
     <div class="show-hide-control">
       <ProofShowHideControl bind:showHide />
@@ -32,7 +33,7 @@
       </div>
     {/if}
   {:else if problem[0] === "example"}
-    <ExampleStatement {problem} />
+    <ExampleStatement {problem} {levels} />
     <!-- show or hide solution parts or answer  -->
     <div class="show-hide-control">
       <ExampleShowHideControl bind:showHide />
@@ -52,6 +53,3 @@
     </div>
   {/if}
 </section>
-
-<style lang="scss">
-</style>

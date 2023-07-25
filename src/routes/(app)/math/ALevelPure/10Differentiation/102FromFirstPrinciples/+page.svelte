@@ -13,7 +13,7 @@
     ],
     headerRight: ["10.2 From First Principles", false],
   };
-  // let tm = topMatter;
+  let levels; // module-counter, section-counter, problem-counter
 </script>
 
 <div class="container {topMatter.theme}">
@@ -27,7 +27,7 @@
           <SubsectionHeader subsectionHeader={problem} />
         {/if}
       {:else}
-        <Problem {problem} />
+        <Problem {problem} {levels} />
       {/if}
     {/each}
   </main>
@@ -38,6 +38,5 @@
     counter-set: none;
     counter-set: module-counter 10 section-counter 2 subsection-counter 1
       problem-counter 0;
-    /* background-color: blue; */
   }
 </style>

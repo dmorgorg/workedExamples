@@ -5,9 +5,11 @@
   --strength-primary: #880;
 
   --strength-white: #eeeee8;
-  --fluids-primary: #099;
+  --fluids-primary: #088;
+  --fluids-hover: #0bb;
   --fluids-white: #edefef;
   --math-primary: #080;
+  --math-hover: #0a0;
   --math-white: #edefed;
   --math-border: #ddf0dd;
   --main-grey: #aaa;
@@ -83,7 +85,7 @@ header {
   }
 
   .left {
-    margin-right: em;
+    margin-right: 2rem;
   }
   .right {
     text-align: right;
@@ -99,7 +101,7 @@ main {
 }
 
 .problem {
-  border-radius: 0.35rem;
+  border-radius: 0.2rem;
   margin: 1rem auto;
   overflow-x: auto;
   padding: 0.5rem 1rem;
@@ -109,9 +111,11 @@ main {
 .math {
   color: var(--math-primary);
   button {
-    border: 1px solid black;
-    color: white;
     background-color: var(--math-primary);
+
+    &:hover {
+      background-color: var(--math-hover);
+    }
   }
   header {
     border-bottom: 0.2rem solid var(--math-primary);
@@ -125,6 +129,13 @@ main {
 }
 .fluids {
   color: var(--fluids-primary);
+  button {
+    background-color: var(--fluids-primary);
+
+    &:hover {
+      background-color: var(--fluids-hover);
+    }
+  }
   header {
     border-bottom: 0.2rem solid var(--fluids-primary);
   }
@@ -170,6 +181,36 @@ main {
   }
 }
 
+.show-hide-control {
+  // border: 1px solid green;
+  display: flex;
+  justify-content: end;
+  align-self: center;
+  padding: 0;
+  padding-top: 0.5em;
+  // margin-right: -0.5rem;
+
+  button {
+    align-self: flex-end;
+    border-radius: 0.2rem;
+    border: 1px solid black;
+    color: white;
+    font-size: 0.8rem;
+    padding: 0.075rem;
+    margin-left: 1rem;
+    margin-right: -0.5rem;
+    min-width: 8em;
+
+    &:hover {
+      box-shadow: 0.1rem 0.1rem 0.125rem 0.125rem var(--primary-grey);
+      color: black;
+      cursor: pointer;
+      // font-weight: bold;
+      outline: 2px inset black;
+    }
+  }
+}
+
 h3.subsectionHeader {
   margin: 1rem 0 0 0;
   // margin-bottom: -0.35rem;
@@ -199,13 +240,6 @@ h3.subsectionHeader {
 // }
 
 // .fluids {
-//   color: var(--fluids-primary);
-
-//   button {
-//     &:hover {
-//       background-color: var(--fluids-primary);
-//     }
-//   }
 
 //   .part-answer {
 //     border: 1px solid var(--fluids-primary);
@@ -262,13 +296,6 @@ h3.subsectionHeader {
 //   }
 // }
 // .math {
-//   color: var(--math-primary);
-
-//   button {
-//     &:hover {
-//       background-color: var(--math-primary);
-//     }
-//   }
 
 //   .part-answer {
 //     border: 1px solid var(--math-primary);
@@ -326,18 +353,35 @@ h3.subsectionHeader {
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 @media (min-width: 512px) {
+  html {
+    font-size: 2.75vw;
+  }
   main {
-    padding: 1em 3em;
-    font-size: 0.9rem;
+    padding: 1em 4em;
+    // font-size: 0.9rem;
     margin-bottom: 1em;
   }
 }
-// @media (min-width: 1024px) {
-//   main {
-//     padding: 1em 10em;
-//     font-size: 0.7rem;
-//   }
-// }
+@media (min-width: 768px) {
+  html {
+    font-size: 2.5vw;
+  }
+  main {
+    padding: 1em 6em;
+    // font-size: 0.9rem;
+    margin-bottom: 1em;
+  }
+}
+@media (min-width: 1024px) {
+  html {
+    font-size: 2vw;
+  }
+  main {
+    padding: 1em 10em;
+    // font-size: 0.9rem;
+    margin-bottom: 1em;
+  }
+}
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -353,21 +397,8 @@ h3.subsectionHeader {
 //   }
 // }
 
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-// .fluids {
-//   color: var(--fluids-primary);
-
-//   button,
-//   .statement::before {
-//     color: var(--fluids-primary);
-//   }
-// }
-
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
 .katex {
-  font-size: 110%;
+  font-size: 1.05em;
   padding: 0;
   margin: 0;
 }

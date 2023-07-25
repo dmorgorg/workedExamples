@@ -1,63 +1,9 @@
 import { ki, kd } from "$lib/utilities";
 
 export default [
-  // section, or sub-type of course module
-  // "differentiation from first principles",
-  // "Differentiation from first principles",
+  // section, or sub-type of course module,
+  // "Rectangular Channel",
   "",
-
-  ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  // EXAMPLE TEMPLATE
-  //   [
-  // 	// type: worked example or proof
-  //     "example",
-
-  //     // main problem statement
-  //     `For discharge ${ki(
-  //       "Q"
-  //     )} in a rectangular channel, the velocity of flow under critical conditions is ${ki(
-  //       "1.900\\,\\mathsf{m/s}"
-  //     )}. If the channel is ${ki("4.50\\,\\mathsf{m}")} in width, determine ${ki(
-  //       "Q"
-  //     )}.`,
-
-  //     // solution parts
-  //     [
-  //       // part 1
-  //       [
-  //         `Determine the critical depth, ${ki("y_c")}`,
-
-  //         `Under critical conditions,
-  // 		${kd(`\\begin{aligned}
-  // 			v_c &= \\sqrt{g(A_c/T_c)} \\\\[15pt]
-  // 			\\Rightarrow v_c^2 &= g\\cdot\\frac{by_c}{b} \\\\[15pt]
-  // 			\\Rightarrow (1.900)^2 &= 9.81 y_c \\\\[15pt]
-  // 			\\Rightarrow y_c &= \\frac{(1.900)^2}{9.81} \\\\[15pt]
-  // 			&= 0.36799\\,\\mathsf{m}
-  // 		\\end{aligned}`)}`,
-
-  //         `${ki(`y_c = 0.36799\\,\\mathsf{m} `)}`,
-  //       ],
-
-  //       //part 2
-  //       [
-  //         `Determine ${ki("Q")}`,
-
-  //         `${kd(`\\begin{aligned}
-  // 			Q &= A_c\\cdot v_c \\\\[15pt]
-  // 			&= \\left(4.50\\cdot y_c \\right)\\cdot v_c \\\\[15pt]
-  // 			&= 4.50\\cdot 0.36799 \\cdot 1.900 \\\\[15pt]
-  // 			&= 3.1463\\,\\mathsf{m^3\\!/s}
-  // 		\\end{aligned}`)}`,
-
-  //         `${kd(` Q= 3.1463\\,\\mathsf{m^3\\!/s} `)}`,
-  //       ],
-  //     ],
-
-  //     //the big answer
-  //     `${kd(` Q= 3.15\\,\\mathsf{m^3\\!/s}`)}`,
-  //   ],
-  ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   // first problem
   [
@@ -192,7 +138,7 @@ export default [
     "example",
 
     // example statement
-    `Find, from first principles, that the derivative of ${ki(
+    `Find, from first principles, the derivative of ${ki(
       `y=\\displaystyle\\frac{1}{x}`
     )}.`,
 
@@ -228,7 +174,7 @@ export default [
     "example",
 
     // example statement
-    `Find the derivative of ${ki(`y=\\sqrt{x}`)} from first principles`,
+    `Find the derivative of ${ki(`y=\\sqrt{x}`)} from first principles.`,
 
     // wrapper for example parts
     [

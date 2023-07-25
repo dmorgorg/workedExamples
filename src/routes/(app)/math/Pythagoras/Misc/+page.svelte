@@ -10,6 +10,7 @@
     headerLeft: ["The Pythagorean Theorem", true, "/math/Pythagoras"],
     headerRight: [`1 Miscellaneous`, false],
   };
+  let levels = 2; // module-counter, section-counter, problem-counter
 </script>
 
 <div class="container {topMatter.theme}">
@@ -23,7 +24,7 @@
           <SubsectionHeader subsectionHeader={problem} />
         {/if}
       {:else}
-        <Problem {problem} />
+        <Problem {problem} {levels} />
       {/if}
     {/each}
   </main>

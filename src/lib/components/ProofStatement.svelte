@@ -1,30 +1,40 @@
 <script>
   export let problem;
+  export let levels;
 </script>
 
-<div class="statement">
-  <p>
+<article
+  class="statement"
+  class:two={levels == 2}
+  class:three={levels == 3}
+  class:four={levels == 4}
+>
+  <span>
     {@html problem[1]}
-  </p>
-</div>
+  </span>
+</article>
 
 <style lang="scss">
-  .statement {
+  .two::before {
+    font-weight: bold;
+    counter-increment: problem-counter;
+    content: "Proof " counter(chapter-counter) "." counter(problem-counter) ". ";
+  }
+  .three::before {
+    font-weight: bold;
+    counter-increment: problem-counter;
+    content: "Proof " counter(chapter-counter) "." counter(subChapter-counter)
+      "." counter(problem-counter) ". ";
+  }
+  .four::before {
+    font-weight: bold;
+    counter-increment: problem-counter;
+    content: "Proof " counter(chapter-counter) "." counter(subChapter-counter)
+      "." counter(subsection-counter) "." counter(problem-counter) ". ";
+  }
+  span {
+    margin-left: 1em;
     color: black;
-    // p {
-    //   margin: 0.5em;
-    // }
-
-    &::before {
-      // margin: 0.5em;
-      margin-top: -1em;
-      position: relative;
-      font-size: 115%;
-      font-weight: bold;
-      counter-increment: problem-counter;
-      // content: "Proof " counter(problem-counter) ". ";
-      content: "Proof " counter(chapter-counter) "." counter(subChapter-counter)
-        "." counter(problem-counter) ". ";
-    }
+    font-size: 90%;
   }
 </style>

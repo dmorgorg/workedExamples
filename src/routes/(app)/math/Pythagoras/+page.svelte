@@ -18,18 +18,18 @@
       </li>
       <ul>
         <li>
-          <a href="/math/Pythagoras/Misc"><h5>1&nbsp;Miscellaneous</h5></a>
+          <a href="/math/Pythagoras/Misc"><h5>1 Miscellaneous</h5></a>
 
           <a href="/math/Pythagoras/Trigonometric"
-            ><h5>2&nbsp;A&nbsp;Trigonometric&nbsp;Proof</h5></a
+            ><h5>2 A Trigonometric Proof</h5></a
           >
 
           <a href="/math/Pythagoras/Algebraic"
-            ><h5><s>3&nbsp;Algebraic&nbsp;Proofs</s></h5></a
+            ><h5><s>3 Algebraic Proofs</s></h5></a
           >
 
           <a href="/math/Pythagoras/Geometric"
-            ><h5><s>4&nbsp;Geometric&nbsp;Proofs</s></h5></a
+            ><h5><s>4 Geometric Proofs</s></h5></a
           >
         </li>
       </ul>
@@ -38,9 +38,7 @@
 </div>
 
 <style>
-  .homeLink {
-    margin-top: 2em;
-    text-decoration: none;
-    color: purple;
+  li a {
+    display: block;
   }
 </style>

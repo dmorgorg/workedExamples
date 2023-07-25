@@ -5,7 +5,7 @@
   const topMatter = {
     theme: "math",
     headerLeft: ["A-Level Pure Maths (Year 1)", true, "/math/ALevelPure"], // to help with navigation and color styling
-    headerRight: ["10 Differentiation", false], // statics, strength, fluids
+    headerRight: ["11 Integration", false], // statics, strength, fluids
   };
   let tm = topMatter;
 </script>
@@ -24,23 +24,23 @@
         <ul>
           <li>
             <a href="/math/ALevelPure/10Differentiation/101Gradient">
-              <h5><s>1 Integration</s></h5>
+              <h5><s>11.1 Integration</s></h5>
             </a>
 
             <a href="/math/ALevelPure/10Differentiation/102FromFirstPrinciples">
-              <h5><s>2 Integration of {@html `${ki(`\\bm{ x^n}`)}`}</s></h5>
+              <h5><s>11.2 Integration of {@html `${ki(`x^n`)}`} </s></h5>
             </a>
 
             <a href="/math/ALevelPure/10Differentiation/103PowersOfX">
-              <h5><s>3 Integration of Functions</s></h5>
+              <h5><s>11.3 Integration of Functions</s></h5>
             </a>
 
             <a href="/math/ALevelPure/10Differentiation/103PowersOfX">
-              <h5><s>4 Finding the Equation of Curves</s></h5>
+              <h5><s>11.4 Finding the Equation of Curves</s></h5>
             </a>
 
             <a href="/math/ALevelPure/10Differentiation/103PowersOfX">
-              <h5><s>5 Evaluation of Definite Integrals</s></h5>
+              <h5><s>11.5 Evaluation of Definite Integrals</s></h5>
             </a>
           </li>
         </ul>
@@ -48,3 +48,9 @@
     </ul>
   </main>
 </div>
+
+<style>
+  li a {
+    display: block;
+  }
+</style>

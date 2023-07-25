@@ -14,6 +14,7 @@
     ],
     headerRight: [`10.3 Powers of ${ki("x")}`, false],
   };
+  let levels = 3; // module-counter, section-counter, problem-counter
 </script>
 
 <div class="container {topMatter.theme}">
@@ -27,7 +28,7 @@
           <SubsectionHeader subsectionHeader={problem} />
         {/if}
       {:else}
-        <Problem {problem} />
+        <Problem {problem} {levels} />
       {/if}
     {/each}
   </main>

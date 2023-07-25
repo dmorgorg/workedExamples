@@ -30,25 +30,28 @@
 </div>
 
 <style lang="scss">
-  .show-hide-control {
-    // border: 1px solid green;
-    display: flex;
-    justify-content: end;
-    align-self: center;
-    padding: 0;
-    padding-top: 0.25em;
+  // .show-hide-control {
+  //   // border: 1px solid green;
+  //   display: flex;
+  //   justify-content: end;
+  //   align-self: center;
+  //   padding: 0;
+  //   padding-top: 0.5em;
+  //   margin-right: -0.5rem;
 
-    button {
-      font-size: 1em;
-      align-self: flex-end;
-      padding: 0.075rem;
-      margin-left: 1em;
-      margin-bottom: 1em;
-      min-width: 8em;
+  //   button {
+  //     font-size: 0.8rem;
+  //     align-self: flex-end;
+  //     border-radius: 0.2rem;
+  //     padding: 0.075rem;
+  //     margin-left: 1em;
+  //     // margin-bottom: 1em;
+  //     min-width: 8em;
 
-      &:hover {
-        color: white;
-      }
-    }
-  }
+  //     &:hover {
+  //       color: black;
+  //       background: pink;
+  //     }
+  //   }
+  // }
 </style>
