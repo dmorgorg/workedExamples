@@ -108,6 +108,11 @@ main {
 
 .math {
   color: var(--math-primary);
+  button {
+    border: 1px solid black;
+    color: white;
+    background-color: var(--math-primary);
+  }
   header {
     border-bottom: 0.2rem solid var(--math-primary);
   }
