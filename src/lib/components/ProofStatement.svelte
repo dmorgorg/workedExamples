@@ -18,19 +18,19 @@
   .two::before {
     font-weight: bold;
     counter-increment: problem-counter;
-    content: "Proof " counter(chapter-counter) "." counter(problem-counter) ". ";
+    content: "Proof " counter(section-counter) "." counter(problem-counter) ". ";
   }
   .three::before {
     font-weight: bold;
     counter-increment: problem-counter;
-    content: "Proof " counter(chapter-counter) "." counter(subChapter-counter)
+    content: "Proof " counter(section-counter) "." counter(subsection-counter)
       "." counter(problem-counter) ". ";
   }
   .four::before {
     font-weight: bold;
     counter-increment: problem-counter;
-    content: "Proof " counter(chapter-counter) "." counter(subChapter-counter)
-      "." counter(subsection-counter) "." counter(problem-counter) ". ";
+    content: "Proof " counter(section-counter) "." counter(subsection-counter)
+      "." counter(subsubsection-counter) "." counter(problem-counter) ". ";
   }
   span {
     margin-left: 1em;

@@ -12,9 +12,9 @@
       true,
       "/math/ALevelPure/10Differentiation",
     ],
-    headerRight: [`10.3 Powers of ${ki("x")}`, false],
+    headerRight: [`10.3 Powers of ${ki("\\bm x")}`, false],
   };
-  let levels = 3; // module-counter, section-counter, problem-counter
+  let levels = 3; // section-counter, subsection-counter, problem-counter
 </script>
 
 <div class="container {topMatter.theme}">
@@ -36,9 +36,8 @@
 
 <style>
   main {
-    counter-reset: subsection-counter;
-    /* counter-set: none; */
-    counter-set: module-counter 10 section-counter 3 subsection-counter 0
+    counter-set: none;
+    counter-set: section-counter 10 subsection-counter 3 subsubsection-counter 0
       problem-counter 0;
   }
 </style>

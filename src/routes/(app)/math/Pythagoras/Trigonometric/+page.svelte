@@ -33,6 +33,6 @@
 <style>
   main {
     counter-set: none;
-    counter-set: chapter-counter 2 subChapter-counter 1 problem-counter 0;
+    counter-set: section-counter 2 subsection-counter 1 problem-counter 0;
   }
 </style>
