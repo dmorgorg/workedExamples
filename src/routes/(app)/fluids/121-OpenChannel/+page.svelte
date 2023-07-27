@@ -1,6 +1,6 @@
 <script>
   import Header from "$lib/components/Header.svelte";
-  import SubsectionHeader from "$lib/components/SubsectionHeader.svelte";
+  import SubsubsectionHeader from "$lib/components/SubsubsectionHeader.svelte";
   import Problem from "$lib/components/Problem.svelte";
   import problems from "./problems";
 
@@ -20,7 +20,7 @@
       {#if typeof problem === "string"}
         {#if problem.length > 0}
           <!-- e.g. Rectangular Channel, Triangular Channel, ... -->
-          <SubsectionHeader subsectionHeader={problem} />
+          <SubsubsectionHeader subsubsectionHeader={problem} />
         {/if}
       {:else}
         <Problem {problem} {levels} />
@@ -32,7 +32,7 @@
 <style>
   .container {
     counter-set: none;
-    counter-set: module-counter 12 section-counter 1 subsection-counter 0
+    counter-set: section-counter 12 subsection-counter 1 subsubsection-counter 0
       problem-counter 0;
   }
 </style>

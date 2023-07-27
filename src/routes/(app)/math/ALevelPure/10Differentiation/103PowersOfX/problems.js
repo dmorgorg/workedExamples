@@ -5,59 +5,6 @@ export default [
   // "differentiation from first principles",
   "",
 
-  ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  // EXAMPLE TEMPLATE
-  //   [
-  // 	// type: worked example or proof
-  //     "example",
-
-  //     // main problem statement
-  //     `For discharge ${ki(
-  //       "Q"
-  //     )} in a rectangular channel, the velocity of flow under critical conditions is ${ki(
-  //       "1.900\\,\\mathsf{m/s}"
-  //     )}. If the channel is ${ki("4.50\\,\\mathsf{m}")} in width, determine ${ki(
-  //       "Q"
-  //     )}.`,
-
-  //     // solution parts
-  //     [
-  //       // part 1
-  //       [
-  //         `Determine the critical depth, ${ki("y_c")}`,
-
-  //         `Under critical conditions,
-  // 		${kd(`\\begin{aligned}
-  // 			v_c &= \\sqrt{g(A_c/T_c)} \\\\
-  // 			\\Rightarrow v_c^2 &= g\\cdot\\frac{by_c}{b} \\\\
-  // 			\\Rightarrow (1.900)^2 &= 9.81 y_c \\\\
-  // 			\\Rightarrow y_c &= \\frac{(1.900)^2}{9.81} \\\\
-  // 			&= 0.36799\\,\\mathsf{m}
-  // 		\\end{aligned}`)}`,
-
-  //         `${ki(`y_c = 0.36799\\,\\mathsf{m} `)}`,
-  //       ],
-
-  //       //part 2
-  //       [
-  //         `Determine ${ki("Q")}`,
-
-  //         `${kd(`\\begin{aligned}
-  // 			Q &= A_c\\cdot v_c \\\\
-  // 			&= \\left(4.50\\cdot y_c \\right)\\cdot v_c \\\\
-  // 			&= 4.50\\cdot 0.36799 \\cdot 1.900 \\\\
-  // 			&= 3.1463\\,\\mathsf{m^3\\!/s}
-  // 		\\end{aligned}`)}`,
-
-  //         `${kd(` Q= 3.1463\\,\\mathsf{m^3\\!/s} `)}`,
-  //       ],
-  //     ],
-
-  //     //the big answer
-  //     `${kd(` Q= 3.15\\,\\mathsf{m^3\\!/s}`)}`,
-  //   ],
-  ////////////////////////////////////////////////////////////////////////////////////////////////////////
-
   // PROBLEM 1
   [
     "example",

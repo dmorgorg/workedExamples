@@ -36,7 +36,7 @@
 <style>
   .container {
     counter-set: none;
-    counter-set: module-counter 10 section-counter 2 subsection-counter 1
+    counter-set: section-counter 10 subsection-counter 2 subsubsection-counter 1
       problem-counter 0;
   }
 </style>

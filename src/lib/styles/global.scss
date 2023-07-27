@@ -126,6 +126,9 @@ main {
   .problem {
     border: 0.1rem var(--math-primary) solid;
   }
+  li::before {
+    color: var(--math-primary);
+  }
 }
 .fluids {
   color: var(--fluids-primary);
@@ -145,13 +148,15 @@ main {
   .problem {
     border: 0.1rem var(--fluids-primary) solid;
   }
+  li::before {
+    color: var(--fluids-primary);
+  }
 }
 
 .linknav {
   ul {
     list-style: none;
     padding-left: 1rem;
-    // text-shadow: 0 0 1px rgba(0, 0, 0, 1);
 
     ul {
       margin-top: -1rem;
@@ -181,8 +186,34 @@ main {
   }
 }
 
+.problem-statement {
+  ol {
+    counter-reset: item;
+    list-style: none;
+    padding: 0;
+
+    li {
+      & + li {
+        margin-top: 0.5em;
+      }
+      &::before {
+        content: counter(item) ")";
+        counter-increment: item;
+        display: inline-block;
+        font-weight: bold;
+        padding-right: 1em;
+      }
+    }
+  }
+}
+
+.centered-list,
+.centered-block {
+  display: flex;
+  justify-content: center;
+}
+
 .show-hide-control {
-  // border: 1px solid green;
   display: flex;
   justify-content: end;
   align-self: center;
@@ -211,9 +242,8 @@ main {
   }
 }
 
-h3.subsectionHeader {
+h3.subsubsectionHeader {
   margin: 1rem 0 0 0;
-  // margin-bottom: -0.35rem;
   text-transform: capitalize;
 }
 
@@ -270,28 +300,9 @@ h3.subsectionHeader {
 //     // margin-top: 1em;
 
 //     ol {
-//       padding: 1em 3em;
-//       counter-reset: item;
-//       list-style: none;
-//       padding: 0;
+//
 
-//       li {
-//         & + li {
-//           margin-top: 1.5em;
-//         }
-//         // counter-increment: item;
-//         padding: 0;
-//         font-weight: normal;
-
-//         &::before {
-//           counter-increment: item;
-//           content: counter(item) ")";
-//           color: var(--fluids-primary);
-//           display: inline-block;
-//           font-size: 110%;
-//           padding-right: 1em;
-//         }
-//       }
+//
 //     }
 //   }
 // }
@@ -413,12 +424,6 @@ h3.subsectionHeader {
 /* Compensate by reducing space around display math */
 .katex-display {
   margin: 0.5em 0;
-}
-
-.centered-list,
-.centered-block {
-  display: flex;
-  justify-content: center;
 }
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

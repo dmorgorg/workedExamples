@@ -3,6 +3,7 @@
 
   import ExampleStatement from "./ExampleStatement.svelte";
   import ProofStatement from "./ProofStatement.svelte";
+  import Statement from "./Statement.svelte";
   import ProofShowHideControl from "./ProofShowHideControl.svelte";
   import ExampleShowHideControl from "./ExampleShowHideControl.svelte";
   import ProofParts from "./ProofParts.svelte";
@@ -21,9 +22,9 @@
 </script>
 
 <section class="problem" transition:fade>
-  {#if problem[0] === "proof"}
-    <ProofStatement {problem} {levels} />
-    <!-- show or hide solution parts or answer  -->
+  <Statement {problem} {levels} />
+  <!-- {#if problem[0] === "proof"}
+    <Statement {problem} {levels} />
     <div class="show-hide-control">
       <ProofShowHideControl bind:showHide />
     </div>
@@ -34,10 +35,8 @@
     {/if}
   {:else if problem[0] === "example"}
     <ExampleStatement {problem} {levels} />
-    <!-- show or hide solution parts or answer  -->
     <div class="show-hide-control">
       <ExampleShowHideControl bind:showHide />
-      <!-- check whether there are solutions provided -->
       {#if problem[1]}
         {#if displaySolution}
           <div transition:fade={{ duration: 1000 }}>
@@ -51,5 +50,5 @@
         {/if}
       {/if}
     </div>
-  {/if}
+  {/if} -->
 </section>

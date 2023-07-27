@@ -1,7 +1,7 @@
 <script>
   import { ki } from "$lib/utilities";
   import Header from "$lib/components/Header.svelte";
-  import SubsectionHeader from "$lib/components/SubsectionHeader.svelte";
+  import SubsubsectionHeader from "$lib/components/SubsubsectionHeader.svelte";
   import Problem from "$lib/components/Problem.svelte";
   import problems from "./problems";
 
@@ -21,7 +21,7 @@
       {#if typeof problem === "string"}
         {#if problem.length > 0}
           <!-- e.g. Rectangular Channel, Triangular Channel, ... -->
-          <SubsectionHeader subsectionHeader={problem} />
+          <SubsubsectionHeader subsubsectionHeader={problem} />
         {/if}
       {:else}
         <Problem {problem} {levels} />
@@ -33,6 +33,6 @@
 <style>
   main {
     counter-set: none;
-    counter-set: chapter-counter 1 subChapter-counter 1 problem-counter 0;
+    counter-set: section-counter 1 subsection-counter 1 problem-counter 0;
   }
 </style>
