@@ -26,10 +26,4 @@
   section {
     counter-reset: part-counter;
   }
-  /* .single {
-      margin: 1em 2em;
-    } */
-  .problem-parts {
-    /* background: yellow; */
-  }
 </style>

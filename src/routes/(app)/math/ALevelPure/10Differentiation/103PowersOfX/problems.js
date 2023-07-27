@@ -10,7 +10,7 @@ export default [
     "example",
 
     // example statement
-    `Find ${ki(`\\displaystyle\\frac{dy}{dx}`)} for each of the following:
+    `Find ${ki(`\\Large\\frac{dy}{dx}`)} for each of the following:
         <div class="centered-list">
             <ol>
                 <li>${ki(`y=x^2`)}</li>
