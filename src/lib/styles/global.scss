@@ -200,6 +200,7 @@ main {
         content: counter(item) ")";
         counter-increment: item;
         display: inline-block;
+        font-size: 1.1em;
         font-weight: bold;
         padding-right: 1em;
       }
