@@ -402,13 +402,6 @@ h3.subsubsectionHeader {
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-.katex {
-  font-size: 90%;
-  color: red;
-  // padding: 0;
-  // margin: 0;
-}
-
 .katex-display > .katex {
   white-space: normal;
 }
@@ -419,6 +412,13 @@ h3.subsubsectionHeader {
 /* Compensate by reducing space around display math */
 .katex-display {
   margin: 0.5em 0;
+}
+
+.katex {
+  font-size: 0.5em;
+  color: orange;
+  // padding: 0;
+  // margin: 0;
 }
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
