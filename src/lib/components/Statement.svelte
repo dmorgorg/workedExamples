@@ -11,6 +11,7 @@
   class:twoExample={levels == 2 && problem[0] === "example"}
   class:threeExample={levels == 3 && problem[0] === "example"}
   class:fourExample={levels == 4 && problem[0] === "example"}
+  class:formulae={problem[0] === "formulae"}
 >
   <span>
     {@html problem[1]}
@@ -21,6 +22,7 @@
   .problem-statement::before {
     font-weight: bold;
     counter-increment: problem-counter;
+    margin-right: 0.5em;
   }
   .twoProof::before {
     content: "Proof " counter(section-counter) "." counter(problem-counter) ". ";
@@ -45,8 +47,12 @@
     content: "Example " counter(section-counter) "." counter(subsection-counter)
       "." counter(subsubsection-counter) "." counter(problem-counter) ". ";
   }
+  .formulae::before {
+    display: flex;
+    justify-content: center;
+    content: "Useful Formulae: ";
+  }
   span {
-    margin-left: 1em;
     color: black;
     font-size: 90%;
   }

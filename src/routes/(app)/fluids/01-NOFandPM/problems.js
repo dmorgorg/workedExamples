@@ -2,11 +2,11 @@ import { ki, kd } from "$lib/utilities";
 
 export default [
   // section, or sub-type of course module
-  "rectangular channel",
+  "",
 
   // first problem
   [
-    "example",
+    "formulae",
 
     // problem statement
     `A rectangular channel has a width of ${ki(
@@ -121,14 +121,10 @@ export default [
     ],
 
     // problem answer
-    `${kd(`
-		\\begin{aligned}
-			v_{(0.850\\,\\mathsf{m})} &= 1.412\\, \\mathsf{m/s} \\\\
-			Q_{(1.700\\,\\mathsf{m})} &= 12.81\\, \\mathsf{m^3/s} \\\\
-			v_{(1.700\\,\\mathsf{m})} &= 1.883\\, \\mathsf{m/s} 
-		\\end{aligned}
-	`)}`,
+    ``,
   ],
+
+  "Nature of Fluids",
 
   // PROBLEM 2
 
@@ -205,6 +201,8 @@ export default [
 		E=1.915 \\,\\mathsf{m},\\quad N_F = 0.566\\lt 1\\:(\\textsf{Flow is sub-critical})
 	`)}`,
   ],
+
+  "Pressure Measurement",
 
   [
     "example",

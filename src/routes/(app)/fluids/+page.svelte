@@ -18,8 +18,15 @@
         <h4>Fluids & Water Resources</h4>
         <ul>
           <li>
+            <a href="/fluids/01-NOFandPM"
+              ><h5>1 The Nature of Fluids & Pressure Measurement</h5></a
+            >
+          </li>
+          <li>
             <a href="/fluids/121-OpenChannel"><h5>12.1 Open Channel Flow</h5></a
             >
+          </li>
+          <li>
             <a href="/fluids/122-OpenChannel"
               ><h5><s>12.2 Open Channel Flow (2)</s></h5></a
             >
