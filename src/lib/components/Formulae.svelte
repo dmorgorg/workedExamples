@@ -7,15 +7,7 @@
   export let problem;
 
   $: displaySolution = showHide.displaySolution;
-  //   $: displayAnswer = showHide.displayAnswer;
 </script>
-
-<!-- <div
-  class:table-title={problem[0] === "table"}
-  class:formulae-title={problem[0] === "formulae"}
->
-  <span class="content">{@html problem[1]}</span>
-</div> -->
 
 <div class="skinny">
   {#if problem[0] === "table"}
@@ -27,8 +19,10 @@
   {/if}
   <ShowHideControl {problem} bind:showHide />
 </div>
-{#if displaySolution}
+{#if displaySolution && problem[0] === "table"}
   <div transition:fade class="content">{@html problem[2]}</div>
+{:else if displaySolution && problem[0] === "formulae"}
+  <div transition:fade class="content">{@html problem[1]}</div>
 {/if}
 
 <style lang="scss">
