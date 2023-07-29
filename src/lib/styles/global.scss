@@ -186,24 +186,23 @@ main {
   }
 }
 
-.problem-statement {
-  ol {
-    counter-reset: item;
-    list-style: none;
-    padding: 0;
+ol {
+  counter-reset: item;
+  list-style: none;
+  padding: 0;
 
-    li {
-      & + li {
-        margin-top: 0.5em;
-      }
-      &::before {
-        content: counter(item) ")";
-        counter-increment: item;
-        display: inline-block;
-        font-size: 1.1em;
-        font-weight: bold;
-        padding-right: 1em;
-      }
+  li {
+    position: relative;
+    counter-increment: item;
+    & + li {
+      margin-top: 0.5em;
+    }
+    &::before {
+      content: counter(item) ". ";
+      display: inline-block;
+      font-size: 1em;
+      position: absolute;
+      left: -1.25em;
     }
   }
 }

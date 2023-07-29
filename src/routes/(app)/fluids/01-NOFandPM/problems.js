@@ -8,120 +8,86 @@ export default [
   [
     "formulae",
 
-    // problem statement
-    `A rectangular channel has a width of ${ki(
-      "4.00 \\, \\mathsf{m}"
-    )} and a slope of ${ki("0.1\\%")}. For a discharge of ${ki(
-      "4.80 \\, \\mathsf{m^3\\!/s}"
-    )}, the depth is measured to be ${ki(
-      `850\\,\\mathsf{mm}`
-    )}. Determine the average flow velocity for these conditions.Then find the average flow velocity ${ki(
-      "v"
-    )} and the discharge ${ki("Q")} when the depth is ${ki(
-      "1.700\\,\\mathsf{m}"
-    )}.`,
+    // formulae list
+    `${kd(`
+      \\begin{aligned}
+        \\\\
+        \\textsf{Pressure:} \\quad P &= \\frac{F}{A} \\quad \\left(= \\frac{\\textsf{force}}{\\textsf{area}}\\right) \\\\\\\\
+        \\textsf{Density:} \\quad \\rho \\textsf{ (rho)} &= \\frac{m}{V} \\quad \\left(= \\frac{\\textsf{mass}}{\\textsf{volume}}\\right) \\\\\\\\
+        \\textsf{Specific Weight:} \\quad \\gamma \\textsf{ (gamma)} &= \\frac{w}{V} \\quad \\left(= \\frac{\\textsf{weight}}{\\textsf{volume}}\\right) \\\\\\\\
+        \\gamma &= \\rho{}g \\\\\\\
+        \\textsf{Specific Gravity:} \\quad  \\textsf{sg} &= \\frac{\\rho_s}{\\rho_{w@4\\degree\\! C}} \\quad \\small\\left(= \\frac{\\textsf{density of substance}}{\\textsf{density of water at } 4\\degree\\! C}\\right) \\\\\\\\
+        &= \\frac{\\gamma_s}{\\gamma_{w@4\\degree\\! C}} \\quad \\small\\left(= \\frac{\\textsf{spec.wt of substance}}{\\textsf{spec.wt of water at } 4\\degree\\! C}\\right) \\\\\\\\
+        p_{abs} &= p_{atm} + p_{gauge} \\\\\\\\
+        \\Delta_{p} &= \\gamma h        
+      \\end{aligned}
+		`)}
+    <p>&nbsp;</p>
+    <ol class="width60">
+    <li>Pressure acts uniformly in all directions on a small volume of liquid</li>
+    <li>Pressure acts perpendicular to the solid boundaries that contain a fluid.</li></ol>`,
+  ],
 
-    // wrapper for problem parts
-    [
-      // problem part
-      [
-        // problem part statement
-        `Find ${ki("\\large v_{(0.850\\,\\mathsf{m})} ")}`,
+  [
+    "table",
 
-        // problem part solution
-        `Calculate the cross-sectional area of the channel:
-		${kd(`
-			\\begin{aligned}
-				A &= \\textsf{base}\\times\\textsf{depth} \\\\
-				&= 4.00\\,\\mathsf{m}\\times 0.850\\,\\mathsf{m} \\\\
-				&= 3.4000\\,\\mathsf{m^2}
-			\\end{aligned}`)}
-		Calculate the velocity:
-		${kd(`
-			\\begin{aligned} 
-				v &= Q/A \\\\ 
-				&= \\frac{4.80\\,\\mathsf{m^3\\!/s}}{3.4000\\,\\mathsf{m^2}} \\\\ 
-				&= 1.4118\\,\\mathsf{m/s} 
-			\\end{aligned}`)}`,
-        // problem part answer
-        `${kd(`{\\large v_{(0.850\\,\\mathsf{m})}} = 1.4118\\,\\mathsf{m/s}`)}`,
-      ],
+    "Properties of Water",
 
-      // second problem part
-      [
-        `Find ${ki("n")}.`,
+    // formulae list
+    `${kd(`
+      \\begin{array}{cccc}
+      \\\\
+      & \\textsf{Specific} & & \\textsf{Dynamic} \\\\
+      \\textsf{Temperature} & \\textsf{Weight} & \\textsf{Density} & \\textsf{Viscosity} \\\\
+      \\degree\\! C & \\mathsf{(kN/m^3)} & \\mathsf{(kg/m^3)} & \\mathsf{(Pa\\cdot s)} \\\\\\\\
+       0 & 9.81 & 1000 & 1.75 \\times 10^{-3} \\\\
+       5 & 9.81 & 1000 & 1.52 \\times 10^{-3} \\\\ 
+			10 & 9.81 & 1000 & 1.30 \\times 10^{-3} \\\\ 
+			15 & 9.81 & 1000 & 1.15 \\times 10^{-3} \\\\ 
+			20 & 9.79 & 998 & 1.02 \\times 10^{-3} \\\\ 
+			25 & 9.78 & 997 & 8.91 \\times 10^{-4} \\\\ 
+			30 & 9.77 & 996 & 9.00 \\times 10^{-4} \\\\ 
+			35 & 9.75 & 994 & 7.18 \\times 10^{-4} \\\\ 
+			40 & 9.73 & 992 & 6.51 \\times 10^{-4} \\\\ 
+			45 & 9.71 & 990 & 5.94 \\times 10^{-4} \\\\ 
+			50 & 9.69 & 988 & 5.41 \\times 10^{-4} \\\\ 
+			55 & 9.67 & 986 & 4.98 \\times 10^{-4} \\\\ 
+			60 & 9.65 & 984 & 4.60 \\times 10^{-4} \\\\ 
+			65 & 9.62 & 981 & 4.31 \\times 10^{-4} \\\\ 
+			70 & 9.59 & 978 & 4.02 \\times 10^{-4} \\\\ 
+			75 & 9.56 & 975 & 3.73 \\times 10^{-4} \\\\ 
+			80 & 9.53 & 971 & 3.50 \\times 10^{-4} \\\\ 
+			85 & 9.50 & 968 & 3.30 \\times 10^{-4} \\\\ 
+			90 & 9.47 & 965 & 3.11 \\times 10^{-4} \\\\ 
+			95 & 9.44 & 962 & 2.92 \\times 10^{-4} \\\\ 
+			100 & 9.40 & 958 & 2.82 \\times 10^{-4} \\\\ 
+      \\end{array}
+		`)}
+    `,
+  ],
+  [
+    "table",
 
-        `Calculate the length of the wetted perimeter, ${ki("P")}:
-		${kd(`
-			\\begin{aligned}                    
-				P &= 4.00\\textsf{ m}+2\\times0.850\\textsf{ m} \\\\
-				&= 5.7000\\,\\mathsf{m}
-			\\end{aligned}`)}
-		And now the value of the hydraulic radius, ${ki("R")}:
-		${kd(`
-			\\begin{aligned}
-				R &= A/P \\\\
-				&= \\frac {3.4000\\,\\mathsf{m^2}}{5.7000\\,\\mathsf{m}} \\\\
-				&= 0.59649\\,\\mathsf{m} 
-			\\end{aligned}`)}
-		Rearrange Manning's Formula to isolate ${ki("n")}:
-		${kd(`
-			\\begin{aligned}
-				Q &= \\frac 1n AR^{2/3} S^{1/2} \\\\
-				\\Rightarrow  n &= \\frac {AR^{2/3} S^{1/2}}{Q} \\\\
-				&= \\frac{(3.4000)(0.59649)^{2/3}(0.001)^{1/2}}{4.80} \\\\
-				&= 0.015872
-			\\end{aligned}
-		`)}`,
+    "Properties of Common Liquids",
 
-        `${kd(`n=0.015872`)}`,
-      ],
-
-      // third problem part
-      [
-        `Find ${ki("\\large v_{(1.700\\,\\mathsf{m})} ")}`,
-
-        `${kd(`
-			\\begin{aligned}
-				A &= 4.00\\,\\mathsf{m} \\times 1.700\\,\\mathsf{m} \\\\
-				&= 6.8000\\,\\mathsf{m^2} \\\\\\\\
-				WP &= 4.00\\,\\mathsf{m}+2(1.700\\,\\mathsf{m}) \\\\
-				&= 7.4000\\,\\mathsf{m}\\\\\\\\
-				R &= A/P \\\\
-				&= \\frac {6.8000\\,\\mathsf{m^2}}{7.4000\\,\\mathsf{m}} \\\\
-				&= 0.91892\\,\\mathsf{m} \\\\\\\\
-				v &= \\frac 1n R^{2/3} S^{1/2} \\\\
-				&= \\frac 1{0.015872} (0.91892)^{2/3} (0.001)^{1/2} \\\\
-				&= 1.8832\\,\\mathsf{m/s}
-			\\end{aligned}
-		`)}`,
-
-        `${kd(`
-					{\\large v_{(1.700\\,\\mathsf{m})}} = 1.8832\\,\\mathsf{m/s}
-				`)}`,
-      ],
-
-      [
-        `Find ${ki("\\large Q_{(1.700\\,\\mathsf{m})} ")}`,
-
-        `${kd(`
-			\\begin{aligned}
-				Q &= Av \\\\
-				&= 6.8000\\,\\mathsf{m^2}\\times 1.8832\\,\\mathsf{m/s} \\\\
-				&= 12.805\\,\\mathsf{m^3/s}
-			\\end{aligned}
-		`)}`,
-
-        `${kd(`
-			{\\large Q_{(1.700\\,\\mathsf{m})}} = 12.805\\,\\mathsf{m^3/s}
-		`)}`,
-      ],
-
-      // end of problem parts wrapper
-    ],
-
-    // problem answer
-    ``,
+    // formulae list
+    `${kd(`
+      \\begin{aligned}
+        \\\\
+        \\textsf{Pressure:} \\quad P &= \\frac{F}{A} \\quad \\left(= \\frac{\\textsf{force}}{\\textsf{area}}\\right) \\\\\\\\
+        \\textsf{Density:} \\quad \\rho \\textsf{ (rho)} &= \\frac{m}{V} \\quad \\left(= \\frac{\\textsf{mass}}{\\textsf{volume}}\\right) \\\\\\\\
+        \\textsf{Specific Weight:} \\quad \\gamma \\textsf{ (gamma)} &= \\frac{w}{V} \\quad \\left(= \\frac{\\textsf{weight}}{\\textsf{volume}}\\right) \\\\\\\\
+        \\gamma &= \\rho{}g \\\\\\\
+        \\textsf{Specific Gravity:} \\quad  \\textsf{sg} &= \\frac{\\rho_s}{\\rho_{w@4\\degree\\! C}} \\quad \\small\\left(= \\frac{\\textsf{density of substance}}{\\textsf{density of water at } 4\\degree\\! C}\\right) \\\\\\\\
+        &= \\frac{\\gamma_s}{\\gamma_{w@4\\degree\\! C}} \\quad \\small\\left(= \\frac{\\textsf{spec.wt of substance}}{\\textsf{spec.wt of water at } 4\\degree\\! C}\\right) \\\\\\\\
+        p_{abs} &= p_{atm} + p_{gauge} \\\\\\\\
+        \\Delta_{p} &= \\gamma h        
+      \\end{aligned}
+		`)}
+    <p>&nbsp;</p>
+    <ol class="width60">
+    <li>Pressure acts uniformly in all directions on a small volume of liquid</li>
+    <li>Pressure acts perpendicular to the solid boundaries that contain a fluid.</li></ol>`,
   ],
 
   "Nature of Fluids",
@@ -208,7 +174,7 @@ export default [
     "example",
 
     `A rectangular flume is built out of wood ${ki(
-      "(n=0.012)"
+      "{(n=0.012)}"
     )} and has a base width of ${ki("1.250\\,\\mathsf{m}")}. 
         The flume has a longitudinal slope of ${ki(
           "0.14\\%"

@@ -37,5 +37,19 @@
         Show Proof
       {/if}
     </button>
+  {:else if problem[0] === "formulae" || problem[0] === "table"}
+    <button class="inline" on:click={toggleSolution}>
+      {#if displaySolution}
+        Hide
+      {:else}
+        Show
+      {/if}
+    </button>
   {/if}
 </div>
+
+<!-- <style>
+  button.inline {
+    display: inline;
+  }
+</style> -->

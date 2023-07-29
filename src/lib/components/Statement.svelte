@@ -11,7 +11,6 @@
   class:twoExample={levels == 2 && problem[0] === "example"}
   class:threeExample={levels == 3 && problem[0] === "example"}
   class:fourExample={levels == 4 && problem[0] === "example"}
-  class:formulae={problem[0] === "formulae"}
 >
   <span>
     {@html problem[1]}
@@ -47,11 +46,7 @@
     content: "Example " counter(section-counter) "." counter(subsection-counter)
       "." counter(subsubsection-counter) "." counter(problem-counter) ". ";
   }
-  .formulae::before {
-    display: flex;
-    justify-content: center;
-    content: "Useful Formulae: ";
-  }
+
   span {
     color: black;
     font-size: 90%;
