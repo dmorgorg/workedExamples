@@ -15,43 +15,47 @@
 <div class="show-hide-control">
   <button on:click={toggleSolution}>
     {#if displaySolution}
-      Hide Solution
+      <div class="hide-part-solution" />
     {:else}
-      Show Solution
+      <div class="show-part-solution" />
     {/if}
   </button>
   <button on:click={toggleAnswer}>
     {#if displayAnswer}
-      Hide Answer
+      <div class="hide-part-answer" />
     {:else}
-      Check Answer
+      <div class="check-part-answer" />
     {/if}
   </button>
 </div>
 
 <style lang="scss">
-  // .show-hide-control {
-  //   // border: 1px solid green;
-  //   display: flex;
-  //   justify-content: end;
-  //   align-self: center;
-  //   padding: 0;
-  //   padding-top: 0.5em;
-  //   margin-right: -0.5rem;
+  .show-hide-control {
+    display: flex;
+    justify-content: end;
+    align-self: center;
+    padding: 0;
 
-  //   button {
-  //     font-size: 0.8rem;
-  //     align-self: flex-end;
-  //     border-radius: 0.2rem;
-  //     padding: 0.075rem;
-  //     margin-left: 1em;
-  //     // margin-bottom: 1em;
-  //     min-width: 8em;
+    button {
+      font-size: 0.7rem;
+      align-self: flex-end;
+      border-radius: 0.2rem;
+      padding: 0.075rem 1rem;
+      margin-left: 1.5em;
+      min-width: 9rem;
 
-  //     &:hover {
-  //       color: black;
-  //       background: pink;
-  //     }
-  //   }
-  // }
+      div.check-part-answer::before {
+        content: "Check Part " counter(part-counter) " Answer";
+      }
+      div.hide-part-answer::before {
+        content: "Hide Part " counter(part-counter) " Answer";
+      }
+      div.show-part-solution::before {
+        content: "Show Part " counter(part-counter) " Solution";
+      }
+      div.hide-part-solution::before {
+        content: "Hide Part " counter(part-counter) " Solution";
+      }
+    }
+  }
 </style>

@@ -217,7 +217,7 @@ export default [
   [
     "example",
 
-    `An open-topped flat-bottomed cylindrical vessel contains   ${ki(
+    `An flat-bottomed cylindrical vessel, open at the top, contains   ${ki(
       `360\\,\\textsf{L}`
     )} of water at ${ki(
       `20\\degree\\!\\mathsf{C}`
