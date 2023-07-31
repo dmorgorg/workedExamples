@@ -30,7 +30,6 @@
         <Parts {problem} />
       </div>
     {/if}
-
     {#if displayAnswer}
       <div transition:fade>
         <ExampleAnswer {problem} />

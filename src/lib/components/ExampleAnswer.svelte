@@ -2,14 +2,25 @@
   export let problem;
 </script>
 
-<div class="answer">
-  <div>{@html problem[3]}</div>
-</div>
+<div class="answer-title" />
+<div class="answer">{@html problem[3]}</div>
 
-<style>
-  div {
+<style lang="scss">
+  .answer-title {
     margin: 0;
+    margin-top: 1rem;
     padding: 0;
     font-size: 95%;
+    &::before {
+      content: "Answer";
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+  }
+  .answer {
+    color: black;
+    font-size: 1rem;
+    padding: 0.125rem;
+    margin: 0.125rem 0;
   }
 </style>

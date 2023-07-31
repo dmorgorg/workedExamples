@@ -36,18 +36,19 @@
     font-weight: bold;
     content: "Formul\0000e6";
     margin-right: 0.5rem;
-    text-decoration: underline;
+    // text-decoration: underline;
   }
   .table-title::before {
     font-weight: bold;
-    content: "Table: ";
+    content: "Table:";
     // margin-right: 0.5rem;
-    text-decoration: underline;
+    // text-decoration: underline;
   }
   span.content {
-    text-decoration: underline;
-    color: inherit;
+    // text-decoration: underline;
+    color: black;
     font-weight: bold;
+    margin-left: 0.5rem;
   }
   .content {
     color: black;

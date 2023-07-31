@@ -9,23 +9,33 @@ export default [
     "formulae",
 
     // formulae list
-    `${kd(`
+    `<br/>Input values and answers are specified to 3 significant digits (unless the first non-zero digit is a 1, in which case 4 significant digits are used). Interim calculations are accurate to 5 significant digits to prevent the accumulation of rounding errors.
+    
+    ${kd(`
       \\begin{aligned}
         \\\\
-        \\textsf{Pressure:} \\quad P &= \\frac{F}{A} \\quad \\left(= \\frac{\\textsf{force}}{\\textsf{area}}\\right) \\\\\\\\
-        \\textsf{Density:} \\quad \\rho \\textsf{ (rho)} &= \\frac{m}{V} \\quad \\left(= \\frac{\\textsf{mass}}{\\textsf{volume}}\\right) \\\\\\\\
-        \\textsf{Specific Weight:} \\quad \\gamma \\textsf{ (gamma)} &= \\frac{w}{V} \\quad \\left(= \\frac{\\textsf{weight}}{\\textsf{volume}}\\right) \\\\\\\\
-        \\gamma &= \\rho{}g \\\\\\\
-        \\textsf{Specific Gravity:} \\quad  \\textsf{sg} &= \\frac{\\rho_s}{\\rho_{w@4\\degree\\! C}} \\quad \\small\\left(= \\frac{\\textsf{density of substance}}{\\textsf{density of water at } 4\\degree\\! C}\\right) \\\\\\\\
-        &= \\frac{\\gamma_s}{\\gamma_{w@4\\degree\\! C}} \\quad \\small\\left(= \\frac{\\textsf{spec.wt of substance}}{\\textsf{spec.wt of water at } 4\\degree\\! C}\\right) \\\\\\\\
-        p_{abs} &= p_{atm} + p_{gauge} \\\\\\\\
-        \\Delta_{p} &= \\gamma h        
+        1\\,\\mathsf{m^3} &= 1000\\,\\text{L} \\quad (\\textsf{litres}) \\\\
+        1\\,\\mathsf{kg\\cdot m/s^2} &= 1\\,\\text{N} \\quad (\\textsf{Newton}) \\\\
+        1\\,\\mathsf{N/m^2} &= 1\\,\\text{Pa} \\quad (\\textsf{Pascal}) \\\\
+        1\\,\\mathsf{kN/m^2} &= 1\\,\\text{kPa} \\quad (\\textsf{kiloascal}) \\\\
+        1\\,\\mathsf{N/mm^2} &= 1\\,\\text{MPa} \\quad (\\textsf{megapascal}) \\\\
+        \\textsf{Pressure:} \\quad P &= \\frac{F}{A} \\quad \\left(= \\frac{\\textsf{force}}{\\textsf{area}}\\right) \\\\
+        \\textsf{Density:} \\quad \\rho \\textsf{ (rho)} &= \\frac{m}{V} \\quad \\left(= \\frac{\\textsf{mass}}{\\textsf{volume}}\\right) \\\\
+        \\textsf{Specific Weight:} \\quad \\gamma \\textsf{ (gamma)} &= \\frac{w}{V} \\quad \\left(= \\frac{\\textsf{weight}}{\\textsf{volume}}\\right) \\\\
+        \\gamma &= \\rho{}g \\\\
+        \\textsf{Specific Gravity:} \\quad  \\textsf{sg} &= \\frac{\\rho_s}{\\rho_{w@4\\degree\\! C}} \\quad \\small\\left(= \\frac{\\textsf{density of substance}}{\\textsf{density of water at } 4\\degree\\! C}\\right) \\\\
+        &= \\frac{\\gamma_s}{\\gamma_{w@4\\degree\\! C}} \\quad \\small\\left(= \\frac{\\textsf{spec.wt of substance}}{\\textsf{spec.wt of water at } 4\\degree\\! C}\\right) \\\\
+        p_{abs} &= p_{atm} + p_{gauge} \\\\
+        \\Delta p &= \\gamma h        
       \\end{aligned}
 		`)}
     <p>&nbsp;</p>
-    <ol class="width60">
-    <li>Pressure acts uniformly in all directions on a small volume of liquid</li>
-    <li>Pressure acts perpendicular to the solid boundaries that contain a fluid.</li></ol>`,
+    <div class="width60">Pascal's Laws:
+    <ol>
+    <li>Pressure acts uniformly in all directions on a small volume of liquid.</li>
+    <li>Pressure acts perpendicular to the solid boundaries that contain a fluid.</li>
+    </ol>
+    </div>`,
   ],
 
   [
@@ -72,110 +82,263 @@ export default [
 
     // formulae list
     `${kd(`
+    \\textsf{(All Liquids at 25\\degree C and 101 kpa)} \\\\
     \\begin{array}{rcccc}
     \\\\
-    & \\text{Specific} & \\text{Specific} &  & \\text{Dynamic }  \\\\
-    \\text{Liquid} & \\text{Gravity} & \\text{Weight} & \\text{Density} & \\text{Viscosity} \\\\
+    & \\textsf{Specific} & \\textsf{Specific} &  & \\textsf{Dynamic }  \\\\
+    \\textsf{Liquid} & \\textsf{Gravity} & \\textsf{Weight} & \\textsf{Density} & \\textsf{Viscosity} \\\\
     & &	 \\gamma & \\rho & \\eta \\\\
     & & \\mathsf{(kN/m^3)} & \\mathsf{(kg/m^3)} & \\mathsf{(Pa\\cdot s)} \\\\\\\\
 
     \\textsf{Acetone}           & 0.787 	& 7.72    & 787   & 3.16 \\times 10^{-4} \\\\    
     \\textsf{Alcohol, Ethyl} 		& 0.789 	& 7.74 		& 789		& 5.60 \\times 10^{-4} \\\\
     \\textsf{Alcohol, Propyl} 	& 0.802 	& 7.87 		& 802		& 1.92 \\times 10^{-3} \\\\
-			\\textsf{Benzene} 				& 0.876 	& 8.59 		& 876		& 6.03 \\times 10^{-4} \\\\
-			\\textsf{Carbon Tetrachloride} & 1.590 & 15.60 & 1590	& 9.10 \\times 10^{-4} \\\\
-			\\textsf{Castor Oil} 			& 0.960 	& 9.42 		& 960		& 6.51 \\times 10^{-1} \\\\
-			\\textsf{Ethylene Glycol} & 1.100 	& 10.79 	& 1100	& 1.62 \\times 10^{-2} \\\\
-			\\textsf{Gasoline} 				& 0.68 		& 6.67 		& 680		& 2.87 \\times 10^{-4} \\\\
-			\\textsf{Glycerine} 			& 1.258 	& 12.34 	& 1258	& 9.60 \\times 10^{-1} \\\\
-			\\textsf{Kerosene} 				& 0.823 	& 8.07 		& 823		& 1.64 \\times 10^{-3} \\\\
-			\\textsf{Linseed Oil} 		& 0.930 	& 9.12 		& 930		& 3.31 \\times 10^{-2} \\\\
-			\\textsf{Mercury} 				& 13.54 	& 132.8 	& 13540	& 1.53 \\times 10^{-3} \\\\
-			\\textsf{Propane} 				& 0.495 	& 4.86 		& 495		& 1.10 \\times 10^{-4} \\\\
-			\\textsf{Seawater} 				& 1.030 	& 10.10 	& 1030	& 1.03 \\times 10^{-3} \\\\
-			\\textsf{Turpentine} 			& 0.870 	& 8.53 		& 870		& 1.37 \\times 10^{-3} \\\\
-			\\textsf{Fuel Oil, medium}& 0.852 	& 8.36 		& 852		& 2.99 \\times 10^{-3} \\\\
-			\\textsf{Fuel Oil, heavy} & 0.906 	& 8.89 		& 906		& 1.07 \\times 10^{-1} \\\\
+    \\textsf{Benzene} 				  & 0.876 	& 8.59 		& 876		& 6.03 \\times 10^{-4} \\\\
+    \\textsf{Carbon Tetrachloride} & 1.590 & 15.60   & 1590	& 9.10 \\times 10^{-4} \\\\
+    \\textsf{Castor Oil} 			  & 0.960 	& 9.42 		& 960		& 6.51 \\times 10^{-1} \\\\
+    \\textsf{Ethylene Glycol}   & 1.100 	& 10.79 	& 1100	& 1.62 \\times 10^{-2} \\\\
+    \\textsf{Gasoline} 				  & 0.68 		& 6.67 		& 680		& 2.87 \\times 10^{-4} \\\\
+    \\textsf{Glycerine} 			  & 1.258 	& 12.34 	& 1258	& 9.60 \\times 10^{-1} \\\\
+    \\textsf{Kerosene} 				  & 0.823 	& 8.07 		& 823		& 1.64 \\times 10^{-3} \\\\
+    \\textsf{Linseed Oil} 		  & 0.930 	& 9.12 		& 930		& 3.31 \\times 10^{-2} \\\\
+    \\textsf{Mercury} 				  & 13.54 	& 132.8 	& 13540	& 1.53 \\times 10^{-3} \\\\
+    \\textsf{Propane} 				  & 0.495 	& 4.86 		& 495		& 1.10 \\times 10^{-4} \\\\
+    \\textsf{Seawater} 				  & 1.030 	& 10.10 	& 1030	& 1.03 \\times 10^{-3} \\\\
+    \\textsf{Turpentine} 			  & 0.870 	& 8.53 		& 870		& 1.37 \\times 10^{-3} \\\\
+    \\textsf{Fuel Oil, medium}  & 0.852 	& 8.36 		& 852		& 2.99 \\times 10^{-3} \\\\
+    \\textsf{Fuel Oil, heavy}   & 0.906 	& 8.89 		& 906		& 1.07 \\times 10^{-1} \\\\
     \\end{array}
 		`)}`,
   ],
 
   "Nature of Fluids",
 
-  // PROBLEM 2
+  // PROBLEM
 
   [
     "example",
 
-    `A rectangular channel with a base of ${ki(
-      " 6.25\\,\\mathsf{m} "
-    )} has a depth of ${ki("y = 1.650\\, \\mathsf{m} ")} 
-        when the discharge (volume flow rate) is ${ki(
-          " Q=23.5 \\,\\mathsf{m^3\\!/s} "
-        )}. 
-        Determine ${ki("E")}, the specific energy, and classify the flow.`,
+    `A mass of ${ki(
+      " 95.0\\,\\mathsf{kg} "
+    )} is supported by a piston over oil in a circular cylinder with inside diameter of  ${ki(
+      "d = 7.35\\, \\mathsf{cm} "
+    )}. What is the oil pressure at the piston?`,
 
     // part solutions
     [
       [
-        `Find ${ki("v")}, the average flow velocity.`,
-
         `${kd(`
 			\\begin{aligned}
-				A &= b \\cdot y \\\\ 
-				&= 6.25\\,\\mathsf{m} \\times 1.650\\,\\mathsf{m} \\\\
-				&= 10.313 \\,\\mathsf{m^2} \\\\\\\\ 
-				v &= Q/A \\\\
-				&= \\frac{23.5\\,\\mathsf{m^3/s}}{10.313\\,\\mathsf{m^2}} \\\\
-				&= 2.2787 \\,\\mathsf{m/s} 
+				P &= \\frac{F}{A} \\\\ 
+				&= \\frac{95.0\\,\\textsf{kg} \\times 9.81\\,\\mathsf{m/s^2}}{(0.0735 \\,\\mathsf {m)^2}\\times\\pi/4} \\\\
+				&= \\frac{931.95\\,\\textsf{N}}{ 0.0042429\\,\\mathsf{m^2}} \\\\
+				&= 219650 \\,\\mathsf{Pa} \\\\ 
+				&= 219.65 \\,\\mathsf{kPa} \\\\ 
+				
 			\\end{aligned}
-		`)}`,
-
-        `${kd(`
-			v=2.2787 \\,\\mathsf{m/s} 
-		`)} `,
-      ],
-
-      [
-        `Find ${ki("E")}, the specific energy.`,
-
-        `${kd(`
-			\\begin{aligned}
-				E &= y + \\frac{v^2}{2g} \\\\
-				&= 1.650\\,\\mathsf{m}+\\frac{(2.2787\\,\\mathsf{m/s})^2}{2(9.81\\,\\mathsf{m/s^2)}} \\\\ 
-				&=1.9147\\,\\mathsf{m}
-			\\end{aligned}
-		`)}`,
-
-        `${kd(`
-			E=1.9147 \\,\\mathsf{m}
-		`)}`,
-      ],
-
-      [
-        `Determine ${ki(
-          "N_F"
-        )}, the Froude number, and use it to classify the flow.`,
-
-        `${kd(`
-			\\begin{aligned}
-				N_F &= \\frac{v}{\\sqrt{g(A/T)}} \\\\
-				&= \\frac{2.2787\\,\\mathsf{m/s}}{\\sqrt{(9.81\\,\\mathsf{m/s^2})(1.650\\,\\mathsf{m})}} \\\\
-				&= 0.56638 \\\\
-				&<1 \\qquad(\\textsf{Flow is sub-critical})
-			\\end{aligned}
-		`)}`,
-
-        `${kd(`
-			N_F = 0.56638\\lt 1\\qquad(\\textsf{Flow is sub-critical})
 		`)}`,
       ],
     ],
 
     // the answer
     `${kd(`
-		E=1.915 \\,\\mathsf{m},\\quad N_F = 0.566\\lt 1\\:(\\textsf{Flow is sub-critical})
+		  220 \\, \\textsf{kPa}
 	`)}`,
+  ],
+  [
+    "example",
+
+    `A Boeing 737 jet's fuel has a density of ${ki(
+      "810\\,\\mathsf{kg/m^3}"
+    )}. The jet has a fuel capacity of ${ki(
+      "26000\\, \\mathsf{L} "
+    )}. What is the mass and the weight of this fuel when the plane is full?`,
+
+    // part solutions
+    [
+      [
+        `${kd(`
+			\\begin{aligned}
+				V &= 26000\\,\\textsf{L} \\\\ 
+				&= 26.0\\,\\mathsf{m^3} \\\\\\\\ 
+				m &= \\rho V \\\\
+				&= 810\\,\\mathsf{kg/m^3}\\times 26.0\\,\\mathsf{m^3} \\\\
+				&= 21060 \\,\\mathsf{kg} \\\\\\\\ 
+				W &= mg  \\\\ 
+				 &= 21060 \\,\\mathsf{kg}\\times 9.81\\,\\mathsf{m/s^2}  \\\\ 
+				 &= 206600 \\,\\mathsf{N}  \\\\ 
+				 &= 206.60 \\,\\mathsf{kN}  \\\\ 
+				
+			\\end{aligned}
+		`)}`,
+      ],
+    ],
+
+    // the answer
+    `${kd(`
+		  207 \\, \\textsf{kN}
+	`)}`,
+  ],
+  [
+    "example",
+
+    `An oil tanker carries  ${ki(
+      `1.500\\times 10^6`
+    )} barrels of medium fuel oil at ${ki(
+      `25\\degree\\!\\mathsf{C}`
+    )} where ${ki(
+      `1\\textsf{ barrel }= 159.0\\,\\textsf{L}`
+    )}. Determine the weight of the oil.`,
+
+    // part solutions
+    [
+      [
+        `${kd(`
+			\\begin{aligned}
+				V &= 1.500\\times 10^6 \\textsf{ barrels }\\times 159.0\\,\\textsf{L/barrel} \\\\ 
+				&= 238.50\\times 10^6 \\,\\mathsf{L} \\\\ 
+				&= 238.50\\times 10^3 \\,\\mathsf{m^3} \\\\\\\\ 
+				W &= \\gamma V \\\\
+				&= 8.36\\,\\mathsf{kN/m^3}\\times 238.50\\times 10^3 \\,\\mathsf{m^3} \\\\
+				&= 1993.9\\times 10^3 \\,\\mathsf{kN} \\\\
+				&= 1993.9\\,\\mathsf{MN} \\\\
+				&= 1.9939\\,\\mathsf{GN} \\\\
+								
+			\\end{aligned}
+		`)}`,
+      ],
+    ],
+
+    // the answer
+    `${kd(`
+		  1.994 \\, \\textsf{GN}
+	`)}`,
+  ],
+  [
+    "example",
+
+    `An open-topped flat-bottomed cylindrical vessel contains   ${ki(
+      `360\\,\\textsf{L}`
+    )} of water at ${ki(
+      `20\\degree\\!\\mathsf{C}`
+    )}. At this temperature, the depth of water, ${ki(
+      `h_{20}`
+    )}, in the vessel is ${ki(`650\\,\\textsf{mm}`)}. 
+    <div class="width85">
+      <ol>
+      <li>Determine the inside diameter of the vessel.</li>
+      <li>The water is heated to ${ki(
+        `55\\degree\\! C`
+      )}. Determine the new depth, ${ki(`h_{55}`)}.</li>
+      <li>The water is heated further, to ${ki(
+        `90\\degree\\! C`
+      )}. At the temperature of ${ki(
+      `75\\degree\\! C`
+    )}, water begins to flow over the open top of the vessel. Determine the height of the vessel.</li>
+        <li>The water remaining in the vessel cools to ${ki(
+          `25\\degree\\! C`
+        )}. What is the height, ${ki(`h_{25}`)}, at this temperature?</li>
+      </ol>
+    </div>
+    
+    
+    <p></p>(Assume that there is no evaporation and that the dimensions of the vessel remain constant throughout.)`,
+
+    // part solutions
+    [
+      [
+        `Find the diameter of the vessel.`,
+
+        `${kd(`
+            \\begin{aligned}
+              V &= \\frac{\\pi d^2 h_{10}}{4} \\\\ 
+              \\Rightarrow d &= \\sqrt{\\frac{4V}{\\pi h_{10}}} \\\\ 
+              &= \\sqrt{\\frac{4(360/\\cancel{1000}\\,\\mathsf{m^3})}{\\pi (650/\\cancel{1000}\\,\\mathsf{m})}}  \\\\
+              &= 0.83975\\,\\mathsf{m}  \\\\ 
+              &= 839.75\\,\\mathsf{mm}  \\\\ 							
+			      \\end{aligned}
+		`)}`,
+
+        `${ki(`839.75\\,\\mathsf{mm}`)}`,
+      ],
+      [
+        `Determine the depth of the water at ${ki(`55\\degree\\! C.`)}`,
+
+        `${kd(`
+            \\begin{aligned}
+              m &= \\rho_{20} V_{20} \\\\ 
+              &= 998\\,\\mathsf{kg/m^3}\\cdot 360/1000\\,\\mathsf{m^3} \\\\ 
+              &= 359.28\\,\\mathsf{kg} \\\\ \\\\
+              V_{75} &= \\frac{m}{\\rho_{75}} \\\\
+             	&= \\frac{359.28\\,\\mathsf{kg}}{986\\,\\mathsf{kg/m^3}} \\\\
+             	&= 0.36438\\,\\mathsf{m^3} \\\\\\\\
+              h_{55} &= \\frac{4V_{55}}{\\pi d^2} \\\\
+              &= \\frac{4(0.36438\\,\\mathsf{m^3})}{\\pi(0.83975\\,\\mathsf{m})^2} \\\\
+              &= 0.65791\\,\\mathsf{m} \\\\
+              &= 657.91\\,\\mathsf{mm} \\\\
+			      \\end{aligned}
+		      `)}`,
+
+        `${ki(`657.91\\,\\mathsf{mm}`)}`,
+      ],
+      [
+        `Determine the height of the vessel.`,
+
+        `${kd(`
+            \\begin{aligned}
+              V_{75} &= \\frac{m}{\\rho_{75}} \\\\
+             	&= \\frac{359.28\\,\\mathsf{kg}}{975\\,\\mathsf{kg/m^3}} \\\\
+             	&= 0.36849\\,\\mathsf{m^3} \\\\\\\\
+              h_{75} &= \\frac{4V_{75}}{\\pi d^2} \\\\
+              &= \\frac{4(0.36849\\,\\mathsf{m^3})}{\\pi(0.83975\\,\\mathsf{m})^2} \\\\
+              &= 0.66533\\,\\mathsf{m} \\\\
+              &= 665.33\\,\\mathsf{mm} \\\\
+			      \\end{aligned}
+		      `)}
+          
+            At ${ki(`75\\degree\\! C`)}, the height of the water is ${ki(
+          `665.33\\,\\mathsf{mm}`
+        )}. At this height, the water begins to overflow the top of the vessel so this is the       height of the vessel.
+         `,
+
+        `${ki(`665.33\\,\\mathsf{mm}`)}`,
+      ],
+      [
+        `What is the height of the remaining water at ${ki(
+          `25\\degree\\! C.`
+        )}`,
+
+        `Find the mass of the water in the vessel at ${ki(
+          `90\\degree\\! C\\!:`
+        )}
+        ${kd(`
+            \\begin{aligned}
+              m' &=  \\frac{\\rho_{90}\\pi d^2 h_{\\textsf{vessel}}}{4} \\\\
+              &=  \\frac{(965\\,\\mathsf{kg/m^3})\\pi (839.75/1000\\,\\mathsf{m})^2 (665.33/1000\\,\\mathsf{m})}{4} \\\\
+             	&= 355.59\\,\\mathsf{kg}\\\\\\\\
+              V_{25} &= \\frac{m'}{\\rho_{25}} \\\\
+              &= \\frac{355.59\\,\\mathsf{kg}}{997\\,\\mathsf{kg/m^3}} \\\\
+              &= 0.35666\\,\\mathsf{m^3} \\\\\\\\
+              h_{25} &= \\frac{4V_{25}}{\\pi d^2} \\\\
+              &= \\frac{4(0.35666\\,\\mathsf{m^3})}{\\pi (0.83975\\,\\mathsf{m})^2} \\\\
+              &= 0.64397\\,\\mathsf{m} \\\\
+              &= 643.97\\,\\mathsf{mm} \\\\
+			      \\end{aligned}
+		      `)} `,
+
+        `${ki(`643.97\\,\\mathsf{mm}`)}`,
+      ],
+    ],
+
+    // the answer
+    `<div class="centered-list">
+        <ol>
+          <li>${ki(`d=840\\,\\mathsf{mm}`)}</li>
+          <li>${ki(`h_{55}=658\\,\\mathsf{mm}`)}</li>
+          <li>${ki(`h_{\\mathsf{vessel}}=665\\,\\mathsf{mm}`)}</li>
+          <li>${ki(`h_{\\mathsf{25}}=644\\,\\mathsf{mm}`)}</li>
+        </ol>
+    </div>`,
   ],
 
   "Pressure Measurement",

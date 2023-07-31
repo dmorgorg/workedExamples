@@ -27,8 +27,8 @@
     content: "Proof " counter(section-counter) "." counter(problem-counter) ". ";
   }
   .threeProof::before {
-    content: "Proof " counter(section-counter) "." counter(subsection-counter)
-      "." counter(problem-counter) ". ";
+    content: "Proof " counter(section-counter) "."
+      counter(subsubsection-counter) "." counter(problem-counter) ". ";
   }
   .fourProof::before {
     content: "Proof " counter(section-counter) "." counter(subsection-counter)
@@ -39,8 +39,8 @@
       ". ";
   }
   .threeExample::before {
-    content: "Example " counter(section-counter) "." counter(subsection-counter)
-      "." counter(problem-counter) ". ";
+    content: "Example " counter(section-counter) "."
+      counter(subsubsection-counter) "." counter(problem-counter) ". ";
   }
   .fourExample::before {
     content: "Example " counter(section-counter) "." counter(subsection-counter)

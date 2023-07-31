@@ -110,6 +110,10 @@ main {
 
 .math {
   color: var(--math-primary);
+  .answer {
+    background-color: var(--math-white);
+    border: 3px solid var(--math-primary);
+  }
   button {
     background-color: var(--math-primary);
 
@@ -132,9 +136,12 @@ main {
 }
 .fluids {
   color: var(--fluids-primary);
+  .answer {
+    background-color: var(--fluids-white);
+    border: 1px solid var(--fluids-primary);
+  }
   button {
     background-color: var(--fluids-primary);
-
     &:hover {
       background-color: var(--fluids-hover);
     }
@@ -190,6 +197,7 @@ ol {
   counter-reset: item;
   list-style: none;
   padding: 0;
+  margin-left: 1.125rem;
 
   li {
     position: relative;
@@ -411,10 +419,12 @@ h3.subsubsectionHeader {
 /* Compensate by reducing space around display math */
 .katex-display {
   margin: 0.5em 0;
+  line-height: 2;
 }
 
 .katex {
   font-size: 1em !important;
+
   // color: orange;
   // padding: 0;
   // margin: 0;

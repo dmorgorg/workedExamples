@@ -10,7 +10,9 @@
 <section class="problem-parts">
   <!-- don't need problem statement and show-hide button if only one part to the proof  -->
   {#if problem[2].length <= 1}
-    <div class="single">{@html problem[2][0][0]}</div>
+    <div class="single-title">
+      <div class="single">{@html problem[2][0][0]}</div>
+    </div>
   {:else}
     {#each problem[2] as part}
       {#if problem[0] === "proof"}
@@ -22,8 +24,17 @@
   {/if}
 </section>
 
-<style>
+<style lang="scss">
   section {
     counter-reset: part-counter;
+  }
+  .single-title::before {
+    content: "Solution";
+    // color: inherit;
+    font-weight: bold;
+  }
+  .single {
+    color: black;
+    // font-size: 90%;
   }
 </style>
