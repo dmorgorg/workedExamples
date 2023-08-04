@@ -2,15 +2,16 @@
   export let statement;
 </script>
 
-<article>
-  <div>
-    <!-- <h4>&nbsp;</h4> -->
-    <div class="problem-part-statement">{@html statement}</div>
-  </div>
-</article>
+<!-- <article> -->
+<div>
+  <!-- <h4>&nbsp;</h4> -->
+  <div class="problem-part-statement">{@html statement}</div>
+</div>
+
+<!-- </article> -->
 
 <style lang="scss">
-  article {
+  div {
     color: black;
     display: flex;
     flex-wrap: wrap;

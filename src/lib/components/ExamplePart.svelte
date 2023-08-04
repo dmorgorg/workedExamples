@@ -49,9 +49,9 @@
     margin: 0.5rem 0;
     padding-bottom: 0.75rem;
 
-    &:first {
+    &:first-of-type {
+      padding-top: 0.5rem;
       border-top: 0.15rem solid var(--fluids-primary);
-      background-color: red;
     }
   }
   div.show-hide {
