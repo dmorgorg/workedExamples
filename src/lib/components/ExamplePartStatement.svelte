@@ -3,8 +3,8 @@
 </script>
 
 <article>
-  <div class="left-matter">
-    <h4>&nbsp;</h4>
+  <div>
+    <!-- <h4>&nbsp;</h4> -->
     <div class="problem-part-statement">{@html statement}</div>
   </div>
 </article>
@@ -17,19 +17,5 @@
     justify-content: space-between;
     align-items: center;
     padding: 0;
-
-    h4 {
-      padding: 0;
-      display: inline;
-
-      &::before {
-        counter-increment: part-counter;
-        content: "Part " counter(part-counter) ": ";
-      }
-    }
-
-    div.problem-part-statement {
-      display: inline;
-    }
   }
 </style>

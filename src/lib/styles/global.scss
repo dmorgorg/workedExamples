@@ -44,12 +44,12 @@ body {
   // background: #efefef;
 }
 
-blockquote {
-  padding: 1em;
-  padding-bottom: 0.5em;
-  border: 1px solid #ccc;
-  background: #eee;
-}
+// blockquote {
+//   padding: 1em;
+//   padding-bottom: 0.5em;
+//   border: 1px solid #ccc;
+//   background: #eee;
+// }
 
 img {
   width: 100%;
@@ -140,6 +140,13 @@ main {
     background-color: var(--fluids-white);
     border: 1px solid var(--fluids-primary);
   }
+  blockquote {
+    background: var(--fluids-white);
+    border: 1px solid #ccc;
+    border-left: 0.25rem solid var(--fluids-primary);
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
   button {
     background-color: var(--fluids-primary);
     &:hover {
@@ -154,6 +161,30 @@ main {
   }
   .problem {
     border: 0.1rem var(--fluids-primary) solid;
+  }
+
+  .part-answer {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    div {
+      background-color: var(--fluids-white);
+      border: 0.05rem solid var(--fluids-primary);
+      color: black;
+      padding: 0 1rem;
+    }
+  }
+  .problem-part-statement {
+    color: black;
+    display: inline;
+
+    &::before {
+      counter-increment: part-counter;
+      color: var(--fluids-primary);
+      content: "Part " counter(part-counter) ": ";
+      font-weight: bold;
+    }
   }
   li::before {
     color: var(--fluids-primary);
@@ -226,7 +257,8 @@ ol {
   justify-content: end;
   align-self: center;
   padding: 0;
-  padding-top: 0.5em;
+  padding-top: 0.5rem;
+  // margin-top: 0.5rem;
   // margin-right: -0.5rem;
 
   button {
@@ -237,7 +269,7 @@ ol {
     font-size: 0.8rem;
     padding: 0.075rem;
     margin-left: 1rem;
-    margin-right: -0.5rem;
+    // margin-right: -0.5rem;
     min-width: 8em;
 
     &:hover {
@@ -250,6 +282,12 @@ ol {
   }
 }
 
+.formulae {
+  .show-hide-control {
+    margin-top: 0.5rem;
+  }
+}
+
 section.problem-parts {
   font-size: 90%;
   margin-top: 2rem;
@@ -259,10 +297,6 @@ h3.subsubsectionHeader {
   margin: 1rem 0 0 0;
   text-transform: capitalize;
 }
-
-// button {
-//   border: 1px solid black;
-// }
 
 // .math,
 // .fluids {
@@ -447,95 +481,250 @@ h3.subsubsectionHeader {
   text-align: center;
 }
 
-// .fright {
-//   float: right;
+.split-col {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  &.top {
+    align-items: flex-start;
+  }
+  &.bottom {
+    align-items: flex-end;
+  }
+}
 
+// .fright {
+//   display: block;
+//   float: right;
+//   clear: both;
 // }
 
+.inline {
+  display: inline;
+}
+
 .width100 {
-  vertical-align: middle;
-  position: relative;
   width: 100%;
   margin: 0 auto;
+
+  &.tight {
+    margin: 0;
+  }
+  &.left {
+    margin-left: 0;
+  }
+  &.right {
+    margin-right: 0;
+  }
 }
 
 .width95 {
-  vertical-align: middle;
-  position: relative;
   width: 95%;
   margin: 0 auto;
+
+  &.tight {
+    margin: 0;
+  }
+  &.left {
+    margin-left: 0;
+  }
+  &.right {
+    margin-right: 0;
+  }
 }
 
 .width90 {
-  vertical-align: middle;
-  position: relative;
   width: 90%;
   margin: 0 auto;
+
+  &.tight {
+    margin: 0;
+  }
+  &.left {
+    margin-left: 0;
+  }
+  &.right {
+    margin-right: 0;
+  }
 }
 
 .width85 {
-  vertical-align: middle;
-  position: relative;
   width: 85%;
   margin: 0 auto;
+
+  &.tight {
+    margin: 0;
+  }
+  &.left {
+    margin-left: 0;
+  }
+  &.right {
+    margin-right: 0;
+  }
 }
 
 .width80 {
-  vertical-align: middle;
-  position: relative;
   width: 80%;
   margin: 0 auto;
+
+  &.tight {
+    margin: 0;
+  }
+  &.left {
+    margin-left: 0;
+  }
+  &.right {
+    margin-right: 0;
+  }
 }
 
 .width75 {
-  vertical-align: middle;
-  position: relative;
   width: 75%;
   margin: 0 auto;
+
+  &.tight {
+    margin: 0;
+  }
+  &.left {
+    margin-left: 0;
+  }
+  &.right {
+    margin-right: 0;
+  }
 }
 
 .width70 {
-  vertical-align: middle;
-  position: relative;
   width: 70%;
   margin: 0 auto;
+
+  &.tight {
+    margin: 0;
+  }
+  &.left {
+    margin-left: 0;
+  }
+  &.right {
+    margin-right: 0;
+  }
 }
 
 .width65 {
-  vertical-align: middle;
-  position: relative;
   width: 65%;
   margin: 0 auto;
+
+  &.tight {
+    margin: 0;
+  }
+  &.left {
+    margin-left: 0;
+  }
+  &.right {
+    margin-right: 0;
+  }
 }
 
 .width60 {
-  vertical-align: middle;
-  position: relative;
   width: 60%;
   margin: 0 auto;
+
+  &.tight {
+    margin: 0;
+  }
+  &.left {
+    margin-left: 0;
+  }
+  &.right {
+    margin-right: 0;
+  }
 }
 
 .width55 {
-  vertical-align: middle;
-  position: relative;
   width: 55%;
   margin: 0 auto;
+
+  &.tight {
+    margin: 0;
+  }
+  &.left {
+    margin-left: 0;
+  }
+  &.right {
+    margin-right: 0;
+  }
 }
 
 .width50 {
-  position: relative;
   width: 50%;
   margin: 0 auto;
+
+  &.tight {
+    margin: 0;
+  }
+  &.left {
+    margin-left: 0;
+  }
+  &.right {
+    margin-right: 0;
+  }
 }
 
 .width45 {
-  position: relative;
   width: 45%;
   margin: 0 auto;
+
+  &.tight {
+    margin: 0;
+  }
+  &.left {
+    margin-left: 0;
+  }
+  &.right {
+    margin-right: 0;
+  }
 }
 
 .width40 {
-  position: relative;
   width: 40%;
   margin: 0 auto;
+
+  &.tight {
+    margin: 0;
+  }
+  &.left {
+    margin-left: 0;
+  }
+  &.right {
+    margin-right: 0;
+  }
+}
+
+.width35 {
+  width: 35%;
+  margin: 0 auto;
+
+  &.tight {
+    margin: 0;
+  }
+  &.left {
+    margin-left: 0;
+  }
+  &.right {
+    margin-right: 0;
+  }
+}
+
+.width30 {
+  width: 30%;
+  margin: 0 auto;
+
+  &.tight {
+    margin: 0;
+  }
+  &.left {
+    margin-left: 0;
+  }
+  &.right {
+    margin-right: 0;
+  }
 }

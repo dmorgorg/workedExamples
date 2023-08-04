@@ -32,17 +32,21 @@
 <style lang="scss">
   .show-hide-control {
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-self: center;
+    margin-bottom: 1rem;
     padding: 0;
+    // border: 1px solid pink;
+    // margin: 0;
 
     button {
-      font-size: 0.7rem;
+      font-size: 0.8rem;
       align-self: flex-end;
       border-radius: 0.2rem;
       padding: 0.075rem 1rem;
-      margin-left: 1.5em;
-      min-width: 9rem;
+      margin-left: 1em;
+      margin-right: 1rem;
+      min-width: 10rem;
 
       div.check-part-answer::before {
         content: "Check Part " counter(part-counter) " Answer";

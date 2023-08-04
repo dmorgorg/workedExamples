@@ -9,7 +9,7 @@
   $: displaySolution = showHide.displaySolution;
 </script>
 
-<div class="skinny">
+<div class="skinny formulae">
   {#if problem[0] === "table"}
     <div class="table-title">
       <span class="content">{@html problem[1]}</span>
@@ -32,10 +32,10 @@
     align-items: flex-start;
   }
   .formulae-title::before {
-    display: inline;
     font-weight: bold;
     content: "Formul\0000e6";
-    margin-right: 0.5rem;
+    // margin-right: 0.5rem;
+    // margin-bottom: 1rem;
     // text-decoration: underline;
   }
   .table-title::before {
@@ -49,6 +49,7 @@
     color: black;
     font-weight: bold;
     margin-left: 0.5rem;
+    // margin-bottom: 1rem;
   }
   .content {
     color: black;

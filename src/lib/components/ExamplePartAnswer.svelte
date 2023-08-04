@@ -2,14 +2,17 @@
   export let answer;
 </script>
 
-<div class="part-answer width80">
-  {@html answer}
+<div class="part-answer">
+  <div>{@html answer}</div>
 </div>
 
-<style lang="scss">
+<!-- <style lang="scss">
   div.part-answer {
-    // display: inline;
-    margin: 0.5em auto;
-    padding: 0;
+    display: flex;
+    justify-content: center;
+    div {
+      // background: pink;
+      padding: 0 1.5em;
+    }
   }
-</style>
+</style> -->

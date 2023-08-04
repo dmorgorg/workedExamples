@@ -20,16 +20,17 @@
   let answer = part[2];
 </script>
 
-<div class="statement-line">
-  <div class="statement"><ExamplePartStatement {statement} /></div>
-  <div class="show-hide">
-    <ExampleShowHideControl bind:showHide />
+<div class="box">
+  <div class="statement-line">
+    <div class="statement"><ExamplePartStatement {statement} /></div>
+    <div class="show-hide">
+      <ExampleShowHideControl bind:showHide />
+    </div>
   </div>
-</div>
 
-<div class:box={either}>
+  <!-- <div class:box={either}> -->
   {#if displaySolution}
-    <div transition:fade={{ duration: 500 }}>
+    <div transition:fade>
       <ExamplePartSolution {solution} />
     </div>
   {/if}
@@ -40,11 +41,18 @@
   {/if}
 </div>
 
+<!-- </div> -->
+
 <style lang="scss">
   div.box {
-    width: 100%;
-    margin: 0;
-    padding: 0;
+    border-bottom: 0.15rem solid var(--fluids-primary);
+    margin: 0.5rem 0;
+    padding-bottom: 0.75rem;
+
+    &:first {
+      border-top: 0.15rem solid var(--fluids-primary);
+      background-color: red;
+    }
   }
   div.show-hide {
     font-size: 0.9em;
@@ -58,7 +66,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 2em;
+    margin-bottom: 0;
     padding: 0;
 
     .statement {
@@ -66,4 +74,13 @@
       margin-bottom: 0.5em;
     }
   }
+  // .border {
+  //   border-bottom: 0.15rem solid var(--fluids-primary);
+  //   margin: 0.5rem 0;
+  //   padding-bottom: 0.75rem;
+
+  //   &:first {
+  //     border-top: 0.15rem solid var(--fluids-primary);
+  //   }
+  // }
 </style>
