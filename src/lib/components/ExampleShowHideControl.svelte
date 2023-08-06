@@ -34,7 +34,7 @@
     display: flex;
     justify-content: center;
     align-self: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     padding: 0;
     // border: 1px solid pink;
     // margin: 0;

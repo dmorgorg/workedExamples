@@ -400,7 +400,7 @@ export default [
     )}, what would be the height of the column for this atmospheric pressure?
     </div>    
     <div class="width30 right"><img src="/images/fluids/01NoFPM/barometer.png" />
-    </div><di></di>`,
+    </div>`,
 
     [
       [
@@ -435,7 +435,7 @@ export default [
       `)}.
       </blockquote>`,
 
-        `${kd(`
+        `${ki(`
 			P_A = 88.976\\,\\mathsf{kPa} 
 		`)}`,
       ],
@@ -456,8 +456,8 @@ export default [
     )} metres in height. This explains why mercury, with its high density and low vapour pressure is a better solution.
     </blockquote>`,
 
-        `${kd(`
-        9.0978\\,\\mathsf{m} 
+        `${ki(`
+        h=9.0978\\,\\mathsf{m} 
 		`)}`,
       ],
     ],

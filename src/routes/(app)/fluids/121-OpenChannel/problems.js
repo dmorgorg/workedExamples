@@ -44,7 +44,7 @@ export default [
 				&= 1.4118\\,\\mathsf{m/s} 
 			\\end{aligned}`)}`,
         // problem part answer
-        `${kd(`{\\large v_{(0.850\\,\\mathsf{m})}} = 1.4118\\,\\mathsf{m/s}`)}`,
+        `${ki(`{\\large v_{(0.850\\,\\mathsf{m})}} = 1.4118\\,\\mathsf{m/s}`)}`,
       ],
 
       // second problem part
@@ -74,7 +74,7 @@ export default [
 			\\end{aligned}
 		`)}`,
 
-        `${kd(`n=0.015872`)}`,
+        `${ki(`n=0.015872`)}`,
       ],
 
       // third problem part
@@ -96,7 +96,7 @@ export default [
 			\\end{aligned}
 		`)}`,
 
-        `${kd(`
+        `${ki(`
 					{\\large v_{(1.700\\,\\mathsf{m})}} = 1.8832\\,\\mathsf{m/s}
 				`)}`,
       ],
@@ -112,7 +112,7 @@ export default [
 			\\end{aligned}
 		`)}`,
 
-        `${kd(`
+        `${ki(`
 			{\\large Q_{(1.700\\,\\mathsf{m})}} = 12.805\\,\\mathsf{m^3/s}
 		`)}`,
       ],
@@ -159,7 +159,7 @@ export default [
 			\\end{aligned}
 		`)}`,
 
-        `${kd(`
+        `${ki(`
 			v=2.2787 \\,\\mathsf{m/s} 
 		`)} `,
       ],
@@ -175,7 +175,7 @@ export default [
 			\\end{aligned}
 		`)}`,
 
-        `${kd(`
+        `${ki(`
 			E=1.9147 \\,\\mathsf{m}
 		`)}`,
       ],
@@ -194,7 +194,7 @@ export default [
 			\\end{aligned}
 		`)}`,
 
-        `${kd(`
+        `${ki(`
 			N_F = 0.56638\\lt 1\\qquad(\\textsf{Flow is sub-critical})
 		`)}`,
       ],
@@ -210,7 +210,7 @@ export default [
     "example",
 
     `A rectangular flume is built out of wood ${ki(
-      "(n=0.012)"
+      "{(n=0.012)}"
     )} and has a base width of ${ki("1.250\\,\\mathsf{m}")}. 
         The flume has a longitudinal slope of ${ki(
           "0.14\\%"
@@ -242,7 +242,7 @@ export default [
 			\\end{aligned}
 		`)}`,
 
-        `${kd(`
+        `${ki(`
 			Q=1.8041\\,\\mathsf{m^3/s} 
 		`)}`,
       ],
@@ -250,23 +250,22 @@ export default [
       [
         `Solve for ${ki("y_c")}.`,
 
-        `Under critical conditions, ${ki(`N_F=1`)}:
-				
-		${kd(`
-			\\begin{aligned}
-				N_F &= \\frac v{\\sqrt{g(A/T)}}=1 \\\\
-				\\Rightarrow v_c &= \\sqrt{g(A_c/T_c)} \\\\\\\\ 
-				\\Rightarrow \\left(\\frac Q{A_c}\\right)^2 &= g(A_c/T_c) \\\\
-				\\Rightarrow \\frac{Q^2}g &= \\frac{A_c^3}{T_c} \\\\
-				&= \\frac{\\left(b\\cdot y_c\\right)^3}{b} \\\\
-				&= b^2 y_c^3 \\\\
-				\\Rightarrow y_c &= \\left(\\frac{Q^2}{b^2g}\\right)^{1/3} \\\\
-				&= \\left(\\frac{(1.8041)^2}{(1.250)^2(9.81)}\\right)^{1/3} \\\\
-				&=0.59659\\,\\mathsf{m}
-			\\end{aligned}
-		`)}`,
+        `Under critical conditions, ${ki(`N_F=1`)}:				
+        ${kd(`
+          \\begin{aligned}
+            N_F &= \\frac v{\\sqrt{g(A/T)}}=1 \\\\
+            \\Rightarrow v_c &= \\sqrt{g(A_c/T_c)} \\\\\\\\ 
+            \\Rightarrow \\left(\\frac Q{A_c}\\right)^2 &= g(A_c/T_c) \\\\
+            \\Rightarrow \\frac{Q^2}g &= \\frac{A_c^3}{T_c} \\\\
+            &= \\frac{\\left(b\\cdot y_c\\right)^3}{b} \\\\
+            &= b^2 y_c^3 \\\\
+            \\Rightarrow y_c &= \\left(\\frac{Q^2}{b^2g}\\right)^{1/3} \\\\
+            &= \\left(\\frac{(1.8041)^2}{(1.250)^2(9.81)}\\right)^{1/3} \\\\
+            &=0.59659\\,\\mathsf{m}
+          \\end{aligned}
+        `)}`,
 
-        `${kd(`
+        `${ki(`
 			y_c=0.59659 \\,\\mathsf{m}
 		`)} `,
       ],
@@ -274,15 +273,15 @@ export default [
         `Calculate ${ki("v_c")}.`,
 
         `${kd(`
-			\\begin{aligned}
-				v_c &= \\frac{Q}{A_c} \\\\
-				&= \\frac{Q}{b\\cdot y_c} \\\\
-				&= \\frac{(1.8041\\,\\mathsf{m^3/s})}{(1.250\\,\\mathsf{m})\\cdot (0.59659 \\,\\mathsf{m})} \\\\
-				&= 2.4192 \\,\\mathsf{m/s}
-			\\end{aligned}
-		`)}`,
+          \\begin{aligned}
+            v_c &= \\frac{Q}{A_c} \\\\
+            &= \\frac{Q}{b\\cdot y_c} \\\\
+            &= \\frac{(1.8041\\,\\mathsf{m^3/s})}{(1.250\\,\\mathsf{m})\\cdot (0.59659 \\,\\mathsf{m})} \\\\
+            &= 2.4192 \\,\\mathsf{m/s}
+          \\end{aligned}
+        `)}`,
 
-        `${kd(`
+        `${ki(`
 			v_c = 2.4192 \\,\\mathsf{m/s} 
 		`)} `,
       ],
@@ -291,18 +290,18 @@ export default [
           "S_c"
         )} that generates these critical conditions.`,
         `${kd(`
-			\\begin{aligned}
-				v_c &= \\frac 1n R_c^{2/3} S_c^{1/2} \\\\
-				&= \\frac 1n \\left(\\frac{A_c}{P_c}\\right)^{2/3}\\!\\! S_c^{1/2} \\\\ 
-				&= \\frac 1n \\left(\\frac{by_c}{b+2y_c}\\right)^{2/3}S_c^{1/2} \\\\
-				\\Rightarrow S_c &= \\left(nv_c \\left( \\frac{b+2y_c}{by_c}\\right)^{2/3} \\right)^2 \\\\
-				&= \\left(0.012\\cdot 2.4192 \\left( \\frac{1.250+2\\cdot 0.59659}{1.250\\cdot 0.59659}\\right)^{2/3}\\right)^2 \\\\
-				&= 0.0041008 \\\\ 
-				&=0.41008\\%
-			\\end{aligned}
-		`)}`,
+          \\begin{aligned}
+            v_c &= \\frac 1n R_c^{2/3} S_c^{1/2} \\\\
+            &= \\frac 1n \\left(\\frac{A_c}{P_c}\\right)^{2/3}\\!\\! S_c^{1/2} \\\\ 
+            &= \\frac 1n \\left(\\frac{by_c}{b+2y_c}\\right)^{2/3}S_c^{1/2} \\\\
+            \\Rightarrow S_c &= \\left(nv_c \\left( \\frac{b+2y_c}{by_c}\\right)^{2/3} \\right)^2 \\\\
+            &= \\left(0.012\\cdot 2.4192 \\left( \\frac{1.250+2\\cdot 0.59659}{1.250\\cdot 0.59659}\\right)^{2/3}\\right)^2 \\\\
+            &= 0.0041008 \\\\ 
+            &=0.41008\\%
+          \\end{aligned}
+        `)}`,
 
-        `${kd(`
+        `${ki(`
 			S_c =0.41008\\%
 		`)}`,
       ],
@@ -332,13 +331,13 @@ export default [
         `Determine the critical depth, ${ki("y_c")}`,
 
         `Under critical conditions,
-		${kd(`\\begin{aligned}
-			v_c &= \\sqrt{g(A_c/T_c)} \\\\
-			\\Rightarrow v_c^2 &= g\\cdot\\frac{by_c}{b} \\\\
-			\\Rightarrow (1.900)^2 &= 9.81 y_c \\\\
-			\\Rightarrow y_c &= \\frac{(1.900)^2}{9.81} \\\\
-			&= 0.36799\\,\\mathsf{m}
-		\\end{aligned}`)}`,
+        ${kd(`\\begin{aligned}
+          v_c &= \\sqrt{g(A_c/T_c)} \\\\
+          \\Rightarrow v_c^2 &= g\\cdot\\frac{by_c}{b} \\\\
+          \\Rightarrow (1.900)^2 &= 9.81 y_c \\\\
+          \\Rightarrow y_c &= \\frac{(1.900)^2}{9.81} \\\\
+          &= 0.36799\\,\\mathsf{m}
+        \\end{aligned}`)}`,
 
         `${ki(`y_c = 0.36799\\,\\mathsf{m} `)}`,
       ],
@@ -348,13 +347,13 @@ export default [
         `Determine ${ki("Q")}`,
 
         `${kd(`\\begin{aligned}
-			Q &= A_c\\cdot v_c \\\\
-			&= \\left(4.50\\cdot y_c \\right)\\cdot v_c \\\\
-			&= 4.50\\cdot 0.36799 \\cdot 1.900 \\\\
-			&= 3.1463\\,\\mathsf{m^3\\!/s} 
-		\\end{aligned}`)}`,
+          Q &= A_c\\cdot v_c \\\\
+          &= \\left(4.50\\cdot y_c \\right)\\cdot v_c \\\\
+          &= 4.50\\cdot 0.36799 \\cdot 1.900 \\\\
+          &= 3.1463\\,\\mathsf{m^3\\!/s} 
+        \\end{aligned}`)}`,
 
-        `${kd(` Q= 3.1463\\,\\mathsf{m^3\\!/s} `)}`,
+        `${ki(` Q= 3.1463\\,\\mathsf{m^3\\!/s} `)}`,
       ],
     ],
 
@@ -370,18 +369,18 @@ export default [
     "example",
 
     // problem statement
-    `A triangular flume, built from unplaned wood ${ki(
-      "(n=0.013)"
-    )}, has a design flow of ${ki(
+    `<div class="split-col"><div class="width45 tight">
+      A triangular flume, built from unplaned wood ${ki(
+        "(n=0.013)"
+      )}, has a design flow of ${ki(
       "3.25\\,\\mathsf{m^3\\!\\!/s}"
     )}. The sidewalls of the flume are inclined at ${ki(
       "45^{\\circ}"
-    )} to the horizontal (i.e., ${ki(
-      "z=1"
-    )}). If the slope of the flume is ${ki(
-      "S=0.001"
-    )}, determine the depth ${ki("y")} of normal flow. Classify this flow. 
-    <div class="width70"><img src="/images/triangularGuidedPractice1.png" /></div><div class="clear" />`,
+    )} to the horizontal (${ki("{z=1}")}). If the slope of the flume is ${ki(
+      "{S=0.001,}"
+    )} determine the depth ${ki("y")} of normal flow. Classify this flow.</div> 
+      <div class="width50 right"><img src="/images/fluids/12OpenChannel/triangular.png" /></div>
+    </div>`,
 
     // solution parts
     [
@@ -389,59 +388,184 @@ export default [
         `Determine ${ki("A")} and ${ki("R")} in terms of the depth ${ki("y")}.`,
 
         `${kd(`
-			\\begin{aligned}
-				A &= \\frac{2y\\cdot y}{2} \\\\
-				&= y^2 \\\\\\\\
-				P &= 2\\sqrt{y^2+y^2} \\\\
-				&= 2\\sqrt{2y^2} \\\\
-				&= 2\\sqrt{2}\\cdot y \\\\\\\\
-				R &= A/P \\\\
-				&= \\frac{y^2}{2\\sqrt{2}\\cdot y} \\\\
-				&= \\frac{y}{2\\sqrt{2}} \\\\
-			\\end{aligned}`)}`,
+          \\begin{aligned}
+            A &= \\frac{2y\\cdot y}{2} \\\\
+            &= y^2 \\\\\\\\
+            P &= 2\\sqrt{y^2+y^2} \\\\
+            &= 2\\sqrt{2y^2} \\\\
+            &= 2\\sqrt{2}\\cdot y \\\\\\\\
+            R &= A/P \\\\
+            &= \\frac{y^2}{2\\sqrt{2}\\cdot y} \\\\
+            &= \\frac{y}{2\\sqrt{2}} \\\\
+          \\end{aligned}`)}`,
 
-        `${kd(` A=y^2,\\quad R=\\frac{y}{2\\sqrt{2}}`)}`,
+        `${ki(` A=y^2,\\quad R=\\frac{y}{2\\sqrt{2}}`)}`,
       ],
 
       [
         `Use Manning's Equation to solve for ${ki("y")}.`,
 
         `${kd(`
-			\\begin{aligned}
-				Q &= \\frac 1n AR^{2/3}S^{1/2} \\\\
-				\\Rightarrow 3.25 &= \\frac 1{0.013}\\left(y^2\\right)\\left(\\frac{y}{2\\sqrt{2}}\\right)^{2/3}\\!\\!\\left(0.001\\right)^{1/2} \\\\
-				\\Rightarrow y^{8/3} &= \\frac{3.25\\cdot 0.013\\cdot \\left(2\\sqrt{2}\\right)^{2/3}}{(0.001)^{1/2}} \\\\
-				\\Rightarrow y &= \\left(2.6721\\right)^{3/8} \\\\
-				&= 1.4457\\,\\mathsf{m}                
-			\\end{aligned}`)}`,
+          \\begin{aligned}
+            Q &= \\frac 1n AR^{2/3}S^{1/2} \\\\
+            \\Rightarrow 3.25 &= \\frac 1{0.013}\\left(y^2\\right)\\left(\\frac{y}{2\\sqrt{2}}\\right)^{2/3}\\!\\!\\left(0.001\\right)^{1/2} \\\\
+            \\Rightarrow y^{8/3} &= \\frac{3.25\\cdot 0.013\\cdot \\left(2\\sqrt{2}\\right)^{2/3}}{(0.001)^{1/2}} \\\\
+            \\Rightarrow y &= \\left(2.6721\\right)^{3/8} \\\\
+            &= 1.4457\\,\\mathsf{m}                
+          \\end{aligned}`)}`,
 
-        `${kd(`y = 1.4457\\,\\mathsf{m}`)}}  `,
+        `${ki(`y = 1.4457\\,\\mathsf{m}`)}  `,
       ],
 
       [
         `Determine the Froude number to determine the flow type.`,
 
         `${kd(`
-			\\begin{aligned}
-				A &= y^2 \\\\
-				&= \\left(1.4457\\right)^2 \\\\
-				&= 2.0900\\,\\mathsf{m^2} \\\\\\\\
-				v &= Q/A \\\\
-				&= \\frac{3.25}{2.0900} \\\\
-				&= 1.5550\\,\\mathsf{m/s} \\\\\\\\
-				T &= 2y \\\\
-				&= 2.8914\\,\\mathsf{m} \\\\\\\\
-				N_F &= \\frac{v}{\\sqrt{g(A/T)}} \\\\
-				N_F &= \\frac{1.5550}{\\sqrt{9.81(2.0900/2.8914)}} \\\\
-				&= 0.58395 \\\\
-				&< 1\\quad(\\textsf{Flow is sub-critical})
-			\\end{aligned}`)}`,
+          \\begin{aligned}
+            A &= y^2 \\\\
+            &= \\left(1.4457\\right)^2 \\\\
+            &= 2.0900\\,\\mathsf{m^2} \\\\\\\\
+            v &= Q/A \\\\
+            &= \\frac{3.25}{2.0900} \\\\
+            &= 1.5550\\,\\mathsf{m/s} \\\\\\\\
+            T &= 2y \\\\
+            &= 2.8914\\,\\mathsf{m} \\\\\\\\
+            N_F &= \\frac{v}{\\sqrt{g(A/T)}} \\\\
+            N_F &= \\frac{1.5550}{\\sqrt{9.81(2.0900/2.8914)}} \\\\
+            &= 0.58395 \\\\
+            &< 1\\quad(\\textsf{Flow is sub-critical})
+          \\end{aligned}`)}`,
 
-        `${kd(`\\textsf{Flow is sub-critical}`)}`,
+        `${ki(`\\textsf{Flow is sub-critical}`)}`,
       ],
     ],
     // the big answer
     `${kd(`y = 1.446\\,\\mathsf{m}, \\quad\\textsf{Flow is sub-critical}`)}`,
+  ],
+  [
+    "example",
+
+    // problem statement
+    `
+      A triangular channel with sides inclined at ${ki(
+        "60.0\\degree"
+      )} to the horizontal is lined with shotcrete ${ki(
+      "(n=0.017)"
+    )}. Determine the volume flow rate if the depth of flow is ${ki(
+      "1.900\\,\\mathsf{m}"
+    )} and the channel slope is ${ki(
+      "0.500\\%"
+    )}. At what slope will this flow become critical?
+      
+    `,
+
+    // solution parts
+    [
+      [
+        `Calculate ${ki("z")}.`,
+
+        `${kd(`
+          \\begin{aligned}
+            \\tan 60\\degree &= \\frac{1}{z} \\\\
+            \\Rightarrow z &= \\frac{1}{\\tan 60\\degree}   \\\\  
+            &= 0.57735             
+          \\end{aligned}`)}`,
+
+        `${ki(`z=0.57735`)}`,
+      ],
+
+      [
+        `Calculate ${ki("A,\\, W\\!P")} and ${ki("R")}.`,
+
+        `${kd(`
+          \\begin{aligned}
+            A &= y^2z \\\\
+            &= (1.900\\,\\mathsf{m})^2\\cdot 0.57735 \\\\
+            &= 2.0842\\,\\mathsf{m^2} \\\\\\\\
+            W\\!P &= 2y\\sqrt{1+z^2} \\\\
+            &= 2(1.900\\,\\mathsf{m})\\sqrt{1+(0.57735)^2} \\\\
+            &= 4.3879\\,\\mathsf{m}    \\\\\\\\
+            R &= \\frac{A}{W\\!P} \\\\       
+            &= \\frac{2.0842\\,\\mathsf{m^2}}{4.3879\\,\\mathsf{m}} \\\\       
+            &= 0.47499\\,\\mathsf{m}\\\\       
+          \\end{aligned}`)}`,
+
+        `${ki(
+          "A = 2.0842\\,\\mathsf{m^2}, W\\!P = 4.3879\\,\\mathsf{m}, R = 0.47499\\,\\mathsf{m}"
+        )} `,
+      ],
+
+      [
+        `Determine ${ki("Q")}.`,
+
+        `${kd(`
+          \\begin{aligned}
+            Q &= \\frac{1}{n}AR^{2/3}S^{1/2} \\\\
+            &= \\frac{1}{0.017}(2.0842\\,\\mathsf{m^2})(0.47499\\,\\mathsf{m})^{2/3}(0.00500)^{1/2} \\\\
+            &= 5.2775\\,\\mathsf{m^3/s} 
+          \\end{aligned}`)}`,
+
+        `${ki(`Q=5.2775\\,\\mathsf{m^3/s} `)}`,
+      ],
+      [
+        `Find ${ki(`y_c`)}, the critical depth.`,
+
+        `Under critical flow conditionw:
+        ${kd(`
+          \\begin{aligned}
+            N_F &= 1 \\\\
+            \\Rightarrow v_c &= \\sqrt{g(A_c/T_c)} \\\\
+            \\Rightarrow \\left(\\frac{Q}{A_c}\\right)^2&= g(A_c/T_c) \\\\
+            \\Rightarrow \\frac{Q^2}{g} &= \\frac{A_c^3}{T_c} \\\\
+            &= \\frac{(y_c^2z)^3}{2y_cz} \\\\
+            &= \\frac{y_c^5z^2}{2} \\\\
+            \\Rightarrow y_c^5 &= \\frac{2Q^2}{gz_c^2} \\\\
+            \\Rightarrow y_c &= \\left[\\frac{2Q^2}{gz^2}\\right]^{0.2} \\\\
+            &= \\left[\\frac{2(5.2775\\,\\mathsf{m^3/s})^2}{(9.81\\,\\mathsf{m/s^2})\\cdot(0.57735)^2}\\right]^{0.2} \\\\
+            &= 1.7631\\,\\mathsf{m}
+          \\end{aligned}`)}`,
+
+        `${ki(`y_c=1.7631\\,\\mathsf{m} `)}`,
+      ],
+      [
+        `Calculate ${ki("A_c,\\, W\\!P_c")} and ${ki("R_c")}.`,
+
+        `${kd(`
+        \\begin{aligned}
+          A_c &= y_c^2z \\\\
+          &= (1.7631\\,\\mathsf{m})^2\\cdot 0.57735 \\\\
+          &= 1.7947\\,\\mathsf{m^2} \\\\\\\\
+          W\\!P_c &= 2y_c\\sqrt{1+z^2} \\\\
+          &= 2(1.7631\\,\\mathsf{m})\\sqrt{1+(0.57735)^2} \\\\
+          &= 4.0717\\,\\mathsf{m}    \\\\\\\\
+          R_c &= \\frac{A_c}{W\\!P_c} \\\\       
+          &= \\frac{1.7947\\,\\mathsf{m^2}}{4.0717\\,\\mathsf{m}} \\\\       
+          &= 0.44077\\,\\mathsf{m}\\\\       
+        \\end{aligned}`)}`,
+
+        `${ki(
+          ` A_c = 1.7947\\,\\mathsf{m^2}, W\\!P_c = 4.0717\\,\\mathsf{m}, R_c = 0.44077\\,\\mathsf{m}`
+        )}`,
+      ],
+      [
+        `Find ${ki("S_c")}, the critical slope.`,
+
+        `${kd(`
+        \\begin{aligned}
+          Q &= \\frac{1}{n}A_cR_c^{2/3}S_c^{1/2} \\\\
+          \\Rightarrow S_c&= \\left[\\frac{Qn}{A_CR_C^{2/3}}\\right]^2\\\\
+          &= \\left[\\frac{(5.2775\\,\\mathsf{m^3/s})(0.017)}{(1.7947\\,\\mathsf{m^2})(0.44077\\,\\mathsf{m})^{2/3}}\\right]^2 \\\\
+          &= 0.0074500 \\\\
+          &= 0.74500\\% \\\\
+         
+             
+        \\end{aligned}`)}`,
+
+        `${ki(` S_c = 0.74500\\%`)}`,
+      ],
+    ],
+    // the big answer
+    `${kd(`Q = 5.28\\,\\mathsf{m^3/s},\\quad S_c=0.745\\%`)}`,
   ],
 
   "Trapezoidal Section",
@@ -464,18 +588,18 @@ export default [
         `Determine ${ki("A")} and ${ki("R")} in terms of the depth ${ki("y")}.`,
 
         `${kd(`
-			\\begin{aligned}
-				A &= \\frac{2y\\cdot y}{2} \\\\
-				&= y^2 \\\\\\\\
-				P &= 2\\sqrt{y^2+y^2} \\\\
-				&= 2\\sqrt{2y^2} \\\\
-				&= 2\\sqrt{2}\\cdot y \\\\\\\\
-				R &= A/P \\\\
-				&= \\frac{y^2}{2\\sqrt{2}\\cdot y} \\\\
-				&= \\frac{y}{2\\sqrt{2}} \\\\
-			\\end{aligned}`)}`,
+          \\begin{aligned}
+            A &= \\frac{2y\\cdot y}{2} \\\\
+            &= y^2 \\\\\\\\
+            P &= 2\\sqrt{y^2+y^2} \\\\
+            &= 2\\sqrt{2y^2} \\\\
+            &= 2\\sqrt{2}\\cdot y \\\\\\\\
+            R &= A/P \\\\
+            &= \\frac{y^2}{2\\sqrt{2}\\cdot y} \\\\
+            &= \\frac{y}{2\\sqrt{2}} \\\\
+          \\end{aligned}`)}`,
 
-        `${kd(`A=y^2,\\quad R=\\frac{y}{2\\sqrt{2}}`)}`,
+        `${ki(`A=y^2,\\quad R=\\frac{y}{2\\sqrt{2}}`)}`,
       ],
 
       //part 2
@@ -483,62 +607,62 @@ export default [
         `Use Manning's Equation to solve for ${ki("y")}.`,
 
         `${kd(`
-			\\begin{aligned}
-				Q &= \\frac 1n AR^{2/3}S^{1/2} \\\\
-				\\Rightarrow 3.25 &= \\frac 1{0.013}\\left(y^2\\right)\\left(\\frac{y}{2\\sqrt{2}}\\right)^{2/3}\\!\\!\\left(0.001\\right)^{1/2} \\\\
-				\\Rightarrow y^{8/3} &= \\frac{3.25\\cdot 0.013\\cdot \\left(2\\sqrt{2}\\right)^{2/3}}{(0.001)^{1/2}} \\\\
-				\\Rightarrow y &= \\left(2.6721\\right)^{3/8} \\\\
-				&= 1.4457\\,\\mathsf{m}                
-			\\end{aligned}`)}`,
+          \\begin{aligned}
+            Q &= \\frac 1n AR^{2/3}S^{1/2} \\\\
+            \\Rightarrow 3.25 &= \\frac 1{0.013}\\left(y^2\\right)\\left(\\frac{y}{2\\sqrt{2}}\\right)^{2/3}\\!\\!\\left(0.001\\right)^{1/2} \\\\
+            \\Rightarrow y^{8/3} &= \\frac{3.25\\cdot 0.013\\cdot \\left(2\\sqrt{2}\\right)^{2/3}}{(0.001)^{1/2}} \\\\
+            \\Rightarrow y &= \\left(2.6721\\right)^{3/8} \\\\
+            &= 1.4457\\,\\mathsf{m}                
+          \\end{aligned}`)}`,
 
-        `${kd(`y = 1.4457\\,\\mathsf{m}`)}`,
+        `${ki(`y = 1.4457\\,\\mathsf{m}`)}`,
       ],
 
       [
         `Determine the average flow velocity, ${ki(`v`)}.`,
 
         `${kd(`
-			\\begin{aligned}
-				A &= by + zy^2 \\\\
-				&= 6.10(3.10)+1.5(3.10)^2 \\\\
-				&= 33.325\\,\\mathsf{m^2} \\\\\\\\
-				v &= Q/A \\\\
-				&= \\frac{45.3}{33.325} \\\\
-				&= 1.3593\\,\\mathsf{m/s}
-		  \\end{aligned}
-		`)}`,
+          \\begin{aligned}
+            A &= by + zy^2 \\\\
+            &= 6.10(3.10)+1.5(3.10)^2 \\\\
+            &= 33.325\\,\\mathsf{m^2} \\\\\\\\
+            v &= Q/A \\\\
+            &= \\frac{45.3}{33.325} \\\\
+            &= 1.3593\\,\\mathsf{m/s}
+          \\end{aligned}
+        `)}`,
 
-        `${kd(`v=1.3593\\,\\mathsf{m/s}`)}`,
+        `${ki(`v=1.3593\\,\\mathsf{m/s}`)}`,
       ],
 
       [
         `Determine the hydraulic radius, ${ki("R")}.`,
 
         `${kd(`
-			\\begin{aligned}
-				P &= b + 2y\\sqrt{1+z^2} \\\\
-				&= 6.10 + 2(3.10)\\sqrt{1+1.5^2} \\\\
-				&= 17.277 \\,\\mathsf{m} \\\\\\\\
-				R &= A/P \\\\
-				&= \\frac{33.325}{17.277} \\\\
-				&= 1.9289 \\,\\mathsf{m}
-			\\end{aligned}`)}`,
+          \\begin{aligned}
+            P &= b + 2y\\sqrt{1+z^2} \\\\
+            &= 6.10 + 2(3.10)\\sqrt{1+1.5^2} \\\\
+            &= 17.277 \\,\\mathsf{m} \\\\\\\\
+            R &= A/P \\\\
+            &= \\frac{33.325}{17.277} \\\\
+            &= 1.9289 \\,\\mathsf{m}
+          \\end{aligned}`)}`,
 
-        `${kd(`R=1.9289\\,\\mathsf{m}`)}`,
+        `${ki(`R=1.9289\\,\\mathsf{m}`)}`,
       ],
 
       [
         `Determine the required slope, ${ki("S")}`,
 
         `${kd(`
-			\\begin{aligned}
-				v &= \\frac 1n R^{2/3}S^{1/2}\\\\
-				S &= \\left[\\frac {nv}{R^{2/3}} \\right]^2\\\\
-				&= \\left[\\frac {(0.014)(1.3593)}{(1.9289)^{2/3}} \\right]^2\\\\
-				&= 0.00015083
-		  	\\end{aligned}`)}`,
+          \\begin{aligned}
+            v &= \\frac 1n R^{2/3}S^{1/2}\\\\
+            S &= \\left[\\frac {nv}{R^{2/3}} \\right]^2\\\\
+            &= \\left[\\frac {(0.014)(1.3593)}{(1.9289)^{2/3}} \\right]^2\\\\
+            &= 0.00015083
+            \\end{aligned}`)}`,
 
-        `${kd(`S=0.00015083 `)}`,
+        `${ki(`S=0.00015083 `)}`,
       ],
     ],
 
@@ -564,51 +688,51 @@ export default [
         `Determine ${ki("A")} and ${ki("R")}.`,
 
         `${kd(`
-			\\begin{aligned}
-				A &= by + zy^2 \\\\
-				&= 6.00(2.30)+0.5(2.30)^2 \\\\
-				&= 16.445\\,\\mathsf{m^2} \\\\\\\\
-				P &= b + 2y\\sqrt{1+z^2} \\\\
-				&= 6.00 + 2(2.30)\\sqrt{1+0.5^2} \\\\
-				&= 11.143 \\,\\mathsf{m} \\\\\\\\
-				R &= A/P \\\\
-				&= \\frac{16.445}{11.143} \\\\
-				&= 1.4758 \\,\\mathsf{m}
-			\\end{aligned}`)}`,
+          \\begin{aligned}
+            A &= by + zy^2 \\\\
+            &= 6.00(2.30)+0.5(2.30)^2 \\\\
+            &= 16.445\\,\\mathsf{m^2} \\\\\\\\
+            P &= b + 2y\\sqrt{1+z^2} \\\\
+            &= 6.00 + 2(2.30)\\sqrt{1+0.5^2} \\\\
+            &= 11.143 \\,\\mathsf{m} \\\\\\\\
+            R &= A/P \\\\
+            &= \\frac{16.445}{11.143} \\\\
+            &= 1.4758 \\,\\mathsf{m}
+          \\end{aligned}`)}`,
 
-        `${kd(`A=16.445\\,\\mathsf{m^2}, R=1.4758 \\,\\mathsf{m}`)}`,
+        `${ki(`A=16.445\\,\\mathsf{m^2}, R=1.4758 \\,\\mathsf{m}`)}`,
       ],
 
       [
         `Determine ${ki("Q")} and ${ki("v")}.`,
 
         `${kd(`
-			\\begin{aligned}
-				v &= \\frac 1n R^{2/3}S^{1/2}\\\\
-				&= \\frac 1{0.014} (1.4758)^{2/3} (1/850)^{1/2}\\\\
-				&= 3.1758\\,\\mathsf{m/s}\\\\\\\\
-				Q &= Av\\\\
-				&= 16.445\\cdot 3.1758\\\\
-				&= 52.226\\,\\mathsf{m^3/s}
-			\\end{aligned}`)}`,
+          \\begin{aligned}
+            v &= \\frac 1n R^{2/3}S^{1/2}\\\\
+            &= \\frac 1{0.014} (1.4758)^{2/3} (1/850)^{1/2}\\\\
+            &= 3.1758\\,\\mathsf{m/s}\\\\\\\\
+            Q &= Av\\\\
+            &= 16.445\\cdot 3.1758\\\\
+            &= 52.226\\,\\mathsf{m^3/s}
+          \\end{aligned}`)}`,
 
-        `${kd(`Q=52.226\\,\\mathsf{m^3/s}, v=3.1758\\,\\mathsf{m/s}`)}`,
+        `${ki(`Q=52.226\\,\\mathsf{m^3/s}, v=3.1758\\,\\mathsf{m/s}`)}`,
       ],
 
       [
         `Classify the flow.`,
 
         `${kd(`
-			\\begin{aligned}
-				T &= 6.00 + 2(0.5)(2.30)\\\\
-				&= 8.3000\\,\\mathsf{m}\\\\\\\\
-				N_F &= \\frac{v}{\\sqrt{g(A/T)}}\\\\
-				&= \\frac{3.1758}{\\sqrt{9.81(16.445/8.30)}}\\\\
-				&= 0.72035\\\\
-				&< 1
-			\\end{aligned}`)}`,
+          \\begin{aligned}
+            T &= 6.00 + 2(0.5)(2.30)\\\\
+            &= 8.3000\\,\\mathsf{m}\\\\\\\\
+            N_F &= \\frac{v}{\\sqrt{g(A/T)}}\\\\
+            &= \\frac{3.1758}{\\sqrt{9.81(16.445/8.30)}}\\\\
+            &= 0.72035\\\\
+            &< 1
+          \\end{aligned}`)}`,
 
-        `${kd(`\\textsf{Flow is sub-critical.}`)}`,
+        `${ki(`\\textsf{Flow is sub-critical.}`)}`,
       ],
     ],
 
@@ -637,20 +761,20 @@ export default [
         )} as a function of ${ki("y")}.`,
 
         `${kd(`
-			\\begin{aligned}
-				A &= by + zy^2 \\\\
-				&= 3.50y+1.5y^2 \\\\\\\\
-				P &= b + 2y\\sqrt{1+z^2} \\\\
-				&= 3.50 + 2y\\sqrt{1+1.5^2} \\\\
-				&= 3.50 + 3.6056y \\\\\\\\
-				Q &= \\frac 1n AR^{2/3} S^{1/2} \\\\
-				&= \\frac 1n A(A/P)^{2/3} S^{1/2} \\\\
-				&= \\frac 1n \\cdot \\frac{A^{5/3}}{P^{2/3}} \\cdot S^{1/2} \\\\
-				&= \\frac 1{0.015} \\cdot \\frac{\\left( 3.50y+1.5y^2\\right)^{5/3}}{\\left(3.50+3.6056y\\right)^{2/3}} \\cdot (0.0005)^{1/2} \\\\
-				Q &=  1.4907 \\cdot \\frac{\\left( 3.50y+1.5y^2\\right)^{5/3}}{\\left(3.50+3.6056y\\right)^{2/3}}  \\\\
-			\\end{aligned}`)}`,
+          \\begin{aligned}
+            A &= by + zy^2 \\\\
+            &= 3.50y+1.5y^2 \\\\\\\\
+            P &= b + 2y\\sqrt{1+z^2} \\\\
+            &= 3.50 + 2y\\sqrt{1+1.5^2} \\\\
+            &= 3.50 + 3.6056y \\\\\\\\
+            Q &= \\frac 1n AR^{2/3} S^{1/2} \\\\
+            &= \\frac 1n A(A/P)^{2/3} S^{1/2} \\\\
+            &= \\frac 1n \\cdot \\frac{A^{5/3}}{P^{2/3}} \\cdot S^{1/2} \\\\
+            &= \\frac 1{0.015} \\cdot \\frac{\\left( 3.50y+1.5y^2\\right)^{5/3}}{\\left(3.50+3.6056y\\right)^{2/3}} \\cdot (0.0005)^{1/2} \\\\
+            Q &=  1.4907 \\cdot \\frac{\\left( 3.50y+1.5y^2\\right)^{5/3}}{\\left(3.50+3.6056y\\right)^{2/3}}  \\\\
+          \\end{aligned}`)}`,
 
-        `${kd(
+        `${ki(
           `Q = 1.4907 \\cdot \\frac{\\left( 3.50y+1.5y^2\\right)^{5/3}}{\\left(3.50+3.6056y\\right)^{2/3}}`
         )}`,
       ],
@@ -661,17 +785,19 @@ export default [
         )}`,
 
         `We are looking for ${ki("y")} that satisfies:
-		${kd(
-      `32.0 = 1.4907 \\cdot \\frac{\\left( 3.50y+1.5y^2\\right)^{5/3}}{\\left(3.50+3.6056y\\right)^{2/3}}`
-    )}
-	This expression cannot be solved analytically for ${ki(
-    "y"
-  )}. Classically, this problem would be solved using 'trial-and-error', evaluating the right hand side of the expression for different values of ${ki(
+        ${kd(
+          `32.0 = 1.4907 \\cdot \\frac{\\left( 3.50y+1.5y^2\\right)^{5/3}}{\\left(3.50+3.6056y\\right)^{2/3}}`
+        )}
+        This expression cannot be solved analytically for ${ki(
+          "y"
+        )}. Classically, this problem would be solved using 'trial-and-error', evaluating the right hand side of the expression for different values of ${ki(
           "y"
         )} until the corresponding discharge of ${ki(
           "Q=32.0\\,\\mathsf{m^3\\!/s}"
         )} is found. Trial-and-error remains a valid approach (but is time-consuming when precision is required).<br/><br/>
-		Starting with an arbitrary initial 'guess' of ${ki("y=1.000\\,\\mathsf{m}")}:
+          Starting with an arbitrary initial 'guess' of ${ki(
+            "y=1.000\\,\\mathsf{m}"
+          )}:
           ${kd(`
               \\begin{aligned}
                   y=1.000\\,\\mathsf{m} & \\Rightarrow Q=5.8967\\,\\mathsf{m^3\\!/s} \\qquad \\text{ ($Q$ < 32.0, try larger $y$)} \\\\
@@ -692,7 +818,7 @@ export default [
               )}.
               ${kd(`y=2.4063\\,\\mathsf{m}`)}`,
 
-        `${kd(`y=2.4063\\,\\mathsf{m}`)}`,
+        `${ki(`y=2.4063\\,\\mathsf{m}`)}`,
       ],
     ],
 
@@ -733,9 +859,9 @@ export default [
 
     [
       [
-        `${ki("y=0.600\\,\\mathsf{m}")} (Pipe less than half full.)`,
+        `${ki("y=0.600\\,\\mathsf{m}")}`,
 
-        `<div style="width: 130%; margin: -2em 15% 0 -15%;"><img src="/images/circularGuidedPractice1UnderHalf.png" /><div class="clear" /></div>
+        `<img src="/images/circularGuidedPractice1UnderHalf.png" />
         ${kd(`
           \\begin{aligned}
               \\alpha &= \\cos^{-1}\\frac{OA}{OB} = \\cos^{-1}\\frac{0.1500}{0.750} = 78.463^{\\circ} \\\\
@@ -754,11 +880,13 @@ export default [
               &= 1.0654\\,\\mathsf{m^3/s}
           \\end{aligned}`)}
         `,
+
+        `${ki(`Q=1.0654\\,\\mathsf{m^3/s, \\, v=1.6140\\,\\mathsf{m/s}}`)}`,
       ],
       [
-        `${ki("y=0.750\\,\\mathsf{m}")} (Pipe half full.)`,
+        `Pipe half full: ${ki("y=0.750\\,\\mathsf{m}")} `,
 
-        `<div style="width: 120%; margin: -2em 10% 0 -10%;"><img src="/images/circularGuidedPractice1Half.png" /></div><div class="clear" />
+        `<img src="/images/circularGuidedPractice1Half.png" />
         ${kd(`
           \\begin{aligned}
               A &= \\frac{\\pi D^2}{8} = \\frac{\\pi (1.500)^2}{8}\\\\
@@ -774,13 +902,13 @@ export default [
               &= 0.88357\\cdot 1.7789\\\\
               &= 1.5806\\,\\mathsf{m^3/s}
           \\end{aligned}`)}`,
+
+        `${ki(`Q=1.5806\\,\\mathsf{m^3/s, \\, v=1.7889\\,\\mathsf{m/s}}`)}`,
       ],
       [
-        `${ki(
-          "y=1.219\\,\\mathsf{m}"
-        )} (Pipe has maximum velocity at just over 80% depth.)`,
+        `${ki("y=1.219\\,\\mathsf{m}")}`,
 
-        `<div style="width: 120%; margin: -2em 10% 0 -10%;"><img src="/images/circularGuidedPractice1OverHalf.png" /></div><div class="clear" />
+        `<img src="/images/circularGuidedPractice1OverHalf.png" />
         ${kd(`
             \\begin{aligned}
                 \\alpha &= \\cos^{-1}\\frac{OA}{OB} = \\cos^{-1}\\frac{0.46900}{0.75000} = 51.293^{\\circ} \\\\\\\\
@@ -797,13 +925,17 @@ export default [
                 Q &= Av\\\\
                 &= 1.5381\\cdot 2.0394\\\\
                 &= 3.1368\\,\\mathsf{m^3/s}
-            \\end{aligned}`)}`,
+            \\end{aligned}`)}
+            <blockquote>
+            A pipe has maximum flow velocity at just over 80% depth. 
+            </blockquote>`,
+
+        `${ki(`Q=3.1368\\,\\mathsf{m^3/s, \\, v=2.0394\\,\\mathsf{m/s}}`)}`,
       ],
       [
-        `${ki(
-          "y=1.230\\,\\mathsf{m}"
-        )} (Pipe has same discharge as when full at 82% depth.)`,
-        `<div style="width: 120%; margin: -2em 10% 0 -10%;"><img src="/images/circularGuidedPractice1OverHalfPlus.png" /></div><div class="clear" />
+        ` ${ki("y=1.230\\,\\mathsf{m}")}`,
+
+        `<img src="/images/circularGuidedPractice1OverHalfPlus.png" />
         ${kd(`
             \\begin{aligned}
                 \\alpha &= \\cos^{-1}\\frac{OA}{OB} = \\cos^{-1}\\frac{0.48000}{0.75000} = 50.208^{\\circ} \\\\\\\\
@@ -820,14 +952,17 @@ export default [
                 Q &= Av\\\\
                 &= 1.5508\\cdot 2.0393\\\\
                 &= 3.1625\\,\\mathsf{m^3/s}
-            \\end{aligned}`)}`,
+            \\end{aligned}`)}
+            <blockquote>
+              A pipe has same discharge at 82% depth as when full. This is not the maximum value. 
+            </blockquote>`,
+
+        `${ki(`Q=3.1625\\,\\mathsf{m^3/s, \\, v=2.0393\\,\\mathsf{m/s}}`)}`,
       ],
       [
-        `${ki(
-          "y=1.407\\,\\mathsf{m}"
-        )} (Pipe has maximum discharge at 93.8% depth.)`,
+        `${ki("y=1.407\\,\\mathsf{m}")}`,
 
-        `<div style="width: 120%; margin: -2em 10% 0 -10%;"><img src="/images/circularGuidedPractice1MaxQ.png" /></div><div class="clear" />
+        `<img src="/images/circularGuidedPractice1MaxQ.png" />
         ${kd(`
             \\begin{aligned}
                 \\alpha &= \\cos^{-1}\\frac{OA}{OB} = \\cos^{-1}\\frac{0.65700}{0.75000} = 28.836^{\\circ} \\\\\\\\
@@ -844,12 +979,18 @@ export default [
                 Q &= Av\\\\
                 &= 1.7217\\cdot 1.9751\\\\
                 &= 3.4005\\,\\mathsf{m^3/s}
-            \\end{aligned}`)}`,
+            \\end{aligned}`)}
+            <blockquote>
+              A pipe has maximum discharge when flowing at 93.8% depth.
+            </blockquote>
+            `,
+
+        `${ki(`Q=3.4005\\,\\mathsf{m^3/s}, \\, v=1.9751\\,\\mathsf{m/s}`)}`,
       ],
       [
-        `${ki("y=1.500\\,\\mathsf{m}")} (Pipe is full.)`,
+        `Pipe is full: ${ki("y=1.500\\,\\mathsf{m}")}`,
 
-        `<div style="width: 120%; margin: -2em 10% 0 -10%;"><img src="/images/circularGuidedPractice1Full.png" /></div><div class="clear" />
+        `<img src="/images/circularGuidedPractice1Full.png" />
         ${kd(`
             \\begin{aligned}
                 A &= \\frac{\\pi D^2}{4} = \\frac{\\pi (1.500)^2}{4}\\\\
@@ -866,6 +1007,8 @@ export default [
                 &= 3.1612\\,\\mathsf{m^3/s}
             \\end{aligned}
         `)}`,
+
+        `${ki(`Q=3.1612\\,\\mathsf{m^3/s}, \\, v=1.7889\\,\\mathsf{m/s}`)}`,
       ],
     ],
 

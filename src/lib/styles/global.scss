@@ -655,8 +655,9 @@ h3.subsubsectionHeader {
 }
 
 .width50 {
-  width: 50%;
   margin: 0 auto;
+  position: relative;
+  width: 50%;
 
   &.tight {
     margin: 0;
