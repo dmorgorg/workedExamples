@@ -20,7 +20,7 @@
   let answer = part[2];
 </script>
 
-<div class="box">
+<div class="part">
   <div class="statement-line">
     <div class="statement"><ExamplePartStatement {statement} /></div>
     <div class="show-hide">
@@ -44,7 +44,7 @@
 <!-- </div> -->
 
 <style lang="scss">
-  div.box {
+  div.part {
     border-bottom: 0.15rem solid var(--fluids-primary);
     margin: 0.5rem 0;
     padding-bottom: 0.75rem;
@@ -52,6 +52,11 @@
     &:first-of-type {
       padding-top: 0.5rem;
       border-top: 0.15rem solid var(--fluids-primary);
+    }
+    &:last-of-type {
+      border-bottom: none;
+      margin-bottom: 0;
+      // padding-bottom: 0;
     }
   }
   div.show-hide {
@@ -74,13 +79,4 @@
       margin-bottom: 0.5em;
     }
   }
-  // .border {
-  //   border-bottom: 0.15rem solid var(--fluids-primary);
-  //   margin: 0.5rem 0;
-  //   padding-bottom: 0.75rem;
-
-  //   &:first {
-  //     border-top: 0.15rem solid var(--fluids-primary);
-  //   }
-  // }
 </style>

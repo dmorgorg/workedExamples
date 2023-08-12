@@ -18,6 +18,9 @@
         <h4>Fluids & Water Resources</h4>
         <ul>
           <li>
+            <a href="/fluids/00-Misc"><h5>0 Miscellaneous</h5></a>
+          </li>
+          <li>
             <a href="/fluids/01-NOFandPM"
               ><h5>1 The Nature of Fluids & Pressure Measurement</h5></a
             >

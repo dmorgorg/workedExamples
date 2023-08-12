@@ -30,11 +30,9 @@
   }
   .single-title::before {
     content: "Solution";
-    // color: inherit;
     font-weight: bold;
   }
   .single {
     color: black;
-    // font-size: 90%;
   }
 </style>

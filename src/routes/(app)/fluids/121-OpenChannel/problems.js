@@ -748,7 +748,7 @@ export default [
 	has a bed width of ${ki("3.50\\,\\mathsf{m}")} and side slopes of ${ki(
       "3H\\!\\!:\\!\\!2V"
     )} (i.e., three horizontal units for each two vertical units, or ${ki(
-      `z=1.5`
+      `{z=1.5}`
     )}). The bed slope is ${ki("S=0.05\\%")}. Determine the depth ${ki(`y`)}
 	 when the discharge is ${ki(" Q=32.0\\,\\mathsf{m^3/s}")}. <br/><br/>
 	 <div class="width85"><img src="/images/trapezoidalGuidedPractice1.png" /></div><div class="clear" />
@@ -823,6 +823,123 @@ export default [
     ],
 
     `${kd(`y=2.41\\,\\mathsf{m}`)}`,
+  ],
+  [
+    "example",
+
+    `An channel with trapezoidal cross-section is lined with fine gravel (${ki(
+      "{n=0.024}"
+    )}) and maximum allowable velocity of ${ki(
+      "{0.75\\,\\mathsf{m/s}}"
+    )}. The channel sides have a slope defined by ${ki(
+      "{z=2.65}"
+    )} and the channel bed has a width of ${ki("{7.00\\,\\mathsf{m}.}")}<p></p>
+    <div class="width90"><img src="/images/fluids/12OpenChannel/g24858.png" /></div><p>The channel is designed for a flow of ${ki(
+      "{21.5\\,\\mathsf{m^3\\!/s}}"
+    )} with the velocity of flow restricted to ${ki(
+      "{80\\%}"
+    )} of the maximum allowable. Determine the depth of flow at this velocity and the slope required to generate this flow.</p><p>
+    Given that the length of the channel is ${ki(
+      "73.5\\,\\mathsf{km}"
+    )} and that the elevation differences between the two ends is ${ki(
+      "21.7\\,\\mathsf{m}"
+    )}, determine the height ${ki("h")} of any drop structure required.</p>
+   
+	 `,
+
+    [
+      [
+        `Find ${ki("y")}, the depth of flow.`,
+
+        `Find the cross-sectional area of the flow:
+        ${kd(`
+          \\begin{aligned}
+            A &=\\frac{Q}{v} \\\\
+            &=\\frac{21.5\\,\\mathsf{m^3/s}}{0.75\\,\\mathsf{m/s}\\times 80\\%} \\\\
+            &= 35.833\\,\\mathsf{m^2}
+          \\end{aligned}
+        `)}
+        Find the depth ${ki("{y}")} of flow that has an area of ${ki(
+          "{35.833\\,\\mathsf{m^2}}"
+        )},
+        ${kd(`
+          \\begin{aligned}
+            A &=by + zy^2 \\\\
+            \\Rightarrow 35.833 &=7.00y+2.65y^2\\\\ 
+            \\Rightarrow 0 &=2.65y^2+7.00y-35.833 \\\\
+            \\Rightarrow y &= \\frac{-7.00+\\sqrt{7.00^2-4(-35.833)2.65}}{2(2.65)}\\\\
+            &= 2.5865\\,\\mathsf{m}
+          \\end{aligned}
+        `)}
+        `,
+
+        `${ki("2.5865\\,\\mathsf{m}")}`,
+      ],
+
+      [
+        `Determine the hydraulic radius for this flow and velocity`,
+
+        `
+        ${kd(`
+          \\begin{aligned}
+            WP &=b + 2y\\sqrt{1+z^2} \\\\
+            &= 7.00\\,\\mathsf{m}+2(2.5865\\,\\mathsf{m})\\sqrt{1+2.65^2} \\\\
+            &= 21.652\\,\\mathsf{m}\\\\\\\\
+            R &= \\frac{A}{WP}\\\\
+            &= \\frac{35.833\\,\\mathsf{m^2}}{21.652\\,\\mathsf{m}}\\\\
+            &= 1.6550\\,\\mathsf{m}
+          \\end{aligned}
+        `)}`,
+
+        `${ki(`R=1.6550\\,\\mathsf{m}`)}`,
+      ],
+      [
+        `Find the slope ${ki(`S`)} that will generate a flow of ${ki(
+          "{35.833\\,\\mathsf{m^2}}"
+        )}`,
+
+        `It is slightly easier, mathematically, to use the velocity form of Manning's Formula to determine the slope:
+        ${kd(`
+          \\begin{aligned}
+            v &=\\frac{1}{n}R^{2/3}S^{1/2} \\\\
+            \\Rightarrow S &= \\left[\\frac{nv}{R^{2/3}}\\right]^2 \\\\
+            &= \\left[\\frac{0.024(0.75\\times 80\\%)}{(1.6550)^{2/3}}\\right]^2\\\\
+            &= 0.00010592 \\\\
+            (&= 0.010592\\%) \\\\
+          \\end{aligned}
+        `)}`,
+
+        `${ki(`S=0.00010592`)}`,
+      ],
+      [
+        `Find ${ki("h")}, the height of any drop structure required.`,
+
+        `As noted, the the required flow of ${ki(
+          "35.833\\,\\mathsf{m^3/s}"
+        )} can be achieved with a depth of ${ki(
+          "y=2.5865\\,\\mathsf{m}"
+        )} and a slope of ${ki(
+          `S=0.00010592`
+        )}. (It could also be achieved with less slope which would decrease the velocity of the flow, necessitatiing an increased depth - and corresponding increase in cross-sectional area - to maintain the volume flow rate.)<p>
+        A slope of ${ki("0.00010592")} for a distance of ${ki(
+          "73.5\\,\\mathsf{km}"
+        )} allows for a drop in elevation of:
+        ${kd(`
+         73.5\\times 1000\\,\\mathsf{m}\\times 0.00010592 = 7.7854\\,\\mathsf{m}
+        `)} There is an elevation difference between ends of the channel in excess of ${ki(
+          "7.7854\\,\\mathsf{m}"
+        )} so a drop structure is required for this extra elevation difference:
+        ${kd(
+          "h = 21.7\\,\\mathsf{m}-7.7854\\,\\mathsf{m}=13.915\\,\\mathsf{m}"
+        )}`,
+
+        `${ki(`h=13.915\\,\\mathsf{m}`)}`,
+      ],
+    ],
+
+    `${kd(
+      `y=2.59\\,\\mathsf{m},\\quad S=0.01059\\%,\\quad h=13.92\\,\\mathsf{m}`
+    )}`,
   ],
 
   // ----------------------------------------------------------------------------------------------------------------

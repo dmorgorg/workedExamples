@@ -36,8 +36,6 @@
     align-self: center;
     margin-bottom: 1.5rem;
     padding: 0;
-    // border: 1px solid pink;
-    // margin: 0;
 
     button {
       font-size: 0.8rem;
