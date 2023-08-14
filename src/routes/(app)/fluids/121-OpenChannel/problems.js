@@ -209,13 +209,220 @@ export default [
   [
     "example",
 
+    `A rectangular channel flows at a depth of ${ki(
+      "{1.850\\,\\mathsf{m}}"
+    )} at an average velocity of ${ki("2.25\\,\\mathsf{m/s}")}. 
+        Determine the alternate depth for this flow.`,
+
+    [
+      [
+        `Find the specific energy for the flow.`,
+        `${kd(`
+			\\begin{aligned}
+				E &= \\frac{v^2}{2g} + y \\\\
+        &= \\frac{(2.25\\,\\mathsf{m/s})^2}{2(9.81\\,\\mathsf{m/s^2})} + 1.85\\,\\mathsf{m} \\\\
+        &= 2.1080\\,\\mathsf{m}
+			\\end{aligned}
+		`)}`,
+
+        `${ki(`
+			E = 2.1080\\,\\mathsf{m}
+		`)}`,
+      ],
+
+      [
+        `Derive a polynomial equation whose solutions include the alternate depths with the same specific energy ${ki(
+          "{E=2.1080\\,\\mathsf{m}}"
+        )}`,
+
+        `Let the width of the channel be ${ki("b\\,\\mathsf{m}")}. Then,				
+        ${kd(`
+          \\begin{aligned}
+            Q &= Av \\\\
+            &= 1.85b\\,\\mathsf{m} \\times 2.25\\,\\mathsf{m/s} \\\\
+            &= 4.1625b\\,\\mathsf{m^3/s} \\\\\\\\
+            E &= \\frac{v^2}{2g} + y \\\\
+            &= \\frac{(Q/A)^2}{2g}+y \\\\
+            \\Rightarrow 2.1080\\,\\mathsf{m} &= \\frac{\\left(\\frac{\\normalsize 4.1625b\\,\\mathsf{m^3/s}}{\\normalsize by\\,\\mathsf{m^2}}\\right)^2}{2(9.81\\,\\mathsf{m/s^2})}+y\\,\\mathsf{m} \\\\[1em]
+            \\Rightarrow 2.1080 &= \\frac{0.88310}{y^2}+y \\\\[1em]
+            \\Rightarrow 2.1080y^2 &= 0.88310 + y^3            
+          \\end{aligned}
+        `)}
+        <blockquote>
+          This is a cubic polynomial. In general, a cubic has three roots, at least one of which is real. The other two roots may both be real numbers or both complex numbers. In our case, we have two (real) alternate depths and a third (necessarily real, since the other two are real) root which is inconsistent with our problem (a negative value for depth).
+          <p></p>
+
+          Cubics that arise in open channel problems are usually difficult or laborious to solve without the use of technology.
+        </blockquote>`,
+
+        `${ki(`
+        y^3 - 2.1080y^2+0.88310=0
+		`)} `,
+      ],
+      [
+        `Solve for the alternate depth (Method 1)`,
+
+        `The easiest way to solve ${ki(`
+        y^3 - 2.1080y^2+0.88310 = 0
+		`)} is to use a calculator that has a polynomial solver. Many reasonably priced calculators have such a function. A calculator gives these three values for ${ki(
+          `y`
+        )}:
+    ${kd(`\\begin{aligned}
+      y_1 &= 1.8500 \\\\
+      y_2 &= 0.83188 \\\\
+      y_3 &= -0.57384
+    \\end{aligned}
+    `)}
+    ${ki(`y_1=1.8500\\,\\mathsf{m}`)} is the originally provided depth. ${ki(
+          `y_3=-0.57384\\,\\mathsf{m}`
+        )} is negative and inconsistent with our problem. The alternate depth we are seeking is ${ki(
+          `y_2 = 0.83188\\,\\mathsf{m}`
+        )}.  `,
+
+        `${ki(`
+			0.83188 \\,\\mathsf{m} 
+		`)} `,
+      ],
+
+      [
+        `Solve for the alternate depth (Method 2)`,
+
+        `<br/>As mentioned earlier, cubics are generally difficult and laborious to solve. But we do have some valuable information: we have already been given one of the solutions.  That is, ${ki(
+          `{y-1.850}`
+        )} is a factor of ${ki(`
+    y^3 - 2.1080y^2+0.88310 = 0.`)} We can perform synthetic division as follows to express the cubic equation as a product of a linear and a quadratic:<p></p>
+
+        ${kd(`
+          \\begin{array}{l}
+            \\phantom{y-1.850\\smash{\\big)}}y^2-0.25800y-0.47730 \\\\
+            y-1.850\\overline{\\smash{\\big)}y^3-2.1080y^2+0y+0.88310} \\\\
+           \\phantom{ y-1.850\\smash{\\big)}}\\underline{y^3\\phantom{0}-1.850y^2} \\\\
+           \\phantom{ y-1.850\\smash{\\big)}y}-0.25800y^2+0y \\\\
+           \\phantom{ y-1.850\\smash{\\big)}yy}\\underline{-0.25800y^2+0.47730y} \\\\
+           \\phantom{ y-1.850\\smash{\\big)}y-0.25800y^2}-0.47730y+0.88310 \\\\
+           \\phantom{ y-1.850\\smash{\\big)y}y-0.25800y^2}\\underline{ -0.47730y+0.88301} \\\\
+           \\phantom{ y-1.850\\smash{\\big)y}y-0.25800y^2-0.4773}+0.00009  \\approx 0\\\\
+          \\end{array}
+        `)}
+       Thus, 
+       ${kd(`
+       \\begin{aligned}
+        y^3 - 2.1080y^2+0.88310 &= 0 \\\\
+        \\Rightarrow (y-1.850)(y^2-0.25800y-0.47730) &= 0
+       \\end{aligned}
+       `)}
+       and setting
+       ${kd(`
+       (y^2-0.25800y-0.47730) = 0       
+       `)}
+       will provide the provide two remaining roots, ${ki(`y_2`)} and ${ki(
+          `y_3`
+        )}, of the cubic:
+       ${kd(`
+       \\begin{aligned}
+        y &= \\frac{-b\\pm\\sqrt{b^2-4ac}}{2a} \\\\
+        &= \\frac{0.25800\\pm\\sqrt{(0.25800)^2-4(1)(-0.47730)}}{2(1)} \\\\
+        y_2 &= 0.83181 \\\\
+        y_3 &= -0.57381
+       \\end{aligned}
+       `)}
+        Discard the negative depth and the alternate depth is ${ki(
+          `0.83181\\,\\mathsf{m}`
+        )}.
+        <blockquote>
+        The slight diffence (in the fifth decimal place) between our two methods is due to rounding errors caused from using five significant digits for interim calculations. This difference will disappear when using three significant digits for the final answer. </blockquote>
+    
+    `,
+
+        `${ki(`
+			0.83181 \\,\\mathsf{m} 
+		`)} `,
+      ],
+
+      [
+        `Solve for the alternate depth (Method 3)`,
+
+        `As an alternative to the previous method using synthetic division, we can also simply factor the cubic. Again, this is possible since we know one of the roots. <p></p>
+    ${kd(`
+      \\begin{aligned}
+        & y^3 - 2.1080y^2+0.88310 \\\\
+        &\\quad\\quad =(y-1.850)(py^2+qy+r) \\\\
+        &\\quad\\quad = py^3+(-1.850p+q)y^2+(-1.850q+r)y+(-1.850r)
+      \\end{aligned}
+    `)} 
+    ${ki(`p`)}, ${ki(`q`)} and ${ki(
+          `r`
+        )} are found by comparing the coefficients of the powers of ${ki(`y`)}:
+        ${kd(`
+        \\begin{alignedat}{2}
+          p &= 1 & \\textsf{(Coefficients of }y^3) \\\\[0.25em]
+          -1.850p+q &= -2.1080 & \\textsf{(Coefficients of }y^2) \\\\
+          \\Rightarrow q &= -2.1080+1.850(1) \\\\
+          &= -0.258 \\\\
+          -1.850q+r &= 0 & \\textsf{(Coefficients of }y^1) \\\\
+          \\Rightarrow r &= 1.850(-0.258) \\\\
+          &= -0.47730 \\\\
+          -1.850r &=0.883100 & \\textsf{(Coefficients of }y^0) \\\\
+          \\Rightarrow r &= -1.850(0.258) \\\\
+          &= -0.47730
+        \\end{alignedat}`)}
+
+        (We didn't really need to use the coefficients of ${ki(
+          `y^0`
+        )} above but it does verify the earlier results from the higher powers of ${ki(
+          `y`
+        )}.)
+        <p></p>
+        Again,
+        ${kd(`
+        \\begin{gather*}
+        y^3-2.1080y^2+0.88310=
+        \\left(y-1.850\\right)\\left(y^2-0.25800y-0.47730\\right)
+        \\end{gather*}
+        `)}
+        Now proceed as in Method 2 above to find  ${ki(
+          `y_2=0.83188\\,\\mathsf{m}`
+        )}.
+    `,
+
+        `${ki(`
+			0.83188 \\,\\mathsf{m} 
+		`)} `,
+      ],
+      [
+        `Verify the result (optional, but simple!).`,
+
+        `${kd(`
+          \\begin{aligned}
+            E &= \\frac{(Q/A)^2}{2g}+y \\\\
+            &= \\frac{\\left(\\frac{\\normalsize 4.1625\\cancel{b}\\,\\mathsf{m^3/s}}{\\normalsize 0.83188\\cancel{b}\\,\\mathsf{m^2}}\\right)^2}{2(9.81\\,\\mathsf{m/s^2})}+0.83188\\,\\mathsf{m} \\\\
+            &= 2.1080\\,\\mathsf{m}\\quad \\checkmark
+          \\end{aligned}
+        `)}
+        For the same volume flow rate, flow depths of ${ki(
+          `1.8500\\,\\mathsf{m}`
+        )} and ${ki(
+          `0.83188\\,\\mathsf{m}`
+        )} have the same specific energy; they are alternate depths.`,
+
+        `Verified!`,
+      ],
+    ],
+    // the answer
+    `${kd(`
+			y=0.832\\,\\mathsf{m}
+	`)}`,
+  ],
+  [
+    "example",
+
     `A rectangular flume is built out of wood ${ki(
       "{(n=0.012)}"
     )} and has a base width of ${ki("1.250\\,\\mathsf{m}")}. 
         The flume has a longitudinal slope of ${ki(
           "0.14\\%"
         )} and a flow depth of ${ki("950\\,\\mathsf{mm}")}. 
-        Determine ${ki("Q")}, the discharge, and the slope ${ki(
+        Determine ${ki("Q,")} the discharge, and the slope ${ki(
       "S_c"
     )} at which this flow becomes critical.
         What is the critical depth ${ki("y_c")} and the critical velocity ${ki(
