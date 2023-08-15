@@ -5,12 +5,14 @@
 
 <article
   class="problem-statement"
+  class:zeroProof={levels == 0 && problem[0] === "proof"}
+  class:oneProof={levels == 1 && problem[0] === "proof"}
   class:twoProof={levels == 2 && problem[0] === "proof"}
   class:threeProof={levels == 3 && problem[0] === "proof"}
-  class:fourProof={levels == 4 && problem[0] === "proof"}
+  class:zeroExample={levels == 0 && problem[0] === "example"}
+  class:oneExample={levels == 1 && problem[0] === "example"}
   class:twoExample={levels == 2 && problem[0] === "example"}
   class:threeExample={levels == 3 && problem[0] === "example"}
-  class:fourExample={levels == 4 && problem[0] === "example"}
 >
   <span>
     {@html problem[1]}
@@ -23,30 +25,38 @@
     counter-increment: problem-counter;
     margin-right: 0.5em;
   }
-  .twoProof::before {
+  .zeroProof::before {
     content: "Proof " counter(section-counter) "." counter(problem-counter) ". ";
   }
-  .threeProof::before {
+  .oneProof::before {
     content: "Proof " counter(section-counter) "."
       counter(subsubsection-counter) "." counter(problem-counter) ". ";
   }
-  .fourProof::before {
+  .twoProof::before {
+    content: "Proof " counter(section-counter) "." counter(subsection-counter)
+      "." counter(problem-counter) ". ";
+  }
+  .threeProof::before {
     content: "Proof " counter(section-counter) "." counter(subsection-counter)
       "." counter(subsubsection-counter) "." counter(problem-counter) ". ";
   }
-  .twoExample::before {
+
+  .zeroExample::before {
     content: "Example " counter(section-counter) "." counter(problem-counter)
       ". ";
   }
-  .threeExample::before {
+  .oneExample::before {
     content: "Example " counter(section-counter) "."
       counter(subsubsection-counter) "." counter(problem-counter) ". ";
   }
-  .fourExample::before {
+  .twoExample::before {
+    content: "Example " counter(section-counter) "." counter(subsection-counter)
+      "." counter(problem-counter) ". ";
+  }
+  .threeExample::before {
     content: "Example " counter(section-counter) "." counter(subsection-counter)
       "." counter(subsubsection-counter) "." counter(problem-counter) ". ";
   }
-
   span {
     color: black;
     font-size: 90%;

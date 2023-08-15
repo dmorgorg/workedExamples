@@ -108,30 +108,32 @@ main {
   background: white;
 }
 
-.math {
-  color: var(--math-primary);
-  .answer {
-    background-color: var(--math-white);
-    border: 3px solid var(--math-primary);
+.math .part,
+.fluids .part {
+  // margin: 0.5rem 0 2em 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0;
+  &:last-of-type {
+    margin-bottom: 0;
+    border-bottom: none;
   }
-  button {
-    background-color: var(--math-primary);
-
-    &:hover {
-      background-color: var(--math-hover);
+  div.statement-line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0;
+    padding: 0;
+    .statement {
+      flex-grow: 1;
+      margin-bottom: 1.5em;
     }
   }
-  header {
-    border-bottom: 0.2rem solid var(--math-primary);
-  }
-  main {
-    background-color: var(--math-white);
-  }
-  .problem {
-    border: 0.1rem var(--math-primary) solid;
-  }
-  li::before {
-    color: var(--math-primary);
+  .show-hide {
+    font-size: 0.9em;
+    padding-right: 0;
+    flex-grow: 1;
+    align-self: flex-end;
   }
 }
 .fluids {
@@ -162,6 +164,12 @@ main {
   .problem {
     border: 0.1rem var(--fluids-primary) solid;
   }
+  .part {
+    border-bottom: 0.15rem solid var(--fluids-primary);
+    &:first-of-type {
+      border-top: 0.15rem solid var(--fluids-primary);
+    }
+  }
 
   .part-answer {
     display: flex;
@@ -188,6 +196,69 @@ main {
   }
   li::before {
     color: var(--fluids-primary);
+  }
+}
+.math {
+  color: var(--math-primary);
+  .answer {
+    background-color: var(--math-white);
+    border: 1px solid var(--math-primary);
+    // padding: 0;
+  }
+  blockquote {
+    background: var(--math-white);
+    border: 1px solid #ccc;
+    border-left: 0.25rem solid var(--math-primary);
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+  button {
+    background-color: var(--math-primary);
+    &:hover {
+      background-color: var(--math-hover);
+    }
+  }
+  header {
+    border-bottom: 0.2rem solid var(--math-primary);
+  }
+  main {
+    background-color: var(--math-white);
+  }
+  .problem {
+    border: 0.1rem var(--math-primary) solid;
+  }
+  .part {
+    border-bottom: 0.15rem solid var(--math-primary);
+    &:first-of-type {
+      border-top: 0.15rem solid var(--math-primary);
+    }
+  }
+
+  .part-answer {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    div {
+      background-color: var(--math-white);
+      border: 0.05rem solid var(--math-primary);
+      color: black;
+      padding: 0.25rem 1rem;
+    }
+  }
+  .problem-part-statement {
+    color: black;
+    display: inline;
+
+    &::before {
+      counter-increment: part-counter;
+      color: var(--math-primary);
+      content: "Part " counter(part-counter) ": ";
+      font-weight: bold;
+    }
+  }
+  li::before {
+    color: var(--math-primary);
   }
 }
 
@@ -257,9 +328,7 @@ ol {
   justify-content: end;
   align-self: center;
   padding: 0;
-  padding-top: 0.5rem;
-  // margin-top: 0.5rem;
-  // margin-right: -0.5rem;
+  margin-top: 0.5rem;
 
   button {
     align-self: flex-end;
@@ -282,12 +351,6 @@ ol {
   }
 }
 
-.formulae {
-  .show-hide-control {
-    margin-top: 0.5rem;
-  }
-}
-
 section.problem-parts {
   font-size: 90%;
   margin-top: 2rem;
@@ -297,116 +360,6 @@ h3.subsubsectionHeader {
   margin: 1rem 0 0 0;
   text-transform: capitalize;
 }
-
-// .math,
-// .fluids {
-// letter-spacing: 0.025em;
-// line-height: 1.2;
-
-//   button {
-//     background-color: var(--primary-grey);
-//     &:hover {
-//       color: white;
-//     }
-//   }
-
-// .statement div ol {
-//   background: none;
-//   border: none;
-// }
-// }
-
-// .fluids {
-
-//   .part-answer {
-//     border: 1px solid var(--fluids-primary);
-//     // margin: -1em auto 2em auto;
-//   }
-//   .answer {
-//     // margin: 0 1em;
-//     // width: 85%;
-
-//     &::before {
-//       content: "Answer:";
-//       color: var(--fluids-primary);
-//       display: block;
-//       font-size: 110%;
-//       font-weight: bold;
-//       padding-bottom: 0.25em;
-//       padding-top: 2em;
-//     }
-//     div {
-//       background: var(--fluids-white);
-//       // border: 1px solid var(--fluids-primary);
-//     }
-//   }
-//   .answer,
-//   .part-answer,
-//   .statement {
-//     color: black;
-//     // margin-top: 1em;
-
-//     ol {
-//
-
-//
-//     }
-//   }
-// }
-// .math {
-
-//   .part-answer {
-//     border: 1px solid var(--math-primary);
-//   }
-//   .answer {
-//     margin: 0 auto;
-//     // width: 85%;
-
-//     &::before {
-//       content: "Answer:";
-//       color: var(--math-primary);
-//       display: block;
-//       font-size: 110%;
-//       font-weight: bold;
-//       padding-bottom: 0.25em;
-//       padding-top: 2em;
-//     }
-//     div {
-//       background: var(--math-white);
-//       border: 1px solid var(--math-primary);
-//     }
-//   }
-//   .answer,
-//   .part-answer,
-//   .statement {
-//     color: black;
-//     // margin-top: 1em;
-
-//     ol {
-//       padding: 1em 3em;
-//       counter-reset: item;
-//       list-style: none;
-//       padding: 0;
-
-//       li {
-//         & + li {
-//           margin-top: 1.5em;
-//         }
-//         counter-increment: item;
-//         padding: 0;
-//         font-weight: normal;
-
-//         &::before {
-//           content: counter(item) ")";
-//           color: var(--math-primary);
-//           display: inline-block;
-//           font-size: 110%;
-//           padding-right: 1em;
-//         }
-//       }
-//     }
-//   }
-// }
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -458,6 +411,8 @@ h3.subsubsectionHeader {
 
 .katex {
   font-size: 1em !important;
+  // background: pink;
+  // padding: 1em;
 
   // color: orange;
   // padding: 0;

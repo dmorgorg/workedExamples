@@ -4,7 +4,7 @@
   import Statement from "./Statement.svelte";
   import ShowHideControl from "./ShowHideControl.svelte";
   import Parts from "./Parts.svelte";
-  import ExampleAnswer from "./ExampleAnswer.svelte";
+  import Answer from "./Answer.svelte";
   import Formulae from "./Formulae.svelte";
   export let problem;
   export let levels;
@@ -32,7 +32,7 @@
     {/if}
     {#if displayAnswer}
       <div transition:fade>
-        <ExampleAnswer {problem} />
+        <Answer {problem} />
       </div>
     {/if}
   {/if}

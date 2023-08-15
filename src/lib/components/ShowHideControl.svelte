@@ -47,9 +47,3 @@
     </button>
   {/if}
 </div>
-
-<!-- <style>
-  button.inline {
-    display: inline;
-  }
-</style> -->

@@ -9,7 +9,12 @@
     headerLeft: ["Fluids & Water Resources", true, "/fluids"],
     headerRight: ["12.1 Open Channel Flow", false],
   };
-  let levels = 4; // module-counter, section-counter, subsection-counter, problem-counter
+  // all levelshave top-level and problem counter
+  // 00 = 0, no sub, no subsub
+  // 01 = 1, no sub, yes subsub
+  // 10 = 2, yes sub, no subsub
+  // 11 = 3, yes sub, yes subsub
+  let levels = 3;
 </script>
 
 <div class="container {topMatter.theme}">
@@ -30,7 +35,7 @@
 </div>
 
 <style>
-  .container {
+  main {
     counter-set: none;
     counter-set: section-counter 12 subsection-counter 1 subsubsection-counter 0
       problem-counter 0;

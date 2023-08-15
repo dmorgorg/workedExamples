@@ -121,8 +121,8 @@ export default [
     `A mass of ${ki(
       " 95.0\\,\\mathsf{kg} "
     )} is supported by a piston over oil in a circular cylinder with inside diameter of  ${ki(
-      "{d = 7.35\\, \\mathsf{cm}} "
-    )}. What is the oil pressure at the piston?`,
+      "{d = 7.35\\, \\mathsf{cm.}} "
+    )} What is the oil pressure at the piston?`,
 
     // part solutions
     [

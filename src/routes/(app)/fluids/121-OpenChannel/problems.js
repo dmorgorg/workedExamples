@@ -289,8 +289,8 @@ export default [
 
         `<br/>As mentioned earlier, cubics are generally difficult and laborious to solve. But we do have some valuable information: we have already been given one of the solutions.  That is, ${ki(
           `{y-1.850}`
-        )} is a factor of ${ki(`
-    y^3 - 2.1080y^2+0.88310 = 0.`)} We can perform synthetic division as follows to express the cubic equation as a product of a linear and a quadratic:<p></p>
+        )} is a factor of ${ki(`{
+    y^3 - 2.1080y^2+0.88310 = 0.}`)} We can perform synthetic division to express the cubic equation as a product of a linear and a quadratic:<p></p>
 
         ${kd(`
           \\begin{array}{l}
@@ -301,7 +301,7 @@ export default [
            \\phantom{ y-1.850\\smash{\\big)}yy}\\underline{-0.25800y^2+0.47730y} \\\\
            \\phantom{ y-1.850\\smash{\\big)}y-0.25800y^2}-0.47730y+0.88310 \\\\
            \\phantom{ y-1.850\\smash{\\big)y}y-0.25800y^2}\\underline{ -0.47730y+0.88301} \\\\
-           \\phantom{ y-1.850\\smash{\\big)y}y-0.25800y^2-0.4773}+0.00009  \\approx 0\\\\
+           \\phantom{ y-1.850\\smash{\\big)y}y-0.25800y^2-0.4773a}+0.00009  \\approx 0\\\\
           \\end{array}
         `)}
        Thus, 
@@ -1036,20 +1036,20 @@ export default [
 
     `An channel with trapezoidal cross-section is lined with fine gravel (${ki(
       "{n=0.024}"
-    )}) and maximum allowable velocity of ${ki(
+    )}) that has a maximum allowable velocity of ${ki(
       "{0.75\\,\\mathsf{m/s}}"
     )}. The channel sides have a slope defined by ${ki(
       "{z=2.65}"
     )} and the channel bed has a width of ${ki("{7.00\\,\\mathsf{m}.}")}<p></p>
-    <div class="width90"><img src="/images/fluids/12OpenChannel/g24858.png" /></div><p>The channel is designed for a flow of ${ki(
+    <div class="width90"><img src="/images/fluids/12OpenChannel/trapezoidalIrrigation.png" /></div><p>The channel is designed for a flow of ${ki(
       "{21.5\\,\\mathsf{m^3\\!/s}}"
     )} with the velocity of flow restricted to ${ki(
       "{80\\%}"
     )} of the maximum allowable. Determine the depth of flow at this velocity and the slope required to generate this flow.</p><p>
     Given that the length of the channel is ${ki(
-      "73.5\\,\\mathsf{km}"
+      "{73.5\\,\\mathsf{km}}"
     )} and that the elevation differences between the two ends is ${ki(
-      "21.7\\,\\mathsf{m}"
+      "{21.7\\,\\mathsf{m}}"
     )}, determine the height ${ki("h")} of any drop structure required.</p>
    
 	 `,
@@ -1337,7 +1337,7 @@ export default [
     ],
 
     `${kd(`
-        \\footnotesize
+        \\scriptsize
         \\color{black}
             {\\begin{array}{|c|c|c|c|}
                 \\hline

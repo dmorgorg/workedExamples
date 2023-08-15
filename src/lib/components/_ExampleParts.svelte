@@ -9,7 +9,7 @@
 <section>
   <!-- don't need problem statement and show-hide button if only one part to the proof  -->
   {#if problem[2].length <= 1}
-    <div class="single">{@html problem[2][0][0]}</div>
+    <div>{@html problem[2][0][0]}</div>
   {:else}
     {#each problem[2] as part}
       <ExamplePart {part} />
@@ -17,10 +17,10 @@
   {/if}
 </section>
 
-<style>
+<!-- <style>
   section {
     color: black;
     counter-reset: part-counter;
     margin-top: 2em;
   }
-</style>
+</style> -->

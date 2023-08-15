@@ -12,7 +12,7 @@
   }
 </script>
 
-<div class="show-hide-control">
+<div class="part-show-hide-control">
   <button on:click={toggleSolution}>
     {#if displaySolution}
       <div class="hide-part-solution" />
@@ -30,7 +30,7 @@
 </div>
 
 <style lang="scss">
-  .show-hide-control {
+  .part-show-hide-control {
     display: flex;
     justify-content: center;
     align-self: center;
@@ -40,10 +40,10 @@
     button {
       font-size: 0.8rem;
       align-self: flex-end;
+      color: white;
       border-radius: 0.2rem;
       padding: 0.075rem 1rem;
-      margin-left: 1em;
-      margin-right: 1rem;
+      margin: 0 0.5rem;
       min-width: 10rem;
 
       div.check-part-answer::before {

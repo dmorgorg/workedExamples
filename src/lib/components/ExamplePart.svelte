@@ -28,7 +28,6 @@
     </div>
   </div>
 
-  <!-- <div class:box={either}> -->
   {#if displaySolution}
     <div transition:fade>
       <ExamplePartSolution {solution} />
@@ -40,43 +39,3 @@
     </div>
   {/if}
 </div>
-
-<!-- </div> -->
-
-<style lang="scss">
-  div.part {
-    border-bottom: 0.15rem solid var(--fluids-primary);
-    margin: 0.5rem 0;
-    padding-bottom: 0.75rem;
-
-    &:first-of-type {
-      padding-top: 0.5rem;
-      border-top: 0.15rem solid var(--fluids-primary);
-    }
-    &:last-of-type {
-      border-bottom: none;
-      margin-bottom: 0;
-      // padding-bottom: 0;
-    }
-  }
-  div.show-hide {
-    font-size: 0.9em;
-    padding-right: 0;
-    flex-grow: 1;
-    align-self: flex-end;
-  }
-
-  div.statement-line {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 0;
-    padding: 0;
-
-    .statement {
-      flex-grow: 1;
-      margin-bottom: 0.5em;
-    }
-  }
-</style>

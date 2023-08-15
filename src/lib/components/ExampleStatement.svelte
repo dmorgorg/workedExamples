@@ -14,7 +14,7 @@
   </span>
 </article>
 
-<style lang="scss">
+<!-- <style lang="scss">
   .two::before {
     font-weight: bold;
     counter-increment: problem-counter;
@@ -24,8 +24,8 @@
   .three::before {
     font-weight: bold;
     counter-increment: problem-counter;
-    content: "Example " counter(section-counter) "." counter(subsection-counter)
-      "." counter(problem-counter) ".  ";
+    content: "Exampleasda " counter(section-counter) "."
+      counter(subsection-counter) "." counter(problem-counter) ".  ";
   }
   .four::before {
     font-weight: bold;
@@ -38,4 +38,4 @@
     color: black;
     font-size: 90%;
   }
-</style>
+</style> -->

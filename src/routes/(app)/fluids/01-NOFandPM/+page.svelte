@@ -9,7 +9,12 @@
     headerLeft: ["Fluids & Water Resources", true, "/fluids"],
     headerRight: ["1 The Nature of Fluids & Pressure Measurement", false],
   };
-  let levels = 3; // module-counter, section-counter, subsection-counter, problem-counter
+  // all levelshave top-level and problem counter
+  // 00 = 0, no sub, no subsub
+  // 01 = 1, no sub, yes subsub
+  // 10 = 2, yes sub, no subsub
+  // 11 = 3, yes sub, yes subsub
+  let levels = 1;
 </script>
 
 <div class="container {topMatter.theme}">
@@ -32,7 +37,6 @@
 <style>
   .container {
     counter-set: none;
-    counter-set: section-counter 1 subsection-counter 1 subsubsection-counter 0
-      problem-counter 0;
+    counter-set: section-counter 1 subsubsection-counter 0 problem-counter 0;
   }
 </style>

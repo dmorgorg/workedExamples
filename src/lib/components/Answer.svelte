@@ -20,7 +20,6 @@
   .answer {
     color: black;
     font-size: 1rem;
-    padding: 0.125rem;
     margin: 0.125rem 0;
   }
 </style>
