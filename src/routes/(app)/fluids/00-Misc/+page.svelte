@@ -2,7 +2,7 @@
   import Header from "$lib/components/Header.svelte";
   import SubsubsectionHeader from "$lib/components/SubsubsectionHeader.svelte";
   import Problem from "$lib/components/Problem.svelte";
-  import problems from "../00-Misc/problems";
+  import problems from "./problems";
 
   const topMatter = {
     theme: "fluids",
