@@ -139,7 +139,7 @@ export default [
 
     // example statement
     `Find, from first principles, the derivative of ${ki(
-      `y=\\displaystyle\\frac{1}{x}`
+      `{y=\\displaystyle\\frac{1}{x}}`
     )}.`,
 
     // wrapper for example parts
