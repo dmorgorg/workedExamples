@@ -13,7 +13,7 @@
     ],
     headerRight: ["10.2 From First Principles", false],
   };
-  let levels = 2; // module-counter, section-counter, problem-counter
+  let levels = "10"; // module-counter, section-counter, problem-counter
 </script>
 
 <div class="container {topMatter.theme}">

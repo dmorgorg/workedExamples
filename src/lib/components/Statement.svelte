@@ -5,14 +5,14 @@
 
 <article
   class="problem-statement"
-  class:zeroProof={levels == 0 && problem[0] === "proof"}
-  class:oneProof={levels == 1 && problem[0] === "proof"}
-  class:twoProof={levels == 2 && problem[0] === "proof"}
-  class:threeProof={levels == 3 && problem[0] === "proof"}
-  class:zeroExample={levels == 0 && problem[0] === "example"}
-  class:oneExample={levels == 1 && problem[0] === "example"}
-  class:twoExample={levels == 2 && problem[0] === "example"}
-  class:threeExample={levels === 3}
+  class:_00-Proof={levels === "00" && problem[0] === "proof"}
+  class:_01-Proof={levels === "01" && problem[0] === "proof"}
+  class:_10-Proof={levels === "10" && problem[0] === "proof"}
+  class:_11-Proof={levels === "11" && problem[0] === "proof"}
+  class:_00-Example={levels === "00" && problem[0] === "example"}
+  class:_01-Example={levels === "01" && problem[0] === "example"}
+  class:_10-Example={levels === "10" && problem[0] === "example"}
+  class:_11-Example={levels === "11" && problem[0] === "example"}
 >
   <span>
     {@html problem[1]}
@@ -21,42 +21,41 @@
 
 <style lang="scss">
   .problem-statement {
-    // background: pink;
     &::before {
       font-weight: bold;
       counter-increment: problem-counter;
       margin-right: 0.5em;
     }
-    &.zeroProof::before {
+    &._00-Proof::before {
       content: "Proof " counter(section-counter) "." counter(problem-counter)
         ". ";
     }
-    &.oneProof::before {
+    &._01-Proof::before {
       content: "Proof " counter(section-counter) "."
         counter(subsubsection-counter) "." counter(problem-counter) ". ";
     }
-    &.twoProof::before {
+    &._10-Proof::before {
       content: "Proof " counter(section-counter) "." counter(subsection-counter)
         "." counter(problem-counter) ". ";
     }
-    &.threeProof::before {
+    &._11-Proof::before {
       content: "Proof " counter(section-counter) "." counter(subsection-counter)
         "." counter(subsubsection-counter) "." counter(problem-counter) ". ";
     }
 
-    &.zeroExample::before {
+    &._00-Example::before {
       content: "Example " counter(section-counter) "." counter(problem-counter)
         ". ";
     }
-    &.oneExample::before {
+    &._01-Example::before {
       content: "Example " counter(section-counter) "."
         counter(subsubsection-counter) "." counter(problem-counter) ". ";
     }
-    &.twoExample::before {
+    &._10-Example::before {
       content: "Example " counter(section-counter) "."
         counter(subsection-counter) "." counter(problem-counter) ". ";
     }
-    &.threeExample::before {
+    &._11-Example::before {
       content: "Example  " counter(section-counter) "."
         counter(subsection-counter) "." counter(subsubsection-counter) "."
         counter(problem-counter) ". ";

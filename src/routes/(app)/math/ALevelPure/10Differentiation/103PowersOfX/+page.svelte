@@ -14,7 +14,7 @@
     ],
     headerRight: [`10.3 Powers of ${ki("\\bm x")}`, false],
   };
-  let levels = 2; // section-counter, subsection-counter, problem-counter
+  let levels = "10";
 </script>
 
 <div class="container {topMatter.theme}">

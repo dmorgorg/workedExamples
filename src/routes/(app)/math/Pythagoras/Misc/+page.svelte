@@ -10,7 +10,7 @@
     headerLeft: ["The Pythagorean Theorem", true, "/math/Pythagoras"],
     headerRight: [`1 Miscellaneous`, false],
   };
-  let levels = 0; // module-counter, section-counter, problem-counter
+  let levels = "00"; // module-counter, section-counter, problem-counter
 </script>
 
 <div class="container {topMatter.theme}">

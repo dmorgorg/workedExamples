@@ -10,7 +10,7 @@
     headerLeft: ["The Pythagorean Theorem", true, "/math/Pythagoras"],
     headerRight: [`2 A Trigonometric Proof`, false],
   };
-  let levels = 0; // module-counter,  problem-counter
+  let levels = "00";
 </script>
 
 <div class="container {topMatter.theme}">

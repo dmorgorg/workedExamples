@@ -1,7 +1,8 @@
 <script>
-  import ProofPart from "$lib/components/ProofPart.svelte";
-  import ExamplePart from "$lib/components/ExamplePart.svelte";
+  // import ProofPart from "$lib/components/ProofPart.svelte";
+  import Part from "$lib/components/Part.svelte";
   export let problem;
+  let problemType = problem[0];
 </script>
 
 <!-- problem[1] is the main problem statement,
@@ -15,17 +16,7 @@
     </div>
   {:else}
     {#each problem[2] as part}
-      {#if problem[0] === "proof"}
-        <ProofPart {part} />
-      {:else if problem[0] === "example"}
-        <ExamplePart {part} />
-      {/if}
+      <Part {part} {problemType} />
     {/each}
   {/if}
 </section>
-
-<style lang="scss">
-  .single {
-    color: black;
-  }
-</style>

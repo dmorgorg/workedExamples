@@ -14,7 +14,7 @@
   // 01 = 1, no sub, yes subsub
   // 10 = 2, yes sub, no subsub
   // 11 = 3, yes sub, yes subsub
-  let levels = 3;
+  let levels = "11";
 </script>
 
 <div class="container {topMatter.theme}">

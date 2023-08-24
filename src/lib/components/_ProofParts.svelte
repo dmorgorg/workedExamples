@@ -16,14 +16,3 @@
     {/each}
   {/if}
 </section>
-
-<style>
-  section {
-    color: black;
-    counter-reset: part-counter;
-    /* margin: 0.5em; */
-  }
-  /* .single {
-    margin: 1em 2em;
-  } */
-</style>
