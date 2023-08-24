@@ -32,19 +32,27 @@
 <style lang="scss">
   .part-show-hide-control {
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-self: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     padding: 0;
 
     button {
-      font-size: 0.8rem;
+      cursor: pointer;
+      font-size: 0.7rem;
       align-self: flex-end;
       color: white;
       border-radius: 0.2rem;
-      padding: 0.075rem 1rem;
-      margin: 0 0.5rem;
-      min-width: 10rem;
+      padding: 0.125rem;
+      margin-left: 0.5rem;
+      min-width: 8rem;
+
+      &:hover {
+        box-shadow: 0.1rem 0.1rem 0.125rem 0.125rem var(--primary-grey);
+        color: black;
+
+        outline: 2px inset black;
+      }
 
       div.check-part-answer::before {
         content: "Check Part " counter(part-counter) " Answer";

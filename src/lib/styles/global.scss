@@ -92,6 +92,17 @@ header {
   }
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 16px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--primary-grey);
+  // padding: 0 2px;
+  width: 16px;
+}
+
 // everything below the header
 main {
   flex: 1;
@@ -103,9 +114,16 @@ main {
 .problem {
   border-radius: 0.2rem;
   margin: 1rem auto;
+  margin: 1rem auto;
   overflow-x: auto;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   background: white;
+
+  .problem-parts {
+    counter-reset: part-counter;
+    font-size: 90%;
+    margin-top: 2rem;
+  }
 }
 
 .math .part,
@@ -197,6 +215,18 @@ main {
   li::before {
     color: var(--fluids-primary);
   }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--fluids-primary);
+    border-radius: 8px;
+    border: 5px solid var(--primary-grey);
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--fluids-hover);
+    border: 3px solid var(--primary-grey);
+  }
 }
 .math {
   color: var(--math-primary);
@@ -233,7 +263,6 @@ main {
       border-top: 0.15rem solid var(--math-primary);
     }
   }
-
   .part-answer {
     display: flex;
     justify-content: center;
@@ -259,6 +288,19 @@ main {
   }
   li::before {
     color: var(--math-primary);
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--math-primary);
+    border-radius: 8px;
+    border: 5px solid var(--primary-grey);
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--math-hover);
+    border: 3px solid var(--primary-grey);
   }
 }
 
@@ -328,6 +370,7 @@ ol {
   justify-content: end;
   align-self: center;
   padding: 0;
+  margin: 0;
   margin-top: 0.5rem;
 
   button {
@@ -338,22 +381,15 @@ ol {
     font-size: 0.8rem;
     padding: 0.075rem;
     margin-left: 1rem;
-    // margin-right: -0.5rem;
     min-width: 8em;
 
     &:hover {
       box-shadow: 0.1rem 0.1rem 0.125rem 0.125rem var(--primary-grey);
       color: black;
       cursor: pointer;
-      // font-weight: bold;
       outline: 2px inset black;
     }
   }
-}
-
-section.problem-parts {
-  font-size: 90%;
-  margin-top: 2rem;
 }
 
 h3.subsubsectionHeader {
@@ -672,6 +708,35 @@ h3.subsubsectionHeader {
 
 .width30 {
   width: 30%;
+  margin: 0 auto;
+
+  &.tight {
+    margin: 0;
+  }
+  &.left {
+    margin-left: 0;
+  }
+  &.right {
+    margin-right: 0;
+  }
+}
+
+.width25 {
+  width: 25%;
+  margin: 0 auto;
+
+  &.tight {
+    margin: 0;
+  }
+  &.left {
+    margin-left: 0;
+  }
+  &.right {
+    margin-right: 0;
+  }
+}
+.width20 {
+  width: 20%;
   margin: 0 auto;
 
   &.tight {

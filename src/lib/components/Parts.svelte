@@ -25,13 +25,6 @@
 </section>
 
 <style lang="scss">
-  section {
-    counter-reset: part-counter;
-  }
-  .single-title::before {
-    content: "Solution";
-    font-weight: bold;
-  }
   .single {
     color: black;
   }

@@ -118,11 +118,16 @@ export default [
   [
     "example",
 
-    `A mass of ${ki(
-      " 95.0\\,\\mathsf{kg} "
-    )} is supported by a piston over oil in a circular cylinder with inside diameter of  ${ki(
+    `<div class="split-col">
+      <div class="width65 left top">
+        A mass of ${ki(
+          " 95.0\\,\\mathsf{kg} "
+        )} is supported by a piston over oil in a circular cylinder with inside diameter of  ${ki(
       "{d = 7.35\\, \\mathsf{cm.}} "
-    )} What is the oil pressure at the piston?`,
+    )} What is the oil pressure at the piston?
+      </div>
+      <div class="width20 left"><img src="/images/fluids/01NoFPM/NoF1.png" />
+    </div>`,
 
     // part solutions
     [
@@ -388,7 +393,7 @@ export default [
     "example",
 
     `<div class="split-col">
-    <div class="width65 tight">
+    <div class="width60 tight">
       The simple barometer shown uses mercury as the fluid. There is a vacuum above ${ki(
         `B`
       )} and, disregarding the minimal vapour pressure from the mercury, the pressure at ${ki(
@@ -399,7 +404,7 @@ export default [
       `25\\degree\\!\\textsf{C}`
     )}, what would be the height of the column for this atmospheric pressure?
     </div>    
-    <div class="width30 right"><img src="/images/fluids/01NoFPM/barometer.png" />
+    <div class="width35 right"><img src="/images/fluids/01NoFPM/barometer.png" />
     </div>`,
 
     [
@@ -464,6 +469,104 @@ export default [
     // the answer
     `${kd(`
 			P_A = 89.0\\,\\mathsf{kPa},\\,h=9.10\\,\\mathsf{m}
+	`)}`,
+  ],
+  [
+    "example",
+
+    `<div class="width75"><img src="/images/fluids/01NoFPM/mano1.png" /></div>
+      A simple U-tube manometer is used to measure the gauge pressure in a pipe at ${ki(
+        `A`
+      )}. Given that the surface at ${ki(
+      `F`
+    )} is open to the atmosphere, find ${ki(`P_A`)}.
+    
+    `,
+
+    [
+      [
+        `${kd(`
+			\\begin{aligned}
+				P_F &= 0\\,\\mathsf{kPa} \\\\[0.2cm]
+
+				P_E &= P_F + \\gamma_{oil}\\cdot h_{EF} \\\\
+				&= 0\\,\\mathsf{kPa} + \\left(0.960\\times 9.81\\,\\mathsf{m/s^2}\\right)(0.145\\,\\mathsf{m})\\\\
+				&= 1.3656\\,\\mathsf{kPa} \\\\[0.2cm]
+
+				P_C &= P_D + \\gamma_{mercury}\\cdot h_{CE} \\\\
+				&= 1.3656\\,\\mathsf{kPa} + \\left(13.54\\times 9.81\\,\\mathsf{m/s^2}\\right)(0.750\\,\\mathsf{m}+ 0.950\\,\\mathsf{m})\\\\
+				&= 227.17\\,\\mathsf{kPa} \\\\[0.2cm]
+
+				P_C &= P_B \\\\[0.2cm]
+
+        P_A &= P_B - \\gamma_{water}\\cdot h_{BA} \\\\
+				&= 227.17\\,\\mathsf{kPa} - \\left(1.000\\times 9.81\\,\\mathsf{m/s^2}\\right)(0.950\\,\\mathsf{m})\\\\
+				&= 217.85\\,\\mathsf{kPa} 
+			\\end{aligned}
+		`)}
+        `,
+      ],
+    ],
+    // the answer
+    `${kd(`
+    P_A =218\\,\\mathsf{kPa} 
+	`)}`,
+  ],
+  [
+    "example",
+
+    `
+      A differential manometer is used to measure the pressure difference between point ${ki(
+        `A`
+      )} and point ${ki(
+      `B`
+    )} in a pipe containing a flow of water. (Given that the fluid between ${ki(
+      `A`
+    )} and ${ki(`B`)} is not static, the pressures at ${ki(`A`)} and point ${ki(
+      `B`
+    )}, although at the same level, are not necessarily identical.) The fluid between ${ki(
+      `A`
+    )} and ${ki(`D`)}, and between ${ki(`B`)} and ${ki(
+      `C`
+    )}, is water and may be considered static. The fluid between ${ki(
+      `D`
+    )} and ${ki(`C`)} is mercury, and static. Determine ${ki(`P_A-P_B`)}.
+      <p></p><div class="width95"><img src="/images/fluids/01NoFPM/mano2.png" /></div><p></p>
+    `,
+
+    [
+      [
+        `Let the elevation difference between ${ki(`B`)} and ${ki(`C`)} be ${ki(
+          `h_{BC}\\,\\mathsf{m}`
+        )}. Then,
+        ${kd(`
+
+			\\begin{aligned}
+				P_C &= P_B + \\gamma_{water}\\cdot h_{BC} \\\\
+				&= P_B + \\left(9.81\\,\\mathsf{kN/m^3}\\right)\\cdot h_{BC}\\,\\mathsf{m} \\\\
+				&= P_B + 9.81\\cdot h_{BC}\\,\\mathsf{kPa} \\\\[0.2cm]
+
+				P_D &= P_C + \\gamma_{mercury}\\cdot 0.115\\,\\mathsf{m}\\\\
+				&= P_C + \\left(13.54\\times 9.81\\,\\mathsf{kN/m^3}\\right)\\cdot 0.115\\,\\mathsf{m}\\\\
+				&= P_B + 9.81\\cdot h_{BC}\\,\\mathsf{kPa} + 15.275\\,\\mathsf{kPa}\\\\[0.2cm]
+
+				P_A &=P_D - \\gamma_{water}\\cdot (0.115\\,\\mathsf{m}+h_{BC}\\,\\mathsf{m})\\\\
+				&=P_D - \\left(9.81\\,\\mathsf{kN/m^3}\\right)\\cdot (0.115\\,\\mathsf{m})-\\left(9.81\\,\\mathsf{kN/m^3}\\right)\\cdot h_{BC}\\,\\mathsf{m}\\\\
+				&=P_D - 1.1282\\,\\mathsf{kPa}-9.81\\cdot h_{BC}\\,\\mathsf{kPa}\\\\
+				&=P_B + \\cancel{9.81\\cdot h_{BC}\\,\\mathsf{kPa}} + 15.275\\,\\mathsf{kPa}\\\\
+        &\\quad\\quad - 1.1282\\,\\mathsf{kPa}-\\cancel{9.81\\cdot h_{BC}\\,\\mathsf{kPa}}\\\\
+				&= P_B + 14.147\\,\\mathsf{kPa}\\\\[0.2cm]
+
+        \\Rightarrow P_A-P_B &= 14.147\\,\\mathsf{kPa}
+				 
+			\\end{aligned}
+		`)}
+        `,
+      ],
+    ],
+    // the answer
+    `${kd(`
+    P_A-P_B =14.18\\,\\mathsf{kPa} 
 	`)}`,
   ],
 ];
