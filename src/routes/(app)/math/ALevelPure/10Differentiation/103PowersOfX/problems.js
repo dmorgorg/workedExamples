@@ -104,7 +104,7 @@ export default [
 
     // example statement
     `Find ${ki(`f'(x)`)} for each of the following:
-    <div class="centered-list">
+    <div class="center">
         <ol>
             <li>${ki(`f(x)=7x^6`)}</li>
             <li>${ki(`f(x)=5x^{-4}`)}</li>
@@ -180,12 +180,12 @@ export default [
     // problem answer
     `<ol>
         <li>${ki(`f'(x)=42x^5`)}</li>
-        <li>${ki(`f'(x)=-20{x^{-5}}`)}</li>
-        <li>${ki(` f'(x) = -\\frac{9}{2\\sqrt{x^5}}`)} </li>     
-        <li>${ki(`f'(x)=\\frac{14}{5\\sqrt[5]{x^3}}`)}</li>
+        <li>${ki(`f'(x)=-20{x^{-5}}=-\\large\\frac{20}{x^5}`)}</li>
+        <li>${ki(` f'(x) = -\\large\\frac{9}{2\\sqrt{x^5}}`)} </li>     
+        <li>${ki(`f'(x)=\\large\\frac{14}{5\\sqrt[5]{x^3}}`)}</li>
     </ol>`,
   ],
-  // PROBLEM 3
+  // PROBLEM 3 /////////////////////////////////////////////////////////////////////////////////////
   [
     "example",
 
@@ -278,10 +278,10 @@ export default [
     ],
     // problem answer
     `<ol>
-        <li>${ki(`f'(x)=42x^5`)}</li>
-        <li>${ki(`f'(x)=-20{x^{-5}}`)}</li>
-        <li>${ki(` f'(x) = -\\frac{9}{2\\sqrt{x^5}}`)} </li>     
-        <li>${ki(`f'(x)=\\frac{14}{5\\sqrt[5]{x^3}}`)}</li>
+        <li>${ki(`4`)}</li>
+        <li>${ki(`\\frac14`)}</li>
+        <li>${ki(`\\frac14`)}</li>  
+        <li>${ki(`-\\frac{1}{12}`)}</li> 
     </ol>`,
   ],
 ];

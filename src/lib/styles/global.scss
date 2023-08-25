@@ -112,13 +112,14 @@ main {
 }
 
 // an example or proof that doesn't have multiple parts
-.single {
+.single,
+.problem-part-soln {
   color: black;
+  margin-top: 1rem;
 }
 
 .problem {
   border-radius: 0.2rem;
-  margin: 1rem auto;
   margin: 1rem auto;
   overflow-x: auto;
   padding: 0.5rem;
@@ -127,7 +128,19 @@ main {
   .problem-parts {
     counter-reset: part-counter;
     font-size: 90%;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
+  }
+}
+
+.answer-title {
+  margin: 0;
+  margin-top: 1rem;
+  padding: 0;
+  font-size: 95%;
+  &::before {
+    content: "Answer";
+    font-size: 0.9rem;
+    font-weight: bold;
   }
 }
 
@@ -140,18 +153,7 @@ main {
     margin-bottom: 0;
     border-bottom: none;
   }
-  div.statement-line {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 0;
-    padding: 0;
-    .statement {
-      flex-grow: 1;
-      margin-bottom: 1.5em;
-    }
-  }
+
   .show-hide {
     font-size: 0.9em;
     padding-right: 0;
@@ -164,6 +166,9 @@ main {
   .answer {
     background-color: var(--fluids-white);
     border: 1px solid var(--fluids-primary);
+    color: black;
+    display: flex;
+    justify-content: center;
   }
   blockquote {
     background: var(--fluids-white);
@@ -199,6 +204,7 @@ main {
     justify-content: center;
     margin: 0;
     padding: 0;
+    margin-bottom: 0.5rem;
     div {
       background-color: var(--fluids-white);
       border: 0.05rem solid var(--fluids-primary);
@@ -238,7 +244,9 @@ main {
   .answer {
     background-color: var(--math-white);
     border: 1px solid var(--math-primary);
-    // padding: 0;
+    color: black;
+    display: flex;
+    justify-content: center;
   }
   blockquote {
     background: var(--math-white);
@@ -264,14 +272,19 @@ main {
   }
   .part {
     border-bottom: 0.15rem solid var(--math-primary);
+
     &:first-of-type {
       border-top: 0.15rem solid var(--math-primary);
+    }
+    &:last-of-type {
+      margin-bottom: -0.5rem;
     }
   }
   .part-answer {
     display: flex;
     justify-content: center;
     margin: 0;
+    margin-bottom: 0.5rem;
     padding: 0;
     div {
       background-color: var(--math-white);
@@ -365,12 +378,14 @@ ol {
 }
 
 .centered-list,
-.centered-block {
+.centered-block,
+.center {
   display: flex;
   justify-content: center;
 }
 
-.show-hide-control {
+.show-hide-control,
+.part-show-hide-control {
   display: flex;
   justify-content: end;
   align-self: center;
@@ -379,14 +394,13 @@ ol {
   margin-top: 0.5rem;
 
   button {
-    align-self: flex-end;
-    border-radius: 0.2rem;
-    border: 1px solid black;
-    color: white;
     font-size: 0.8rem;
-    padding: 0.075rem;
-    margin-left: 1rem;
-    min-width: 8em;
+    align-self: flex-end;
+    color: white;
+    border-radius: 0.2rem;
+    padding: 0.125rem;
+    margin-left: 0.5rem;
+    min-width: 8rem;
 
     &:hover {
       box-shadow: 0.1rem 0.1rem 0.125rem 0.125rem var(--primary-grey);
@@ -394,6 +408,32 @@ ol {
       cursor: pointer;
       outline: 2px inset black;
     }
+  }
+}
+.part-show-hide-control {
+  margin-bottom: 0.5rem;
+
+  button {
+    font-size: 0.7rem;
+  }
+
+  div.example-check-part-answer::before {
+    content: "Check Part " counter(part-counter) " Answer";
+  }
+  div.example-hide-part-answer::before {
+    content: "Hide Part " counter(part-counter) " Answer";
+  }
+  div.example-show-part-solution::before {
+    content: "Show Part " counter(part-counter) " Solution";
+  }
+  div.example-hide-part-solution::before {
+    content: "Hide Part " counter(part-counter) " Solution";
+  }
+  div.proof-show-part-solution::before {
+    content: "Show Part " counter(part-counter) " Proof";
+  }
+  div.proof-hide-part-solution::before {
+    content: "Hide Part " counter(part-counter) " Proof";
   }
 }
 
@@ -452,30 +492,9 @@ h3.subsubsectionHeader {
 
 .katex {
   font-size: 1em !important;
-  // background: pink;
-  // padding: 1em;
-
-  // color: orange;
-  // padding: 0;
-  // margin: 0;
 }
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-// .hide {
-//   display: none;
-//   visibility: hidden;
-//   opacity: 0;
-// }
-
-// .show {
-//   display: block;
-//   visibility: visible;
-//   opacity: 1;
-// }
-.center {
-  text-align: center;
-}
 
 .split-col {
   display: flex;
@@ -489,12 +508,6 @@ h3.subsubsectionHeader {
     align-items: flex-end;
   }
 }
-
-// .fright {
-//   display: block;
-//   float: right;
-//   clear: both;
-// }
 
 .inline {
   display: inline;

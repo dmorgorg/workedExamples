@@ -1,12 +1,11 @@
 <script>
-  import ExamplePartAnswer from "$lib/components/ExamplePartAnswer.svelte";
-  import ExamplePartSolution from "$lib/components/ExamplePartSolution.svelte";
+  import PartAnswer from "$lib/components/PartAnswer.svelte";
+  import PartSolution from "$lib/components/PartSolution.svelte";
   import PartStatement from "$lib/components/PartStatement.svelte";
-  import ExampleShowHideControl from "$lib/components/ExampleShowHideControl.svelte";
-  // import ProofShowHideControl from "$lib/components/ProofShowHideControl.svelte";
+  import PartShowHideControl from "$lib/components/PartShowHideControl.svelte";
   import { fade } from "svelte/transition";
   export let part;
-  export let problemType; // "example", "proof"
+  export let problemType;
 
   let showHide = {
     displayAnswer: false,
@@ -15,33 +14,25 @@
 
   $: displaySolution = showHide.displaySolution;
   $: displayAnswer = showHide.displayAnswer;
-  // $: either = displaySolution || displayAnswer;
 
   let statement = part[0];
   let solution = part[1];
   let answer = part[2];
 </script>
 
-<div class="part">
-  <div class="statement-line">
-    <div class="statement"><PartStatement {statement} /></div>
-    {#if problemType === "example"}
-      <div class="show-hide">
-        <ExampleShowHideControl bind:showHide />
-      </div>
-      <!-- {:else if problemType === "proof"}
-      <ProofShowHideControl bind:showHide /> -->
-    {/if}
-  </div>
+<div class="part" transition:fade>
+  <PartStatement {statement} />
+  <PartShowHideControl bind:showHide {problemType} />
 
   {#if displaySolution}
     <div transition:fade>
-      <ExamplePartSolution {solution} />
+      <PartSolution {solution} />
     </div>
   {/if}
-  {#if displayAnswer}
-    <div transition:fade={{ duration: 500 }}>
-      <ExamplePartAnswer {answer} />
+  <!-- proofs only have proof `solutions``, not answers -->
+  {#if displayAnswer && problemType === "example"}
+    <div transition:fade={{ duration: 1000 }}>
+      <PartAnswer {answer} />
     </div>
   {/if}
 </div>

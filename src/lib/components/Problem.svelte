@@ -25,6 +25,7 @@
   {:else}
     <Statement {problem} {levels} />
     <ShowHideControl {problem} bind:showHide />
+
     {#if displaySolution}
       <div transition:fade>
         <Parts {problem} />
