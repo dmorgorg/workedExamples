@@ -6,6 +6,7 @@
 
   --strength-white: #eeeee8;
   --fluids-primary: #088;
+  --fluids-dark: #066;
   --fluids-hover: #0bb;
   --fluids-white: #edefef;
   --math-primary: #080;
@@ -107,8 +108,8 @@ header {
 main {
   flex: 1;
   overflow-y: auto;
-  padding: 1em;
-  padding-bottom: 10rem;
+  // padding: 1em;
+  // padding-bottom: 10rem;
 }
 
 // an example or proof that doesn't have multiple parts
@@ -181,6 +182,19 @@ main {
     background-color: var(--fluids-primary);
     &:hover {
       background-color: var(--fluids-hover);
+    }
+  }
+  a.form-tab-link {
+    font-weight: bold;
+    margin: 1.5rem 0;
+    &:link,
+    &:visited,
+    &:active {
+      color: var(--fluids-dark);
+    }
+    &:hover {
+      color: var(--fluids-primary);
+      cursor: pointer;
     }
   }
   header {
@@ -451,7 +465,7 @@ h3.subsubsectionHeader {
   main {
     padding: 1em 4em;
     // font-size: 0.9rem;
-    margin-bottom: 1em;
+    // margin-bottom: 1em;
   }
 }
 @media (min-width: 768px) {
@@ -461,7 +475,7 @@ h3.subsubsectionHeader {
   main {
     padding: 1em 6em;
     // font-size: 0.9rem;
-    margin-bottom: 1em;
+    // margin-bottom: 1em;
   }
 }
 @media (min-width: 1024px) {
@@ -471,7 +485,7 @@ h3.subsubsectionHeader {
   main {
     padding: 1em 10em;
     // font-size: 0.9rem;
-    margin-bottom: 1em;
+    // margin-bottom: 1em;
   }
 }
 

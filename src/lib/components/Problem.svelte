@@ -5,7 +5,7 @@
   import ShowHideControl from "./ShowHideControl.svelte";
   import Parts from "./Parts.svelte";
   import Answer from "./Answer.svelte";
-  import Formulae from "./Formulae.svelte";
+  import FormTabLink from "./FormTabLink.svelte";
   export let problem;
   export let levels;
 
@@ -19,10 +19,10 @@
   $: displayAnswer = showHide.displayAnswer;
 </script>
 
-<section class="problem" transition:fade>
-  {#if problem[0] === "formulae" || problem[0] === "table"}
-    <Formulae {problem} />
-  {:else}
+{#if problem[0] === "formulae" || problem[0] === "table"}
+  <FormTabLink {problem} />
+{:else}
+  <section class="problem" transition:fade>
     <Statement {problem} {levels} />
     <ShowHideControl {problem} bind:showHide />
 
@@ -36,5 +36,5 @@
         <Answer {problem} />
       </div>
     {/if}
-  {/if}
-</section>
+  </section>
+{/if}
