@@ -307,13 +307,13 @@ export default [
 
     `<div class="split-col">
     <div class="width60 tight">
-      The simple barometer shown uses mercury as the fluid. There is a vacuum above ${ki(
+      The simple barometer shown uses mercury for the gauge fluid. There is a vacuum above ${ki(
         `B`
       )} and, disregarding the minimal vapour pressure from the mercury, the pressure at ${ki(
       `B`
     )} is effectively zero. Determine the atmospheric pressure at ${ki(
       `A`
-    )}. <p></p>If the barometer fluid was water at ${ki(
+    )}. <p></p>If the gauge fluid was water at ${ki(
       `25\\degree\\!\\textsf{C}`
     )}, what would be the height of the column for this atmospheric pressure?
     </div>    
@@ -441,7 +441,7 @@ export default [
       `A`
     )} and ${ki(`D`)}, and between ${ki(`B`)} and ${ki(
       `C`
-    )}, is water and may be considered static. The fluid between ${ki(
+    )}, is water and may be considered static. The gauge fluid between ${ki(
       `D`
     )} and ${ki(`C`)} is mercury, and static. Determine ${ki(`P_A-P_B`)}.
       <p></p><div class="width95"><img src="/images/fluids/01NoFPM/mano2.png" /></div><p></p>

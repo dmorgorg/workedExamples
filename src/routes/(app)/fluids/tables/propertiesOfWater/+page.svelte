@@ -4,7 +4,7 @@
 
   const topMatter = {
     theme: "fluids",
-    headerLeft: ["Table: Properties of Water", true, "/fluids/"], // to help with navigation and color styling
+    headerLeft: ["Table: Properties of Water", false], // to help with navigation and color styling
     headerRight: ["Fluids", true, "/fluids"], // statics, strength, fluids
   };
 </script>
@@ -46,8 +46,5 @@
 <style>
   .black {
     color: black;
-  }
-  h4 {
-    color: var(--fluids-primary);
   }
 </style>

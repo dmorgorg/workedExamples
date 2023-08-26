@@ -61,6 +61,9 @@
             <a href="/fluids/01-NOFandPM"
               ><h5>1 The Nature of Fluids & Pressure Measurement</h5></a
             >
+            <a href="/fluids/03-FFBernoulli"
+              ><h5>3 The Flow of Fluids & Bernoulli's Equation</h5></a
+            >
             <a href="/fluids/121-OpenChannel"><h5>12.1 Open Channel Flow</h5></a
             >
             <a href="/fluids/122-OpenChannel"

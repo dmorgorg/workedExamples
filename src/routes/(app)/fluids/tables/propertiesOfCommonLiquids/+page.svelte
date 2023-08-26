@@ -4,7 +4,7 @@
 
   const topMatter = {
     theme: "fluids",
-    headerLeft: ["Table: Properties of Common Liquids", true, "/fluids/"], // to help with navigation and color styling
+    headerLeft: ["Table: Properties of Common Liquids", false], // to help with navigation and color styling
     headerRight: ["Fluids", true, "/fluids"], // statics, strength, fluids
   };
 </script>

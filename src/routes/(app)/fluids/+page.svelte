@@ -26,6 +26,11 @@
             >
           </li>
           <li>
+            <a href="/fluids/03-FFBernoulli"
+              ><h5>3 The Flow of Fluids & Bernoulli's Equation</h5></a
+            >
+          </li>
+          <li>
             <a href="/fluids/121-OpenChannel"><h5>12.1 Open Channel Flow</h5></a
             >
           </li>
