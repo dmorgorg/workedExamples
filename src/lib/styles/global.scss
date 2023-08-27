@@ -93,22 +93,11 @@ header {
   }
 }
 
-/* width */
-::-webkit-scrollbar {
-  width: 16px;
-}
-/* Track */
-::-webkit-scrollbar-track {
-  background: var(--primary-grey);
-  // padding: 0 2px;
-  width: 16px;
-}
-
 // everything below the header
 main {
   flex: 1;
   overflow-y: auto;
-  // padding: 1em;
+  padding: 1em;
   // padding-bottom: 10rem;
 }
 
@@ -240,9 +229,7 @@ main {
   li::before {
     color: var(--fluids-primary);
   }
-  // ::-webkit-scrollbar {
-  //   display: none;
-  // }
+
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: var(--fluids-primary);
@@ -324,11 +311,6 @@ main {
   li::before {
     color: var(--math-primary);
   }
-
-  /*hide the scrollbar*/
-  // ::-webkit-scrollbar {
-  //   display: none;
-  // }
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
@@ -466,14 +448,26 @@ h3.subsubsectionHeader {
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+@media (max-width: 512px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
 @media (min-width: 512px) {
   html {
     font-size: 2.75vw;
   }
   main {
     padding: 1em 4em;
-    // font-size: 0.9rem;
-    // margin-bottom: 1em;
+  }
+  /* width */
+  ::-webkit-scrollbar {
+    width: 16px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--primary-grey);
+    width: 16px;
   }
 }
 @media (min-width: 768px) {
@@ -482,8 +476,6 @@ h3.subsubsectionHeader {
   }
   main {
     padding: 1em 6em;
-    // font-size: 0.9rem;
-    // margin-bottom: 1em;
   }
 }
 @media (min-width: 1024px) {
@@ -492,8 +484,6 @@ h3.subsubsectionHeader {
   }
   main {
     padding: 1em 10em;
-    // font-size: 0.9rem;
-    // margin-bottom: 1em;
   }
 }
 
