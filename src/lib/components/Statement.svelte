@@ -1,6 +1,5 @@
 <script>
-  export let problem;
-  export let levels;
+  let { problem, levels } = $props();
 </script>
 
 <article

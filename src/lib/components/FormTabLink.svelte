@@ -1,6 +1,12 @@
 <script>
-  //   import { fade } from "svelte/transition";
-  export let problem;
+  
+  /**
+   * @typedef {Object} Props
+   * @property {any} problem - import { fade } from "svelte/transition";
+   */
+
+  /** @type {Props} */
+  let { problem } = $props();
   let title = problem[1];
   let path = problem[2];
 </script>

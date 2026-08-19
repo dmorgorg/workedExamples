@@ -1,7 +1,7 @@
 <script>
   // import ProofPart from "$lib/components/ProofPart.svelte";
   import Part from "$lib/components/Part.svelte";
-  export let problem;
+  let { problem } = $props();
   let problemType = problem[0];
 </script>
 

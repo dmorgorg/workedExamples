@@ -1,6 +1,6 @@
 <script>
-  export let topMatter;
-  $: tm = topMatter;
+  let { topMatter } = $props();
+  let tm = $derived(topMatter);
 </script>
 
 <header>

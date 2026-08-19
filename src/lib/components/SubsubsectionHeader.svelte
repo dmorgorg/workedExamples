@@ -1,12 +1,12 @@
 <script>
-  export let subsubsectionHeader;
+  let { subsubsectionHeader, children } = $props();
 </script>
 
-<slot>
+{#if children}{@render children()}{:else}
   <h3 class="subsubsectionHeader">
     <span>{subsubsectionHeader}</span>
   </h3>
-</slot>
+{/if}
 
 <style>
   h3 {

@@ -4,16 +4,15 @@
   import PartStatement from "$lib/components/PartStatement.svelte";
   import PartShowHideControl from "$lib/components/PartShowHideControl.svelte";
   import { fade } from "svelte/transition";
-  export let part;
-  export let problemType;
+  let { part, problemType } = $props();
 
-  let showHide = {
+  let showHide = $state({
     displayAnswer: false,
     displaySolution: false,
-  };
+  });
 
-  $: displaySolution = showHide.displaySolution;
-  $: displayAnswer = showHide.displayAnswer;
+  let displaySolution = $derived(showHide.displaySolution);
+  let displayAnswer = $derived(showHide.displayAnswer);
 
   let statement = part[0];
   let solution = part[1];

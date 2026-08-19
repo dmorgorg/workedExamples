@@ -1,5 +1,5 @@
 <script>
-  export let topMatter;
+  let { topMatter } = $props();
   let tm = topMatter;
 </script>
 
@@ -8,7 +8,7 @@
     <li class="fluids">
       {#if tm.subject === "fluids"}
         <div><a href="/">Home</a></div>
-        <p />
+        <p></p>
       {:else}
         <a href="/fluids">Fluids and Water Resources</a>
       {/if}
@@ -22,7 +22,7 @@
     <li class="math">
       {#if tm.subject === "math"}
         <div><a href="/">Home</a></div>
-        <p />
+        <p></p>
       {:else}
         <a href="/math">Mathematics (Miscellaneous)</a>
       {/if}

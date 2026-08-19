@@ -6,17 +6,16 @@
   import Parts from "./Parts.svelte";
   import Answer from "./Answer.svelte";
   import FormTabLink from "./FormTabLink.svelte";
-  export let problem;
-  export let levels;
+  let { problem, levels } = $props();
 
-  let showHide = {
+  let showHide = $state({
     displayAnswer: false,
     displaySolution: false,
-  };
+  });
   // let show = false;
 
-  $: displaySolution = showHide.displaySolution;
-  $: displayAnswer = showHide.displayAnswer;
+  let displaySolution = $derived(showHide.displaySolution);
+  let displayAnswer = $derived(showHide.displayAnswer);
 </script>
 
 {#if problem[0] === "formulae" || problem[0] === "table"}

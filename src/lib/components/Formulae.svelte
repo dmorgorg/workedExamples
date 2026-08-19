@@ -1,12 +1,12 @@
 <script>
   import { fade } from "svelte/transition";
   import ShowHideControl from "./ShowHideControl.svelte";
-  let showHide = {
+  let showHide = $state({
     displaySolution: false,
-  };
-  export let problem;
+  });
+  let { problem } = $props();
 
-  $: displaySolution = showHide.displaySolution;
+  let displaySolution = $derived(showHide.displaySolution);
 </script>
 
 <div class="skinny formulae">
@@ -15,7 +15,7 @@
       <span class="content">{@html problem[1]}</span>
     </div>
   {:else if problem[0] === "formulae"}
-    <div class="formulae-title" />
+    <div class="formulae-title"></div>
   {/if}
   <ShowHideControl {problem} bind:showHide />
 </div>

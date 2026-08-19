@@ -1,9 +1,8 @@
 <script>
-  export let showHide;
-  export let problem;
+  let { showHide = $bindable(), problem } = $props();
 
-  $: displaySolution = showHide.displaySolution;
-  $: displayAnswer = showHide.displayAnswer;
+  let displaySolution = $derived(showHide.displaySolution);
+  let displayAnswer = $derived(showHide.displayAnswer);
 
   function toggleAnswer() {
     showHide.displayAnswer = !displayAnswer;
@@ -15,14 +14,14 @@
 
 <div class="show-hide-control">
   {#if problem[0] === "example"}
-    <button on:click={toggleSolution}>
+    <button onclick={toggleSolution}>
       {#if displaySolution}
         Hide Solution
       {:else}
         Show Solution
       {/if}
     </button>
-    <button on:click={toggleAnswer}>
+    <button onclick={toggleAnswer}>
       {#if displayAnswer}
         Hide Answer
       {:else}
@@ -30,7 +29,7 @@
       {/if}
     </button>
   {:else if problem[0] === "proof"}
-    <button on:click={toggleSolution}>
+    <button onclick={toggleSolution}>
       {#if displaySolution}
         Hide Proof
       {:else}
@@ -38,7 +37,7 @@
       {/if}
     </button>
   {:else if problem[0] === "formulae" || problem[0] === "table"}
-    <button class="inline" on:click={toggleSolution}>
+    <button class="inline" onclick={toggleSolution}>
       {#if displaySolution}
         Hide
       {:else}

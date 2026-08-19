@@ -1,5 +1,5 @@
 <script>
-  export let answer;
+  let { answer } = $props();
 </script>
 
 <div class="part-answer">

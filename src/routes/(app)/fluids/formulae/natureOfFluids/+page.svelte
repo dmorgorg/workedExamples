@@ -33,9 +33,9 @@
             \\Delta p &= \\gamma h 
         \\end{aligned}`)}`}
     <div class="width65">
-      <p />
+      <p></p>
       &nbsp;
-      <p />
+      <p></p>
       <h4>Pascal's Laws:</h4>
       <ol>
         <li>
