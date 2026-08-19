@@ -20,9 +20,9 @@
   <ShowHideControl {problem} bind:showHide />
 </div>
 {#if displaySolution && problem[0] === "table"}
-  <div transition:fade class="content">{@html problem[2]}</div>
+  <div transition:fade|global class="content">{@html problem[2]}</div>
 {:else if displaySolution && problem[0] === "formulae"}
-  <div transition:fade class="content">{@html problem[1]}</div>
+  <div transition:fade|global class="content">{@html problem[1]}</div>
 {/if}
 
 <style lang="scss">

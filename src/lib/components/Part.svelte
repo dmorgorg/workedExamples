@@ -20,18 +20,18 @@
   let answer = part[2];
 </script>
 
-<div class="part" transition:fade>
+<div class="part" transition:fade|global>
   <PartStatement {statement} />
   <PartShowHideControl bind:showHide {problemType} />
 
   {#if displaySolution}
-    <div transition:fade>
+    <div transition:fade|global>
       <PartSolution {solution} />
     </div>
   {/if}
   <!-- proofs only have proof `solutions``, not answers -->
   {#if displayAnswer && problemType === "example"}
-    <div transition:fade={{ duration: 1000 }}>
+    <div transition:fade|global={{ duration: 1000 }}>
       <PartAnswer {answer} />
     </div>
   {/if}

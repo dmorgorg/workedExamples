@@ -22,17 +22,17 @@
 {#if problem[0] === "formulae" || problem[0] === "table"}
   <FormTabLink {problem} />
 {:else}
-  <section class="problem" transition:fade>
+  <section class="problem" transition:fade|global>
     <Statement {problem} {levels} />
     <ShowHideControl {problem} bind:showHide />
 
     {#if displaySolution}
-      <div transition:fade>
+      <div transition:fade|global>
         <Parts {problem} />
       </div>
     {/if}
     {#if displayAnswer}
-      <div transition:fade>
+      <div transition:fade|global>
         <Answer {problem} />
       </div>
     {/if}
