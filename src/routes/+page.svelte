@@ -16,12 +16,13 @@
 				<a href="/math"><h3>Mathematics</h3></a>
 				<ul>
 					<li>
-						<a href="/math/ALevelPure"><h4>A-Level Pure Mathematics (Year 1)</h4></a>
+						<a href="/math/calculus"><h4>Calculus</h4></a>
 					</li>
 					<ul>
 						<li>
-							<a href="/math/ALevelPure/10Differentiation"><h5>10 Differentiation</h5></a>
-							<a href="/math/ALevelPure/11Integration"><h5><s>11 Integration</s></h5></a>
+							<a href="/math/calculus/01Limits"><h5>01 Limits</h5></a>
+							<!-- <a href="/math/ALevelPure/10Differentiation"><h5>10 Differentiation</h5></a>
+							<a href="/math/ALevelPure/11Integration"><h5><s>11 Integration</s></h5></a> -->
 						</li>
 					</ul>
 
